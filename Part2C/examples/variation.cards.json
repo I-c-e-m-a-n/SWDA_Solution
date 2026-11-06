@@ -1,0 +1,279 @@
+[
+  {
+    "actors": [
+      "PA",
+      "TA"
+    ],
+    "assertions": [
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "S3"
+        ],
+        "text": "A marketing agent kept pushing my elderly mum to use her credits and mentioned a cash reward. Not sure what the course even was."
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "S3",
+          "MO-04"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "S3"
+        ],
+        "text": "A marketing agent kept pushing my elderly mum to use her credits and mentioned a cash reward. Not sure what the course even was."
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "S3",
+          "MO-04"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "S3"
+        ],
+        "text": "A marketing agent kept pushing my elderly mum to use her credits and mentioned a cash reward. Not sure what the course even was."
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "S3",
+          "MO-04"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "S3"
+        ],
+        "text": "A marketing agent kept pushing my elderly mum to use her credits and mentioned a cash reward. Not sure what the course even was."
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "S3",
+          "MO-04"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "S3",
+          "MO-04"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      }
+    ],
+    "classification": "VARIATION",
+    "comparison_rationale": "VARIATION relative only to MO-01–MO-08. MO-04: shared=['cash_offer', 'credit_use'], absent=['optional_attendance'], additional=[] Feature similarity describes illustrative concepts, not actual wrongdoing or real-world novelty.",
+    "contributions": [
+      {
+        "actor": "PA",
+        "benefit": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "S3",
+            "MO-04"
+          ],
+          "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning a cash inducement; no realised benefit is established."
+        },
+        "claim": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "S3",
+            "MO-04"
+          ],
+          "text": "Hypothetical PA contribution: a cash inducement. Role allocation is a modelling assumption, not observed conduct."
+        },
+        "dependency_features": {},
+        "depends_on": [],
+        "features": [
+          "cash_offer"
+        ],
+        "material": true
+      },
+      {
+        "actor": "TA",
+        "benefit": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "S3",
+            "MO-04"
+          ],
+          "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning training-credit use; no realised benefit is established."
+        },
+        "claim": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "S3",
+            "MO-04"
+          ],
+          "text": "Hypothetical TA contribution: training-credit use. Role allocation is a modelling assumption, not observed conduct."
+        },
+        "dependency_features": {
+          "msg-5dbb3d14ca134ace": [
+            "cash_offer"
+          ]
+        },
+        "depends_on": [
+          "msg-5dbb3d14ca134ace"
+        ],
+        "features": [
+          "credit_use"
+        ],
+        "material": true
+      }
+    ],
+    "counterfactuals": [
+      {
+        "excluded_parent_messages": [
+          "msg-2644b0bf9d5045dc",
+          "msg-a8f94e5c8fcd451d",
+          "msg-5dbb3d14ca134ace",
+          "msg-88b049a85ebd4961"
+        ],
+        "outcome": "MULTI_PARTY_DEPENDENCY",
+        "parent_run_id": "run-1eca35fbeaab4079",
+        "rationale": "Fresh reduced execution compared with validated material dependency edges and feature coverage. A surviving coalition is not single-actor feasibility; loss without parent cooperation is inconclusive. No real-world causal proof is claimed.",
+        "removed_actor": "PA",
+        "run_id": "run-8149f3916cde44b7",
+        "surviving_actors": []
+      },
+      {
+        "excluded_parent_messages": [
+          "msg-a8f94e5c8fcd451d",
+          "msg-88b049a85ebd4961"
+        ],
+        "outcome": "MULTI_PARTY_DEPENDENCY",
+        "parent_run_id": "run-1eca35fbeaab4079",
+        "rationale": "Fresh reduced execution compared with validated material dependency edges and feature coverage. A surviving coalition is not single-actor feasibility; loss without parent cooperation is inconclusive. No real-world causal proof is claimed.",
+        "removed_actor": "TA",
+        "run_id": "run-c9346b71778f4d32",
+        "surviving_actors": [
+          "PA"
+        ]
+      }
+    ],
+    "evaluation_ids": [
+      "eval-b357900fb4704fcb"
+    ],
+    "flows": [
+      {
+        "claim": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "S3",
+            "MO-04"
+          ],
+          "text": "TA explicitly depends on PA's simulated a cash inducement; this is a scripted relationship."
+        },
+        "destination_actor": "TA",
+        "flow_type": "contribution_dependency",
+        "source_actor": "PA",
+        "trace_ids": [
+          "msg-5dbb3d14ca134ace",
+          "msg-88b049a85ebd4961"
+        ]
+      },
+      {
+        "claim": {
+          "label": "ASSUMPTION",
+          "source_ids": [
+            "S3",
+            "MO-04"
+          ],
+          "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning a cash inducement; no realised benefit is established."
+        },
+        "destination_actor": "PA",
+        "flow_type": "hypothesized_benefit",
+        "source_actor": "SCHEME",
+        "trace_ids": [
+          "msg-2644b0bf9d5045dc",
+          "msg-5dbb3d14ca134ace"
+        ]
+      },
+      {
+        "claim": {
+          "label": "ASSUMPTION",
+          "source_ids": [
+            "S3",
+            "MO-04"
+          ],
+          "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning training-credit use; no realised benefit is established."
+        },
+        "destination_actor": "TA",
+        "flow_type": "hypothesized_benefit",
+        "source_actor": "SCHEME",
+        "trace_ids": [
+          "msg-88b049a85ebd4961"
+        ]
+      }
+    ],
+    "human_status": "REVIEW_PENDING",
+    "limitations": [
+      "Annex A is illustrative; Annex B is exercise-written and unverified.",
+      "Role allocation and benefit endpoints are assumptions, not observed transfers.",
+      "Actor-removal findings concern scripted structure, not real-world causation."
+    ],
+    "machine_outcome": "PASS",
+    "missing_data": [
+      "Independently verified attendance records",
+      "Independently verified enrolment records",
+      "Independently verified financial or value-flow records"
+    ],
+    "pattern_id": "pattern-3d78b8e1f9844444",
+    "run_id": "run-1eca35fbeaab4079",
+    "scenario": {
+      "fault": "",
+      "features": [
+        "cash_offer",
+        "credit_use"
+      ],
+      "fixture_version": "scripts-2",
+      "mode": "dependency",
+      "policy_version": "acl-1",
+      "roles": [
+        "PA",
+        "TA"
+      ],
+      "rounds": 2,
+      "scenario_id": "variation",
+      "seed": 17,
+      "source_version": "annex-1",
+      "sources": [
+        "S3",
+        "MO-04"
+      ],
+      "version": "1"
+    },
+    "source_manifest": {
+      "annex-v1.json": "62d62e2c00eb3c2ed494f310376a1a41650281a5eb7ba4c973e629c1e24dc0ff",
+      "manifest_version": "release-1"
+    },
+    "summary": {
+      "label": "SIMULATION",
+      "source_ids": [
+        "S3",
+        "MO-04"
+      ],
+      "text": "Hypothetical mechanism involving PA, TA: a cash inducement, training-credit use. Explicit material cooperation in scripted contributions; no actual misconduct established."
+    },
+    "title": "Hypothetical variation",
+    "trace_ids": [
+      "msg-2644b0bf9d5045dc",
+      "msg-a8f94e5c8fcd451d",
+      "msg-5dbb3d14ca134ace",
+      "msg-88b049a85ebd4961"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "version": "synthetic-1.0.0",
+  "synthetic": true,
+  "programmes": [
+    {"programme_id":"SYN-E02","name":"Fictional Career Compass","category":"employment","description":"Invented career planning sessions.","eligibility_example":"For synthetic employment enquiries; a person must review actual eligibility.","channels":["web","phone","caseworker"],"priority":10,"active":true},
+    {"programme_id":"SYN-E01","name":"Fictional Work Bridge","category":"employment","description":"Invented job search support.","eligibility_example":"For synthetic job search enquiries; advisory only.","channels":["web","phone","caseworker"],"priority":10,"active":true},
+    {"programme_id":"SYN-S01","name":"Fictional Learning Lantern","category":"skills","description":"Invented skills course guidance.","eligibility_example":"For synthetic training enquiries received through web or caseworker channels.","channels":["web","caseworker"],"priority":5,"active":true},
+    {"programme_id":"SYN-C01","name":"Fictional Care Circle","category":"care","description":"Invented caregiver guidance.","eligibility_example":"For synthetic caregiver enquiries; no benefit entitlement is determined.","channels":["web","phone","caseworker"],"priority":5,"active":true},
+    {"programme_id":"SYN-X01","name":"Fictional Retired Pilot","category":"employment","description":"Inactive invented pilot.","eligibility_example":"Never recommended because inactive.","channels":["web"],"priority":1,"active":false}
+  ]
+}

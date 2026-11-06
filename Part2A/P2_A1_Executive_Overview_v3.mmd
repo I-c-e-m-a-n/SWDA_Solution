@@ -1,0 +1,65 @@
+%% SWDA Part 2A v3 — Executive Overview. Same logical components as the detailed A1, NOT an additional implementation.
+%% Solid = data, dash = control / authorisation, dots = trusted audit.
+flowchart TB
+    subgraph S["UNTRUSTED SOURCE"]
+        ANN["Annex A and B - untrusted text"]
+    end
+    subgraph I["TRUSTED INGESTION"]
+        LOAD["Loader + trusted versioned manifest"]
+        CAT["Provenance-tagged read-only catalogue"]
+    end
+    subgraph O["TRUSTED ORCHESTRATION"]
+        ORCH["Deterministic ORCH + bounded CANDIDATE / CF / TEST"]
+        POL["One gateway OUT + IN: scopes, schema, routing"]
+    end
+    subgraph A["ISOLATED SIMULATED ACTORS"]
+        ACT["Trainee / Provider / Employer scripted mocks"]
+    end
+    subgraph P["TRUSTED ANALYSIS"]
+        ANA["CARD + DEP: tagged patterns + bounded actor-removal CF"]
+        REF["Trusted MO + source reference helpers"]
+    end
+    subgraph R["LESS-TRUSTED REVIEW"]
+        REV["Non-authoritative review agent"]
+    end
+    subgraph E["TRUSTED ASSURANCE"]
+        SAFE["Deterministic gates + isolated TEST evaluation"]
+    end
+    subgraph H["HUMAN-ONLY AUTHORISATION"]
+        UI["Marked simulation output / authorised human"]
+        APPR["Locally verified role + rationale + SQLite CAS approval"]
+    end
+    subgraph T["TRUSTED PERSISTENCE"]
+        STORE[("Run state + trace + decisions")]
+    end
+    ANN --> LOAD
+    LOAD --> CAT
+    CAT --> ORCH
+    ORCH --> POL
+    POL --> ACT
+    ACT --> POL
+    POL --> ORCH
+    ORCH --> ANA
+    ANA --> REV
+    REV --> SAFE
+    SAFE --> UI
+    UI --> APPR
+    APPR --> STORE
+    CAT --> REF
+    REV -.->|narrow lookup request| POL
+    POL -.->|authorised filtered reference| REF
+    REF --> POL
+    POL --> REV
+    ANA -.->|CANDIDATE to CF only| ORCH
+    SAFE -.->|TEST fixture; no recursion| ORCH
+    SAFE -.->|candidate only: REVIEW_PENDING| STORE
+    ORCH -.->|trusted audit| STORE
+    POL -.->|trusted audit| STORE
+    classDef risk fill:#FFF5E8,stroke:#B68A4B,color:#593C14;
+    classDef trusted fill:#EAF5FF,stroke:#5282AD,color:#163B5B;
+    classDef actor fill:#F2ECFF,stroke:#8F7AC6,color:#403466;
+    classDef approval fill:#E4F6E9,stroke:#25805B,color:#1F593F;
+    class ANN,REV risk;
+    class LOAD,CAT,ORCH,POL,ANA,REF,SAFE,STORE trusted;
+    class ACT actor;
+    class UI,APPR approval;

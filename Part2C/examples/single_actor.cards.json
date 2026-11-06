@@ -1,0 +1,157 @@
+[
+  {
+    "actors": [
+      "TA"
+    ],
+    "assertions": [
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "MO-03"
+        ],
+        "text": "Individuals submit false claims without attending a course"
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "MO-03"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "MO-03"
+        ],
+        "text": "Individuals submit false claims without attending a course"
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "MO-03"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "MO-03"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      }
+    ],
+    "classification": "KNOWN",
+    "comparison_rationale": "KNOWN relative only to MO-01–MO-08. MO-03: shared=['false_claim', 'nonattendance'], absent=[], additional=[] Feature similarity describes illustrative concepts, not actual wrongdoing or real-world novelty.",
+    "contributions": [
+      {
+        "actor": "TA",
+        "benefit": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-03"
+          ],
+          "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established."
+        },
+        "claim": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-03"
+          ],
+          "text": "Hypothetical TA contribution: a potentially unsupported grant claim, nonattendance. Role allocation is a modelling assumption, not observed conduct."
+        },
+        "dependency_features": {},
+        "depends_on": [],
+        "features": [
+          "false_claim",
+          "nonattendance"
+        ],
+        "material": true
+      }
+    ],
+    "counterfactuals": [
+      {
+        "excluded_parent_messages": [
+          "msg-7e148e6bbe8e48c7",
+          "msg-bed3fb04fe0844b3"
+        ],
+        "outcome": "SINGLE_ACTOR_FEASIBILITY",
+        "parent_run_id": "run-b42bbe86c961407d",
+        "rationale": "Fresh reduced execution compared with validated material dependency edges and feature coverage. A surviving coalition is not single-actor feasibility; loss without parent cooperation is inconclusive. No real-world causal proof is claimed.",
+        "removed_actor": "TA",
+        "run_id": "run-d0cb01f1d6d74ec4",
+        "surviving_actors": []
+      }
+    ],
+    "evaluation_ids": [
+      "eval-e5aef1e0ef454674"
+    ],
+    "flows": [
+      {
+        "claim": {
+          "label": "ASSUMPTION",
+          "source_ids": [
+            "MO-03"
+          ],
+          "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established."
+        },
+        "destination_actor": "TA",
+        "flow_type": "hypothesized_benefit",
+        "source_actor": "SCHEME",
+        "trace_ids": [
+          "msg-7e148e6bbe8e48c7",
+          "msg-bed3fb04fe0844b3"
+        ]
+      }
+    ],
+    "human_status": "REVIEW_PENDING",
+    "limitations": [
+      "Annex A is illustrative; Annex B is exercise-written and unverified.",
+      "Role allocation and benefit endpoints are assumptions, not observed transfers.",
+      "Actor-removal findings concern scripted structure, not real-world causation."
+    ],
+    "machine_outcome": "PASS",
+    "missing_data": [
+      "Independently verified attendance records",
+      "Independently verified grant-claim records"
+    ],
+    "pattern_id": "pattern-b884d046c5a846c0",
+    "run_id": "run-b42bbe86c961407d",
+    "scenario": {
+      "fault": "",
+      "features": [
+        "false_claim",
+        "nonattendance"
+      ],
+      "fixture_version": "scripts-2",
+      "mode": "single",
+      "policy_version": "acl-1",
+      "roles": [
+        "TA"
+      ],
+      "rounds": 2,
+      "scenario_id": "single_actor",
+      "seed": 17,
+      "source_version": "annex-1",
+      "sources": [
+        "MO-03"
+      ],
+      "version": "1"
+    },
+    "source_manifest": {
+      "annex-v1.json": "62d62e2c00eb3c2ed494f310376a1a41650281a5eb7ba4c973e629c1e24dc0ff",
+      "manifest_version": "release-1"
+    },
+    "summary": {
+      "label": "SIMULATION",
+      "source_ids": [
+        "MO-03"
+      ],
+      "text": "Hypothetical mechanism involving TA: a potentially unsupported grant claim, nonattendance. Single-actor structure in scripted contributions; no actual misconduct established."
+    },
+    "title": "Hypothetical single actor",
+    "trace_ids": [
+      "msg-7e148e6bbe8e48c7",
+      "msg-bed3fb04fe0844b3"
+    ]
+  }
+]

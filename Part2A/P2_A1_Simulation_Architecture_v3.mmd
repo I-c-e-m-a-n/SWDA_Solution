@@ -1,0 +1,194 @@
+%% SWDA Part 2A | v3 targeted precision/readability patch | proposed local Python proof-of-concept architecture
+%% Annex contents are UNTRUSTED DATA. No source or simulated statement is a fraud finding.
+%% Link legend: SOLID=data; LONG DASH=control / authorization; DOT=auditing / telemetry.
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "Inter, Arial, sans-serif", "background": "#FFFFFF", "primaryColor": "#FFFFFF", "primaryTextColor": "#17243A", "primaryBorderColor": "#CBD5E1", "lineColor": "#64748B", "clusterBkg": "#FFFFFF", "clusterBorder": "#94A3B8"}, "flowchart": {"htmlLabels": false, "curve": "linear", "nodeSpacing": 64, "rankSpacing": 105, "diagramPadding": 32, "useMaxWidth": false}}}%%
+flowchart LR
+
+    subgraph SRC["01A  UNTRUSTED ANNEXES  |  data, never instructions"]
+        direction LR
+        AA["Annex A<br/>Illustrative MOs: MO-01 to MO-08"]
+        BB["Annex B<br/>Unverified excerpts: S1 to S5"]
+    end
+    subgraph PROV["01B  TRUSTED SOURCE HANDLING  |  provenance boundary"]
+        direction LR
+        LOAD["Source loader<br/>ID / schema / version + digests matched<br/>to separately trusted versioned manifest<br/>Quarantine missing / mismatched content"]
+        CAT[("Read-only source catalogue<br/>IDs, source type, version, digest,<br/>trust level / provenance")]
+    end
+    subgraph CTRL["02  ORCHESTRATION & POLICY  |  trusted Python controls"]
+        direction LR
+        INIT["Scenario configuration<br/>Selected source IDs, seed, actor profiles,<br/>budgets and limits"]
+        ORCH["Deterministic orchestrator<br/>Run types: CANDIDATE / CF / TEST<br/>State / rounds / routing / retries / lineage budgets<br/>CF only from CANDIDATE, depth one; TEST non-recursive"]
+        OUT["Policy gateway: dispatch + reviewer PEP<br/>Identity / purpose / recipient / source IDs<br/>Scopes / messages / bound budgets"]
+        CTX["Agent-specific context builder<br/>Scoped excerpts; reject removed actor and<br/>all actor-dependent prior messages"]
+        IN["Policy gateway: receipt + filtered reference return<br/>Binding / scopes / schema / safety<br/>Deny by default; no permission escalation"]
+    end
+    subgraph SIM["03  SIMULATION  |  isolated actor boundaries"]
+        direction LR
+        subgraph TRA["TRAINEE AGENT  |  least privilege"]
+            direction TB
+            TP["Trainee profile<br/>Distinct goals, capabilities, visible data<br/>Permitted: propose / reply only"]
+            TA["Scripted trainee mock LLM<br/>Structured message only"]
+        end
+        subgraph PRV["TRAINING PROVIDER AGENT  |  least privilege"]
+            direction TB
+            PP["Provider profile<br/>Distinct goals, capabilities, visible data<br/>Permitted: propose / reply only"]
+            PA["Scripted provider mock LLM<br/>Structured message only"]
+        end
+        subgraph EMP["EMPLOYER AGENT  |  least privilege"]
+            direction TB
+            EP["Employer profile<br/>Distinct goals, capabilities, visible data<br/>Permitted: propose / reply only"]
+            EA["Scripted employer mock LLM<br/>Structured message only"]
+        end
+    end
+    subgraph ANAL["04  ANALYSIS  |  claims remain hypothetical"]
+        direction LR
+        CARD["Structured pattern-card assembler<br/>Actors / contributions / benefits / flows<br/>SOURCE / SIMULATION / ASSUMPTION tags"]
+        DEP["Actor-removal & dependency analysis<br/>CANDIDATE to linked CF only; parent_id + removed_actor<br/>Fresh context; no recursive CF or tainted descendants<br/>Structural dependency; NOT real-world causality"]
+        MO["Illustrative MO comparator<br/>Known / variation / new<br/>Record test data needed"]
+        REF["Trusted read-only MO / reference helpers<br/>Catalogue retrieval after reviewer policy allow<br/>Filtered source IDs, provenance and uncertainty"]
+    end
+    subgraph REVIEW["04B  ISOLATED NON-AUTHORITATIVE REVIEWER  |  no catalogue or approval writes"]
+        direction LR
+        REV["Review Agent: scripted mock<br/>Only approved narrow lookup via gateway<br/>Recommends classification; CANNOT approve"]
+    end
+    subgraph ASSURE["05  ASSURANCE & HUMAN AUTHORISATION  |  code-gated"]
+        direction LR
+        FIX["Regression fixtures<br/>Benign / adversarial / malformed schema<br/>Permission-denial cases"]
+        EVAL["Evaluation harness<br/>Isolated TEST run IDs through ORCH<br/>No TEST recursion / human queue / approval write<br/>Actor / E2E regressions only"]
+        GATE["Deterministic release-to-review gates<br/>Schema / provenance / safety / policy<br/>Evaluation and risk-level checks"]
+        BLOCK["Blocked or quarantined draft<br/>No approval or publication"]
+        UI["Human review interface<br/>Clearly marked SIMULATED risk pattern<br/>Not a fraud finding"]
+        DEC["Authorised HUMAN reviewer only<br/>Approve for investigation / reject<br/>Request revision, with rationale"]
+        APPROVAL["Trusted approval service<br/>Locally verified/configured reviewer role (PoC)<br/>REVIEW_PENDING + passed gates + explicit rationale<br/>SQLite atomic CAS; investigation only; deny by default"]
+    end
+    subgraph OBS["06  LOCAL PERSISTENCE & OBSERVABILITY  |  actors have no write access"]
+        direction LR
+        STATE[("Run-state store (trusted SQLite)<br/>CANDIDATE / TEST / linked CF + parent run IDs<br/>REVIEW_PENDING / gates / lineage usage / status")]
+        EVENTS["Trusted event recorder<br/>Stable run / message IDs<br/>Source versions / policy decisions<br/>Retries / costs / validation / reviews"]
+        TRACE[("Append-only trace & audit store<br/>Invocations / decisions / evaluation IDs<br/>No actor modification pathway")]
+        DECISION[("Decision records (same SQLite transaction)<br/>Decision ID / reviewer / time / reason<br/>Outcome: investigation only / reject / revise")]
+    end
+    subgraph KEY["LEGEND  |  trust & line semantics"]
+        direction LR
+        KDATA["Solid arrow: structured data"]
+        KCTRL["Long dash: control / authorisation"]
+        KAUD["Dot: telemetry / audit event"]
+        KTRUST["Boxes: trust boundaries; agents cannot<br/>change policy, source catalogue or audits"]
+    end
+
+    %% 01 Source handling: data crosses a strict parse-and-provenance boundary.
+    AA -->|illustrative MO records| LOAD
+    BB -->|unverified text excerpts| LOAD
+    LOAD -->|validated typed source records| CAT
+    %% 02 Scenario control, policy-enforced message mediation.
+    INIT -->|scenario and allowed source IDs| ORCH
+    CAT -->|scoped read-only evidence| CTX
+    ORCH -.->|next actor / round / request| OUT
+    OUT -->|approved scoped message| CTX
+    %% Profiles are fixed by code/config, not editable by agents.
+    TP -->|fixed trainee permissions| TA
+    PP -->|fixed provider permissions| PA
+    EP -->|fixed employer permissions| EA
+    CTX -->|trainee-only context| TA
+    CTX -->|provider-only context| PA
+    CTX -->|employer-only context| EA
+    TA -->|typed agent response| IN
+    PA -->|typed agent response| IN
+    EA -->|typed agent response| IN
+    IN -->|validated routed message| ORCH
+    OUT -.->|deny / budget or route violation| ORCH
+    IN -.->|schema reject / retry decision| ORCH
+    %% 03 Repeated rounds only within the orchestrator; no actor-to-actor links.
+    ORCH -->|bounded completed run transcript| CARD
+    %% 04 Trusted analysis and non-authoritative review, narrow source reads through the SAME policy gateway.
+    CARD -->|actor links and contributions| DEP
+    DEP -.->|CANDIDATE-only CF request: parent ID, removed actor; lineage cap| ORCH
+    ORCH -->|independent linked CF result + trace ref| DEP
+    CARD -->|candidate pattern signatures| MO
+    CARD -->|labelled claims and refs| REF
+    CAT -->|illustrative MO entries| MO
+    CAT -->|approved source IDs + provenance| REF
+    DEP -->|necessity / single-actor outcome| REV
+    REV -.->|scoped lookup: identity, purpose, permitted source IDs| OUT
+    OUT -.->|authorised read of illustrative MO IDs| MO
+    OUT -.->|authorised read of permitted references| REF
+    MO -->|typed read-only MO comparison| IN
+    REF -->|typed filtered source evidence + trust tags| IN
+    IN -->|validated filtered lookup response or deny| REV
+    %% 05 Assurance. The harness may run as test mode and per-run checks.
+    ORCH -->|candidate or TEST result + trace ID / sources| EVAL
+    EVAL -.->|top-level TEST fixture; no recursive TEST or approval| ORCH
+    REV -->|review output + run ID| EVAL
+    FIX -->|benign + adversarial test cases| EVAL
+    REV -->|provisional reviewed pattern card| GATE
+    EVAL -->|linked evaluation outcomes| GATE
+    GATE -.->|CANDIDATE-only PASS: gates and REVIEW_PENDING| STATE
+    STATE -->|committed eligible candidate only| UI
+    GATE -->|FAIL: contain / return errors| BLOCK
+    UI -.->|human-only decision authority, local PoC role| DEC
+    DEC -->|explicit human action + local reviewer identity + rationale| APPROVAL
+    STATE -->|persisted status + gate evidence| APPROVAL
+    APPROVAL -.->|role, state and gate check; atomic CAS| STATE
+    APPROVAL -->|decision record in same transaction| DECISION
+    APPROVAL -->|persisted receipt or denial| UI
+    %% 06 Persistence: only trusted code writes; no actor is an audit sink client.
+    %% Same trusted SQLite transaction must compare candidate state + persist decision and receipt.
+    %% Required caps: patterns, CF per candidate, fixtures, turns, retries, timeout and aggregate lineage mock calls.
+    ORCH -->|checkpoint / resume / stop| STATE
+    STATE -->|current state / limits| ORCH
+    LOAD -.->|source identity / parse outcome| EVENTS
+    ORCH -.->|run / round / route / retry / usage| EVENTS
+    OUT -.->|dispatch allow / deny| EVENTS
+    IN -.->|response allow / reject| EVENTS
+    CARD -.->|pattern assembly / tagging| EVENTS
+    REV -.->|review classification / rationale| EVENTS
+    GATE -.->|validation outcomes| EVENTS
+    EVAL -.->|agent + E2E results / run ID| EVENTS
+    DEC -.->|human request only, not approval state| EVENTS
+    APPROVAL -.->|accepted or denied decision + receipt| EVENTS
+    EVENTS -->|append validated audit event| TRACE
+    DECISION -->|append immutable decision record| TRACE
+    %% Legend uses styled examples with no connections to execution nodes.
+    KDATA --> KCTRL
+    KCTRL -.-> KAUD
+    KAUD -.-> KTRUST
+
+    %% Palette: clear roles, controls and source trust classification.
+    classDef src fill:#FFF7ED,stroke:#C47C34,color:#613B12,stroke-width:1.4px;
+    classDef catalogue fill:#EBF5FF,stroke:#3F79B6,color:#173B60,stroke-width:1.5px;
+    classDef service fill:#F4F7FB,stroke:#6B859D,color:#172C42,stroke-width:1.35px;
+    classDef gateway fill:#E9F8F4,stroke:#2A8F7B,color:#155B4E,stroke-width:1.8px;
+    classDef actors fill:#F3F0FF,stroke:#8876C5,color:#403464,stroke-width:1.35px;
+    classDef reviewer fill:#FFF5E8,stroke:#BB8845,color:#694516,stroke-width:1.6px;
+    classDef human fill:#DDF6EA,stroke:#26845C,color:#155A42,stroke-width:2px;
+    classDef blocked fill:#FFF0EF,stroke:#B55B53,color:#75342E,stroke-width:1.5px;
+    classDef store fill:#EDF2F6,stroke:#64748B,color:#253346,stroke-width:1.5px;
+    classDef legend fill:#FFFFFF,stroke:#CBD5E1,color:#435166,stroke-width:1px;
+    class AA,BB src;
+    class LOAD,CAT catalogue;
+    class INIT,ORCH,CTX,CARD,DEP,MO,REF,FIX,EVAL,GATE service;
+    class APPROVAL gateway;
+    class OUT,IN gateway;
+    class TP,PP,EP,TA,PA,EA actors;
+    class REV reviewer;
+    class UI,DEC human;
+    class BLOCK blocked;
+    class STATE,EVENTS,TRACE,DECISION store;
+    class KDATA,KCTRL,KAUD,KTRUST legend;
+    style SRC fill:#FFFAF3,stroke:#C47C34,stroke-width:1.6px
+    style PROV fill:#F6FAFE,stroke:#3F79B6,stroke-width:1.6px
+    style CTRL fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px
+    style SIM fill:#F9F7FF,stroke:#8876C5,stroke-width:1.6px
+    style TRA fill:#FFFFFF,stroke:#A799D6,stroke-width:1.2px
+    style PRV fill:#FFFFFF,stroke:#A799D6,stroke-width:1.2px
+    style EMP fill:#FFFFFF,stroke:#A799D6,stroke-width:1.2px
+    style ANAL fill:#FFFBF4,stroke:#C8A56D,stroke-width:1.5px
+    style REVIEW fill:#FFF5E8,stroke:#BB8845,stroke-width:1.8px
+    style ASSURE fill:#F5FCF9,stroke:#54947C,stroke-width:1.5px
+    style OBS fill:#F7F9FC,stroke:#8293A6,stroke-width:1.5px
+    style KEY fill:#FFFFFF,stroke:#CCD5DD,stroke-width:1px
+
+
+    %% Exact v3 edge indices: control is long-dash, audit is short-dot; no semantic links removed.
+    linkStyle 5,17,18,21,28,29,30,35,40,43,46 stroke:#697B8C,stroke-width:1.6px,stroke-dasharray:8 5;
+    linkStyle 51,52,53,54,55,56,57,58,59,60,64,65 stroke:#8090A0,stroke-width:1.45px,stroke-dasharray:2 5;

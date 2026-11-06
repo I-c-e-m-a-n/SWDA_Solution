@@ -1,0 +1,2660 @@
+{
+  "run": {
+    "id": "run-9add07adf1334e46",
+    "kind": "CANDIDATE",
+    "parent": null,
+    "status": "NO_PATTERN",
+    "version": 1,
+    "metadata": "{\"depth\": 0, \"parent_run_id\": null, \"removed_actor\": null, \"run_id\": \"run-9add07adf1334e46\", \"run_type\": \"CANDIDATE\", \"scenario\": {\"fault\": \"\", \"features\": [], \"fixture_version\": \"scripts-2\", \"mode\": \"insufficient\", \"policy_version\": \"acl-1\", \"roles\": [\"PA\", \"TA\"], \"rounds\": 2, \"scenario_id\": \"insufficient\", \"seed\": 17, \"source_version\": \"annex-1\", \"sources\": [\"S1\", \"S2\", \"S4\"], \"version\": \"1\"}, \"status\": \"RUNNING\", \"version\": 0}"
+  },
+  "records": [
+    {
+      "seq": 437,
+      "id": "run_started-b470212f004f4458",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "run_started",
+      "data": {
+        "depth": 0,
+        "parent_run_id": null,
+        "removed_actor": null,
+        "run_id": "run-9add07adf1334e46",
+        "run_type": "CANDIDATE",
+        "scenario": {
+          "fault": "",
+          "features": [],
+          "fixture_version": "scripts-2",
+          "mode": "insufficient",
+          "policy_version": "acl-1",
+          "roles": [
+            "PA",
+            "TA"
+          ],
+          "rounds": 2,
+          "scenario_id": "insufficient",
+          "seed": 17,
+          "source_version": "annex-1",
+          "sources": [
+            "S1",
+            "S2",
+            "S4"
+          ],
+          "version": "1"
+        },
+        "status": "RUNNING",
+        "version": 0
+      },
+      "timestamp": "2026-11-06T16:15:58.438Z"
+    },
+    {
+      "seq": 438,
+      "id": "snapshots-fdc9587f2d5f4665",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "snapshots",
+      "data": {
+        "adapter_version": "scripts-2",
+        "code_revision": "sha256:5875c19de7deb03d0999f68af32a931d2706ccc28e0b3c34caf71e7218b10edc",
+        "code_version": "1.1.0",
+        "grounding_version": "annex-concepts-1",
+        "limits": {
+          "cards": 3,
+          "cf": 3,
+          "lineage_calls": 48,
+          "retries": 2,
+          "rounds": 4,
+          "seconds": 120.0,
+          "suite_calls": 60,
+          "test_calls": 12,
+          "test_fixtures": 12,
+          "turns": 12
+        },
+        "policy": {
+          "EA": {
+            "actor": "EA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical employment/training benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "PA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-06",
+              "MO-08",
+              "S5"
+            ]
+          },
+          "PA": {
+            "actor": "PA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical enrolment or funding benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "REV": {
+            "actor": "REV",
+            "capabilities": [
+              "reference_lookup",
+              "review"
+            ],
+            "incentive": "Challenge assumptions and provenance",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "GATE"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "TA": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          }
+        },
+        "scenario": {
+          "fault": "",
+          "features": [],
+          "fixture_version": "scripts-2",
+          "mode": "insufficient",
+          "policy_version": "acl-1",
+          "roles": [
+            "PA",
+            "TA"
+          ],
+          "rounds": 2,
+          "scenario_id": "insufficient",
+          "seed": 17,
+          "source_version": "annex-1",
+          "sources": [
+            "S1",
+            "S2",
+            "S4"
+          ],
+          "version": "1"
+        },
+        "schema_version": "2",
+        "source_manifest": {
+          "annex-v1.json": "62d62e2c00eb3c2ed494f310376a1a41650281a5eb7ba4c973e629c1e24dc0ff",
+          "manifest_version": "release-1"
+        }
+      },
+      "timestamp": "2026-11-06T16:15:58.440Z"
+    },
+    {
+      "seq": 439,
+      "id": "grounding-c5574e55864d438b",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "grounding",
+      "data": {
+        "benign": [],
+        "eligible": false,
+        "evidence": "Illustrative risk concepts only; no evidence of actual wrongdoing.",
+        "features": {},
+        "unsupported": [],
+        "version": "annex-concepts-1"
+      },
+      "timestamp": "2026-11-06T16:15:58.441Z"
+    },
+    {
+      "seq": 440,
+      "id": "context_reset-4c76ca6f3a5441c3",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "context_reset",
+      "data": {
+        "copied_parent_messages": [],
+        "excluded_parent_messages": [],
+        "fresh_history": true,
+        "removed_actor": null
+      },
+      "timestamp": "2026-11-06T16:15:58.443Z"
+    },
+    {
+      "seq": 441,
+      "id": "policy-6760c404b3944246",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DISPATCH_ALLOWED",
+        "message_id": "msg-e925d3c86b7d4c42",
+        "stage": "dispatch"
+      },
+      "timestamp": "2026-11-06T16:15:58.444Z"
+    },
+    {
+      "seq": 442,
+      "id": "invocation_started-89bbc0dc92204325",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "invocation_started",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "PA",
+            "attempt": 0,
+            "message_id": "msg-e925d3c86b7d4c42",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "propose",
+            "recipient": "TA",
+            "round": 1,
+            "run_id": "run-9add07adf1334e46",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "source_version": "annex-1",
+            "turn": 1
+          },
+          "incoming": [],
+          "prior": [],
+          "profile": {
+            "actor": "PA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical enrolment or funding benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S1",
+              "source_id": "S1",
+              "source_type": "ANNEX_B",
+              "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S2",
+              "source_id": "S2",
+              "source_type": "ANNEX_B",
+              "text": "Almost $600 for basic cleaning training? How is that worth it?",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S4",
+              "source_id": "S4",
+              "source_type": "ANNEX_B",
+              "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [],
+            "fixture_version": "scripts-2",
+            "mode": "insufficient",
+            "policy_version": "acl-1",
+            "roles": [
+              "PA",
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "insufficient",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "version": "1"
+          }
+        },
+        "invocation_id": "inv-856356e458e4447b",
+        "schema_version": "2",
+        "script_version": "scripts-2"
+      },
+      "timestamp": "2026-11-06T16:15:58.445Z"
+    },
+    {
+      "seq": 443,
+      "id": "usage-d91819d4f4214f22",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "usage",
+      "data": {
+        "attempt": 0,
+        "elapsed_seconds": 0.005951979000201391,
+        "invocation_id": "inv-856356e458e4447b",
+        "message_id": "msg-e925d3c86b7d4c42",
+        "scopes": [
+          "run-9add07adf1334e46"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.445Z"
+    },
+    {
+      "seq": 444,
+      "id": "policy-4543e935af054d93",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "RECEIPT_ALLOWED",
+        "message_id": "msg-e925d3c86b7d4c42",
+        "stage": "receipt"
+      },
+      "timestamp": "2026-11-06T16:15:58.446Z"
+    },
+    {
+      "seq": 445,
+      "id": "policy-7c545a4a9a254011",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DEPENDENCY_ALLOWED",
+        "message_id": "msg-e925d3c86b7d4c42",
+        "stage": "dependency"
+      },
+      "timestamp": "2026-11-06T16:15:58.448Z"
+    },
+    {
+      "seq": 446,
+      "id": "policy-10db9daad4e74cb3",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "CONCEPT_SUPPORTED",
+        "message_id": "msg-e925d3c86b7d4c42",
+        "stage": "grounding"
+      },
+      "timestamp": "2026-11-06T16:15:58.448Z"
+    },
+    {
+      "seq": 447,
+      "id": "policy-7583560a58164df7",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "SAFE_CLOSED_GRAMMAR",
+        "message_id": "msg-e925d3c86b7d4c42",
+        "stage": "safety"
+      },
+      "timestamp": "2026-11-06T16:15:58.450Z"
+    },
+    {
+      "seq": 448,
+      "id": "msg-e925d3c86b7d4c42",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "message",
+      "data": {
+        "envelope": {
+          "actor": "PA",
+          "attempt": 0,
+          "message_id": "msg-e925d3c86b7d4c42",
+          "parent_message_id": null,
+          "policy_version": "acl-1",
+          "purpose": "propose",
+          "recipient": "TA",
+          "round": 1,
+          "run_id": "run-9add07adf1334e46",
+          "run_type": "CANDIDATE",
+          "schema_version": "2",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S4"
+          ],
+          "source_version": "annex-1",
+          "turn": 1
+        },
+        "response": {
+          "claims": [
+            {
+              "label": "SOURCE",
+              "source_ids": [
+                "S1"
+              ],
+              "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading."
+            },
+            {
+              "label": "ASSUMPTION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+            }
+          ],
+          "contribution": {
+            "actor": "PA",
+            "benefit": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established."
+            },
+            "claim": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+            },
+            "dependency_features": {},
+            "depends_on": [],
+            "features": [],
+            "material": false
+          },
+          "operation": "propose",
+          "recipient": "TA"
+        }
+      },
+      "timestamp": "2026-11-06T16:15:58.451Z"
+    },
+    {
+      "seq": 449,
+      "id": "inv-856356e458e4447b",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "invocation",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "PA",
+            "attempt": 0,
+            "message_id": "msg-e925d3c86b7d4c42",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "propose",
+            "recipient": "TA",
+            "round": 1,
+            "run_id": "run-9add07adf1334e46",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "source_version": "annex-1",
+            "turn": 1
+          },
+          "incoming": [],
+          "prior": [],
+          "profile": {
+            "actor": "PA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical enrolment or funding benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S1",
+              "source_id": "S1",
+              "source_type": "ANNEX_B",
+              "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S2",
+              "source_id": "S2",
+              "source_type": "ANNEX_B",
+              "text": "Almost $600 for basic cleaning training? How is that worth it?",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S4",
+              "source_id": "S4",
+              "source_type": "ANNEX_B",
+              "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [],
+            "fixture_version": "scripts-2",
+            "mode": "insufficient",
+            "policy_version": "acl-1",
+            "roles": [
+              "PA",
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "insufficient",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "version": "1"
+          }
+        },
+        "error_code": "",
+        "invocation_id": "inv-856356e458e4447b",
+        "outcome": "SCHEMA_VALID",
+        "output_bytes": 931,
+        "output_digest": "c6f6803070ec78801e2b92fcc0a0c9c222ee8568341a553fa45823ba49e2996a",
+        "raw_output": "{\"operation\": \"propose\", \"recipient\": \"TA\", \"claims\": [{\"label\": \"SOURCE\", \"text\": \"I signed up for a short course, then found out it\\u2019s only available as part of a longer diploma. Feels misleading.\", \"source_ids\": [\"S1\"]}, {\"label\": \"ASSUMPTION\", \"text\": \"Role incentives and structural dependencies are scripted modelling assumptions.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}], \"contribution\": {\"actor\": \"PA\", \"claim\": {\"label\": \"SIMULATION\", \"text\": \"Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}, \"benefit\": {\"label\": \"SIMULATION\", \"text\": \"Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}, \"features\": [], \"depends_on\": [], \"dependency_features\": {}, \"material\": false}}",
+        "schema_version": "2",
+        "script_version": "scripts-2",
+        "semantic_output_digest": "c6f6803070ec78801e2b92fcc0a0c9c222ee8568341a553fa45823ba49e2996a"
+      },
+      "timestamp": "2026-11-06T16:15:58.452Z"
+    },
+    {
+      "seq": 450,
+      "id": "policy-f63ce5404b044b01",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DISPATCH_ALLOWED",
+        "message_id": "msg-33a72d2a952d4fd8",
+        "stage": "dispatch"
+      },
+      "timestamp": "2026-11-06T16:15:58.453Z"
+    },
+    {
+      "seq": 451,
+      "id": "invocation_started-f1ff8d6f1ab24f0d",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "invocation_started",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "TA",
+            "attempt": 0,
+            "message_id": "msg-33a72d2a952d4fd8",
+            "parent_message_id": "msg-e925d3c86b7d4c42",
+            "policy_version": "acl-1",
+            "purpose": "reply",
+            "recipient": "ORCH",
+            "round": 1,
+            "run_id": "run-9add07adf1334e46",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "source_version": "annex-1",
+            "turn": 2
+          },
+          "incoming": [
+            {
+              "envelope": {
+                "actor": "PA",
+                "attempt": 0,
+                "message_id": "msg-e925d3c86b7d4c42",
+                "parent_message_id": null,
+                "policy_version": "acl-1",
+                "purpose": "propose",
+                "recipient": "TA",
+                "round": 1,
+                "run_id": "run-9add07adf1334e46",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "S1",
+                  "S2",
+                  "S4"
+                ],
+                "source_version": "annex-1",
+                "turn": 1
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "S1"
+                    ],
+                    "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading."
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "PA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [],
+                  "material": false
+                },
+                "operation": "propose",
+                "recipient": "TA"
+              }
+            }
+          ],
+          "prior": [],
+          "profile": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S1",
+              "source_id": "S1",
+              "source_type": "ANNEX_B",
+              "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S2",
+              "source_id": "S2",
+              "source_type": "ANNEX_B",
+              "text": "Almost $600 for basic cleaning training? How is that worth it?",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S4",
+              "source_id": "S4",
+              "source_type": "ANNEX_B",
+              "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [],
+            "fixture_version": "scripts-2",
+            "mode": "insufficient",
+            "policy_version": "acl-1",
+            "roles": [
+              "PA",
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "insufficient",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "version": "1"
+          }
+        },
+        "invocation_id": "inv-33b37b5a3e44411f",
+        "schema_version": "2",
+        "script_version": "scripts-2"
+      },
+      "timestamp": "2026-11-06T16:15:58.454Z"
+    },
+    {
+      "seq": 452,
+      "id": "usage-6c8337eeec82429e",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "usage",
+      "data": {
+        "attempt": 0,
+        "elapsed_seconds": 0.015035190000162402,
+        "invocation_id": "inv-33b37b5a3e44411f",
+        "message_id": "msg-33a72d2a952d4fd8",
+        "scopes": [
+          "run-9add07adf1334e46"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.454Z"
+    },
+    {
+      "seq": 453,
+      "id": "policy-36a7a84cf2b34203",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "RECEIPT_ALLOWED",
+        "message_id": "msg-33a72d2a952d4fd8",
+        "stage": "receipt"
+      },
+      "timestamp": "2026-11-06T16:15:58.456Z"
+    },
+    {
+      "seq": 454,
+      "id": "policy-4267ba250fee4aae",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DEPENDENCY_ALLOWED",
+        "message_id": "msg-33a72d2a952d4fd8",
+        "stage": "dependency"
+      },
+      "timestamp": "2026-11-06T16:15:58.457Z"
+    },
+    {
+      "seq": 455,
+      "id": "policy-fe7d8759453946a1",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "CONCEPT_SUPPORTED",
+        "message_id": "msg-33a72d2a952d4fd8",
+        "stage": "grounding"
+      },
+      "timestamp": "2026-11-06T16:15:58.458Z"
+    },
+    {
+      "seq": 456,
+      "id": "policy-b627df77bd074280",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "SAFE_CLOSED_GRAMMAR",
+        "message_id": "msg-33a72d2a952d4fd8",
+        "stage": "safety"
+      },
+      "timestamp": "2026-11-06T16:15:58.459Z"
+    },
+    {
+      "seq": 457,
+      "id": "msg-33a72d2a952d4fd8",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "message",
+      "data": {
+        "envelope": {
+          "actor": "TA",
+          "attempt": 0,
+          "message_id": "msg-33a72d2a952d4fd8",
+          "parent_message_id": "msg-e925d3c86b7d4c42",
+          "policy_version": "acl-1",
+          "purpose": "reply",
+          "recipient": "ORCH",
+          "round": 1,
+          "run_id": "run-9add07adf1334e46",
+          "run_type": "CANDIDATE",
+          "schema_version": "2",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S4"
+          ],
+          "source_version": "annex-1",
+          "turn": 2
+        },
+        "response": {
+          "claims": [
+            {
+              "label": "SOURCE",
+              "source_ids": [
+                "S1"
+              ],
+              "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading."
+            },
+            {
+              "label": "ASSUMPTION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+            }
+          ],
+          "contribution": {
+            "actor": "TA",
+            "benefit": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning no supported risk contribution; no realised benefit is established."
+            },
+            "claim": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Hypothetical TA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+            },
+            "dependency_features": {},
+            "depends_on": [],
+            "features": [],
+            "material": false
+          },
+          "operation": "reply",
+          "recipient": "ORCH"
+        }
+      },
+      "timestamp": "2026-11-06T16:15:58.460Z"
+    },
+    {
+      "seq": 458,
+      "id": "inv-33b37b5a3e44411f",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "invocation",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "TA",
+            "attempt": 0,
+            "message_id": "msg-33a72d2a952d4fd8",
+            "parent_message_id": "msg-e925d3c86b7d4c42",
+            "policy_version": "acl-1",
+            "purpose": "reply",
+            "recipient": "ORCH",
+            "round": 1,
+            "run_id": "run-9add07adf1334e46",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "source_version": "annex-1",
+            "turn": 2
+          },
+          "incoming": [
+            {
+              "envelope": {
+                "actor": "PA",
+                "attempt": 0,
+                "message_id": "msg-e925d3c86b7d4c42",
+                "parent_message_id": null,
+                "policy_version": "acl-1",
+                "purpose": "propose",
+                "recipient": "TA",
+                "round": 1,
+                "run_id": "run-9add07adf1334e46",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "S1",
+                  "S2",
+                  "S4"
+                ],
+                "source_version": "annex-1",
+                "turn": 1
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "S1"
+                    ],
+                    "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading."
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "PA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [],
+                  "material": false
+                },
+                "operation": "propose",
+                "recipient": "TA"
+              }
+            }
+          ],
+          "prior": [],
+          "profile": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S1",
+              "source_id": "S1",
+              "source_type": "ANNEX_B",
+              "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S2",
+              "source_id": "S2",
+              "source_type": "ANNEX_B",
+              "text": "Almost $600 for basic cleaning training? How is that worth it?",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S4",
+              "source_id": "S4",
+              "source_type": "ANNEX_B",
+              "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [],
+            "fixture_version": "scripts-2",
+            "mode": "insufficient",
+            "policy_version": "acl-1",
+            "roles": [
+              "PA",
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "insufficient",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "version": "1"
+          }
+        },
+        "error_code": "",
+        "invocation_id": "inv-33b37b5a3e44411f",
+        "outcome": "SCHEMA_VALID",
+        "output_bytes": 948,
+        "output_digest": "4fa19757480dda0d2064dd2f7f203903d0ce090647c73242bb8ad8dfd8950bdb",
+        "raw_output": "{\"operation\": \"reply\", \"recipient\": \"ORCH\", \"claims\": [{\"label\": \"SOURCE\", \"text\": \"I signed up for a short course, then found out it\\u2019s only available as part of a longer diploma. Feels misleading.\", \"source_ids\": [\"S1\"]}, {\"label\": \"ASSUMPTION\", \"text\": \"Role incentives and structural dependencies are scripted modelling assumptions.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}], \"contribution\": {\"actor\": \"TA\", \"claim\": {\"label\": \"SIMULATION\", \"text\": \"Hypothetical TA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}, \"benefit\": {\"label\": \"SIMULATION\", \"text\": \"Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning no supported risk contribution; no realised benefit is established.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}, \"features\": [], \"depends_on\": [], \"dependency_features\": {}, \"material\": false}}",
+        "schema_version": "2",
+        "script_version": "scripts-2",
+        "semantic_output_digest": "4fa19757480dda0d2064dd2f7f203903d0ce090647c73242bb8ad8dfd8950bdb"
+      },
+      "timestamp": "2026-11-06T16:15:58.461Z"
+    },
+    {
+      "seq": 459,
+      "id": "policy-26a572891dce4298",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DISPATCH_ALLOWED",
+        "message_id": "msg-26dbb6f03e9f48f4",
+        "stage": "dispatch"
+      },
+      "timestamp": "2026-11-06T16:15:58.462Z"
+    },
+    {
+      "seq": 460,
+      "id": "invocation_started-2948aac1d86e4dad",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "invocation_started",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "PA",
+            "attempt": 0,
+            "message_id": "msg-26dbb6f03e9f48f4",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "propose",
+            "recipient": "TA",
+            "round": 2,
+            "run_id": "run-9add07adf1334e46",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "source_version": "annex-1",
+            "turn": 3
+          },
+          "incoming": [],
+          "prior": [
+            {
+              "envelope": {
+                "actor": "PA",
+                "attempt": 0,
+                "message_id": "msg-e925d3c86b7d4c42",
+                "parent_message_id": null,
+                "policy_version": "acl-1",
+                "purpose": "propose",
+                "recipient": "TA",
+                "round": 1,
+                "run_id": "run-9add07adf1334e46",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "S1",
+                  "S2",
+                  "S4"
+                ],
+                "source_version": "annex-1",
+                "turn": 1
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "S1"
+                    ],
+                    "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading."
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "PA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [],
+                  "material": false
+                },
+                "operation": "propose",
+                "recipient": "TA"
+              }
+            }
+          ],
+          "profile": {
+            "actor": "PA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical enrolment or funding benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S1",
+              "source_id": "S1",
+              "source_type": "ANNEX_B",
+              "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S2",
+              "source_id": "S2",
+              "source_type": "ANNEX_B",
+              "text": "Almost $600 for basic cleaning training? How is that worth it?",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S4",
+              "source_id": "S4",
+              "source_type": "ANNEX_B",
+              "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [],
+            "fixture_version": "scripts-2",
+            "mode": "insufficient",
+            "policy_version": "acl-1",
+            "roles": [
+              "PA",
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "insufficient",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "version": "1"
+          }
+        },
+        "invocation_id": "inv-c6151ded306542c6",
+        "schema_version": "2",
+        "script_version": "scripts-2"
+      },
+      "timestamp": "2026-11-06T16:15:58.463Z"
+    },
+    {
+      "seq": 461,
+      "id": "usage-79e3c9b4f0a14490",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "usage",
+      "data": {
+        "attempt": 0,
+        "elapsed_seconds": 0.024024972000006528,
+        "invocation_id": "inv-c6151ded306542c6",
+        "message_id": "msg-26dbb6f03e9f48f4",
+        "scopes": [
+          "run-9add07adf1334e46"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.463Z"
+    },
+    {
+      "seq": 462,
+      "id": "policy-f2c996438cc34d50",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "RECEIPT_ALLOWED",
+        "message_id": "msg-26dbb6f03e9f48f4",
+        "stage": "receipt"
+      },
+      "timestamp": "2026-11-06T16:15:58.465Z"
+    },
+    {
+      "seq": 463,
+      "id": "policy-c41fa45d20224960",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DEPENDENCY_ALLOWED",
+        "message_id": "msg-26dbb6f03e9f48f4",
+        "stage": "dependency"
+      },
+      "timestamp": "2026-11-06T16:15:58.466Z"
+    },
+    {
+      "seq": 464,
+      "id": "policy-b7603f7cfc524db2",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "CONCEPT_SUPPORTED",
+        "message_id": "msg-26dbb6f03e9f48f4",
+        "stage": "grounding"
+      },
+      "timestamp": "2026-11-06T16:15:58.467Z"
+    },
+    {
+      "seq": 465,
+      "id": "policy-46cbc6c555ec481a",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "SAFE_CLOSED_GRAMMAR",
+        "message_id": "msg-26dbb6f03e9f48f4",
+        "stage": "safety"
+      },
+      "timestamp": "2026-11-06T16:15:58.468Z"
+    },
+    {
+      "seq": 466,
+      "id": "msg-26dbb6f03e9f48f4",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "message",
+      "data": {
+        "envelope": {
+          "actor": "PA",
+          "attempt": 0,
+          "message_id": "msg-26dbb6f03e9f48f4",
+          "parent_message_id": null,
+          "policy_version": "acl-1",
+          "purpose": "propose",
+          "recipient": "TA",
+          "round": 2,
+          "run_id": "run-9add07adf1334e46",
+          "run_type": "CANDIDATE",
+          "schema_version": "2",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S4"
+          ],
+          "source_version": "annex-1",
+          "turn": 3
+        },
+        "response": {
+          "claims": [
+            {
+              "label": "SOURCE",
+              "source_ids": [
+                "S4"
+              ],
+              "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding."
+            },
+            {
+              "label": "ASSUMPTION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+            }
+          ],
+          "contribution": {
+            "actor": "PA",
+            "benefit": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established."
+            },
+            "claim": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+            },
+            "dependency_features": {},
+            "depends_on": [],
+            "features": [],
+            "material": false
+          },
+          "operation": "propose",
+          "recipient": "TA"
+        }
+      },
+      "timestamp": "2026-11-06T16:15:58.469Z"
+    },
+    {
+      "seq": 467,
+      "id": "inv-c6151ded306542c6",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "invocation",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "PA",
+            "attempt": 0,
+            "message_id": "msg-26dbb6f03e9f48f4",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "propose",
+            "recipient": "TA",
+            "round": 2,
+            "run_id": "run-9add07adf1334e46",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "source_version": "annex-1",
+            "turn": 3
+          },
+          "incoming": [],
+          "prior": [
+            {
+              "envelope": {
+                "actor": "PA",
+                "attempt": 0,
+                "message_id": "msg-e925d3c86b7d4c42",
+                "parent_message_id": null,
+                "policy_version": "acl-1",
+                "purpose": "propose",
+                "recipient": "TA",
+                "round": 1,
+                "run_id": "run-9add07adf1334e46",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "S1",
+                  "S2",
+                  "S4"
+                ],
+                "source_version": "annex-1",
+                "turn": 1
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "S1"
+                    ],
+                    "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading."
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "PA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [],
+                  "material": false
+                },
+                "operation": "propose",
+                "recipient": "TA"
+              }
+            }
+          ],
+          "profile": {
+            "actor": "PA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical enrolment or funding benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S1",
+              "source_id": "S1",
+              "source_type": "ANNEX_B",
+              "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S2",
+              "source_id": "S2",
+              "source_type": "ANNEX_B",
+              "text": "Almost $600 for basic cleaning training? How is that worth it?",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S4",
+              "source_id": "S4",
+              "source_type": "ANNEX_B",
+              "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [],
+            "fixture_version": "scripts-2",
+            "mode": "insufficient",
+            "policy_version": "acl-1",
+            "roles": [
+              "PA",
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "insufficient",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "version": "1"
+          }
+        },
+        "error_code": "",
+        "invocation_id": "inv-c6151ded306542c6",
+        "outcome": "SCHEMA_VALID",
+        "output_bytes": 904,
+        "output_digest": "b7a10f00eed96652e13d3557ea0ce52cdcb474859baae19a8299545c9aa02b74",
+        "raw_output": "{\"operation\": \"propose\", \"recipient\": \"TA\", \"claims\": [{\"label\": \"SOURCE\", \"text\": \"Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding.\", \"source_ids\": [\"S4\"]}, {\"label\": \"ASSUMPTION\", \"text\": \"Role incentives and structural dependencies are scripted modelling assumptions.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}], \"contribution\": {\"actor\": \"PA\", \"claim\": {\"label\": \"SIMULATION\", \"text\": \"Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}, \"benefit\": {\"label\": \"SIMULATION\", \"text\": \"Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}, \"features\": [], \"depends_on\": [], \"dependency_features\": {}, \"material\": false}}",
+        "schema_version": "2",
+        "script_version": "scripts-2",
+        "semantic_output_digest": "b7a10f00eed96652e13d3557ea0ce52cdcb474859baae19a8299545c9aa02b74"
+      },
+      "timestamp": "2026-11-06T16:15:58.470Z"
+    },
+    {
+      "seq": 468,
+      "id": "policy-e928fb8592de4523",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DISPATCH_ALLOWED",
+        "message_id": "msg-b02f210d991e4b61",
+        "stage": "dispatch"
+      },
+      "timestamp": "2026-11-06T16:15:58.471Z"
+    },
+    {
+      "seq": 469,
+      "id": "invocation_started-7490a1495a7c46a7",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "invocation_started",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "TA",
+            "attempt": 0,
+            "message_id": "msg-b02f210d991e4b61",
+            "parent_message_id": "msg-26dbb6f03e9f48f4",
+            "policy_version": "acl-1",
+            "purpose": "reply",
+            "recipient": "ORCH",
+            "round": 2,
+            "run_id": "run-9add07adf1334e46",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "source_version": "annex-1",
+            "turn": 4
+          },
+          "incoming": [
+            {
+              "envelope": {
+                "actor": "PA",
+                "attempt": 0,
+                "message_id": "msg-e925d3c86b7d4c42",
+                "parent_message_id": null,
+                "policy_version": "acl-1",
+                "purpose": "propose",
+                "recipient": "TA",
+                "round": 1,
+                "run_id": "run-9add07adf1334e46",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "S1",
+                  "S2",
+                  "S4"
+                ],
+                "source_version": "annex-1",
+                "turn": 1
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "S1"
+                    ],
+                    "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading."
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "PA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [],
+                  "material": false
+                },
+                "operation": "propose",
+                "recipient": "TA"
+              }
+            },
+            {
+              "envelope": {
+                "actor": "PA",
+                "attempt": 0,
+                "message_id": "msg-26dbb6f03e9f48f4",
+                "parent_message_id": null,
+                "policy_version": "acl-1",
+                "purpose": "propose",
+                "recipient": "TA",
+                "round": 2,
+                "run_id": "run-9add07adf1334e46",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "S1",
+                  "S2",
+                  "S4"
+                ],
+                "source_version": "annex-1",
+                "turn": 3
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "S4"
+                    ],
+                    "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding."
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "PA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [],
+                  "material": false
+                },
+                "operation": "propose",
+                "recipient": "TA"
+              }
+            }
+          ],
+          "prior": [
+            {
+              "envelope": {
+                "actor": "TA",
+                "attempt": 0,
+                "message_id": "msg-33a72d2a952d4fd8",
+                "parent_message_id": "msg-e925d3c86b7d4c42",
+                "policy_version": "acl-1",
+                "purpose": "reply",
+                "recipient": "ORCH",
+                "round": 1,
+                "run_id": "run-9add07adf1334e46",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "S1",
+                  "S2",
+                  "S4"
+                ],
+                "source_version": "annex-1",
+                "turn": 2
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "S1"
+                    ],
+                    "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading."
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "TA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning no supported risk contribution; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothetical TA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [],
+                  "material": false
+                },
+                "operation": "reply",
+                "recipient": "ORCH"
+              }
+            }
+          ],
+          "profile": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S1",
+              "source_id": "S1",
+              "source_type": "ANNEX_B",
+              "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S2",
+              "source_id": "S2",
+              "source_type": "ANNEX_B",
+              "text": "Almost $600 for basic cleaning training? How is that worth it?",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S4",
+              "source_id": "S4",
+              "source_type": "ANNEX_B",
+              "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [],
+            "fixture_version": "scripts-2",
+            "mode": "insufficient",
+            "policy_version": "acl-1",
+            "roles": [
+              "PA",
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "insufficient",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "version": "1"
+          }
+        },
+        "invocation_id": "inv-14c1e06cbb6f4715",
+        "schema_version": "2",
+        "script_version": "scripts-2"
+      },
+      "timestamp": "2026-11-06T16:15:58.472Z"
+    },
+    {
+      "seq": 470,
+      "id": "usage-34738e5cd12142ef",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "usage",
+      "data": {
+        "attempt": 0,
+        "elapsed_seconds": 0.03287992999958078,
+        "invocation_id": "inv-14c1e06cbb6f4715",
+        "message_id": "msg-b02f210d991e4b61",
+        "scopes": [
+          "run-9add07adf1334e46"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.472Z"
+    },
+    {
+      "seq": 471,
+      "id": "policy-e4d5981a5f454588",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "RECEIPT_ALLOWED",
+        "message_id": "msg-b02f210d991e4b61",
+        "stage": "receipt"
+      },
+      "timestamp": "2026-11-06T16:15:58.475Z"
+    },
+    {
+      "seq": 472,
+      "id": "policy-6568e88e03464868",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DEPENDENCY_ALLOWED",
+        "message_id": "msg-b02f210d991e4b61",
+        "stage": "dependency"
+      },
+      "timestamp": "2026-11-06T16:15:58.476Z"
+    },
+    {
+      "seq": 473,
+      "id": "policy-a347a0640c7d4b2f",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "CONCEPT_SUPPORTED",
+        "message_id": "msg-b02f210d991e4b61",
+        "stage": "grounding"
+      },
+      "timestamp": "2026-11-06T16:15:58.477Z"
+    },
+    {
+      "seq": 474,
+      "id": "policy-4b245d2e7eca4365",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "SAFE_CLOSED_GRAMMAR",
+        "message_id": "msg-b02f210d991e4b61",
+        "stage": "safety"
+      },
+      "timestamp": "2026-11-06T16:15:58.478Z"
+    },
+    {
+      "seq": 475,
+      "id": "msg-b02f210d991e4b61",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "message",
+      "data": {
+        "envelope": {
+          "actor": "TA",
+          "attempt": 0,
+          "message_id": "msg-b02f210d991e4b61",
+          "parent_message_id": "msg-26dbb6f03e9f48f4",
+          "policy_version": "acl-1",
+          "purpose": "reply",
+          "recipient": "ORCH",
+          "round": 2,
+          "run_id": "run-9add07adf1334e46",
+          "run_type": "CANDIDATE",
+          "schema_version": "2",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S4"
+          ],
+          "source_version": "annex-1",
+          "turn": 4
+        },
+        "response": {
+          "claims": [
+            {
+              "label": "SOURCE",
+              "source_ids": [
+                "S4"
+              ],
+              "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding."
+            },
+            {
+              "label": "ASSUMPTION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+            }
+          ],
+          "contribution": {
+            "actor": "TA",
+            "benefit": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning no supported risk contribution; no realised benefit is established."
+            },
+            "claim": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "text": "Hypothetical TA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+            },
+            "dependency_features": {},
+            "depends_on": [],
+            "features": [],
+            "material": false
+          },
+          "operation": "reply",
+          "recipient": "ORCH"
+        }
+      },
+      "timestamp": "2026-11-06T16:15:58.479Z"
+    },
+    {
+      "seq": 476,
+      "id": "inv-14c1e06cbb6f4715",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "invocation",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "TA",
+            "attempt": 0,
+            "message_id": "msg-b02f210d991e4b61",
+            "parent_message_id": "msg-26dbb6f03e9f48f4",
+            "policy_version": "acl-1",
+            "purpose": "reply",
+            "recipient": "ORCH",
+            "round": 2,
+            "run_id": "run-9add07adf1334e46",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "source_version": "annex-1",
+            "turn": 4
+          },
+          "incoming": [
+            {
+              "envelope": {
+                "actor": "PA",
+                "attempt": 0,
+                "message_id": "msg-e925d3c86b7d4c42",
+                "parent_message_id": null,
+                "policy_version": "acl-1",
+                "purpose": "propose",
+                "recipient": "TA",
+                "round": 1,
+                "run_id": "run-9add07adf1334e46",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "S1",
+                  "S2",
+                  "S4"
+                ],
+                "source_version": "annex-1",
+                "turn": 1
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "S1"
+                    ],
+                    "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading."
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "PA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [],
+                  "material": false
+                },
+                "operation": "propose",
+                "recipient": "TA"
+              }
+            },
+            {
+              "envelope": {
+                "actor": "PA",
+                "attempt": 0,
+                "message_id": "msg-26dbb6f03e9f48f4",
+                "parent_message_id": null,
+                "policy_version": "acl-1",
+                "purpose": "propose",
+                "recipient": "TA",
+                "round": 2,
+                "run_id": "run-9add07adf1334e46",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "S1",
+                  "S2",
+                  "S4"
+                ],
+                "source_version": "annex-1",
+                "turn": 3
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "S4"
+                    ],
+                    "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding."
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "PA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning no supported risk contribution; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothetical PA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [],
+                  "material": false
+                },
+                "operation": "propose",
+                "recipient": "TA"
+              }
+            }
+          ],
+          "prior": [
+            {
+              "envelope": {
+                "actor": "TA",
+                "attempt": 0,
+                "message_id": "msg-33a72d2a952d4fd8",
+                "parent_message_id": "msg-e925d3c86b7d4c42",
+                "policy_version": "acl-1",
+                "purpose": "reply",
+                "recipient": "ORCH",
+                "round": 1,
+                "run_id": "run-9add07adf1334e46",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "S1",
+                  "S2",
+                  "S4"
+                ],
+                "source_version": "annex-1",
+                "turn": 2
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "S1"
+                    ],
+                    "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading."
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "TA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning no supported risk contribution; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "S1",
+                      "S2",
+                      "S4"
+                    ],
+                    "text": "Hypothetical TA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [],
+                  "material": false
+                },
+                "operation": "reply",
+                "recipient": "ORCH"
+              }
+            }
+          ],
+          "profile": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S1",
+              "source_id": "S1",
+              "source_type": "ANNEX_B",
+              "text": "I signed up for a short course, then found out it’s only available as part of a longer diploma. Feels misleading.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S2",
+              "source_id": "S2",
+              "source_type": "ANNEX_B",
+              "text": "Almost $600 for basic cleaning training? How is that worth it?",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S4",
+              "source_id": "S4",
+              "source_type": "ANNEX_B",
+              "text": "Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [],
+            "fixture_version": "scripts-2",
+            "mode": "insufficient",
+            "policy_version": "acl-1",
+            "roles": [
+              "PA",
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "insufficient",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "S1",
+              "S2",
+              "S4"
+            ],
+            "version": "1"
+          }
+        },
+        "error_code": "",
+        "invocation_id": "inv-14c1e06cbb6f4715",
+        "outcome": "SCHEMA_VALID",
+        "output_bytes": 921,
+        "output_digest": "15cfad0830262623ec3e0d9d333037645a5e3c0209cdbc4325373c32ccf7c26c",
+        "raw_output": "{\"operation\": \"reply\", \"recipient\": \"ORCH\", \"claims\": [{\"label\": \"SOURCE\", \"text\": \"Nobody in my class ever fails. Feels like providers just pass everyone to keep the funding.\", \"source_ids\": [\"S4\"]}, {\"label\": \"ASSUMPTION\", \"text\": \"Role incentives and structural dependencies are scripted modelling assumptions.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}], \"contribution\": {\"actor\": \"TA\", \"claim\": {\"label\": \"SIMULATION\", \"text\": \"Hypothetical TA contribution: no supported risk contribution. Role allocation is a modelling assumption, not observed conduct.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}, \"benefit\": {\"label\": \"SIMULATION\", \"text\": \"Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning no supported risk contribution; no realised benefit is established.\", \"source_ids\": [\"S1\", \"S2\", \"S4\"]}, \"features\": [], \"depends_on\": [], \"dependency_features\": {}, \"material\": false}}",
+        "schema_version": "2",
+        "script_version": "scripts-2",
+        "semantic_output_digest": "15cfad0830262623ec3e0d9d333037645a5e3c0209cdbc4325373c32ccf7c26c"
+      },
+      "timestamp": "2026-11-06T16:15:58.480Z"
+    },
+    {
+      "seq": 477,
+      "id": "eval-0b236b028e734d29",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "evaluation",
+      "data": {
+        "checks": [
+          "nonempty_transcript:True",
+          "bound_identity:True",
+          "ancestry_same_run:True",
+          "scoped_references:True",
+          "participation_matches_contributions:True",
+          "source_support:True",
+          "benign_control:True",
+          "valid_material_graph:True"
+        ],
+        "evaluation_id": "eval-0b236b028e734d29",
+        "fixture_id": "candidate_trace_v2",
+        "passed": true,
+        "trace_ids": [
+          "msg-e925d3c86b7d4c42",
+          "msg-33a72d2a952d4fd8",
+          "msg-26dbb6f03e9f48f4",
+          "msg-b02f210d991e4b61"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.482Z"
+    },
+    {
+      "seq": 478,
+      "id": "no_pattern-95f9cb0596674abd",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "no_pattern",
+      "data": {
+        "reason": "Insufficient attributable contributions; no supported pattern."
+      },
+      "timestamp": "2026-11-06T16:15:58.483Z"
+    },
+    {
+      "seq": 479,
+      "id": "state_transition-5d774a5957ff40af",
+      "run_id": "run-9add07adf1334e46",
+      "kind": "state_transition",
+      "data": {
+        "status": "NO_PATTERN"
+      },
+      "timestamp": "2026-11-06T16:15:58.484Z"
+    }
+  ],
+  "budgets": [
+    {
+      "scope": "run-9add07adf1334e46",
+      "used": 4,
+      "cap": 48
+    }
+  ],
+  "decisions": [],
+  "annotations": [],
+  "children": []
+}

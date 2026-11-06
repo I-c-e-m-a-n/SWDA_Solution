@@ -1,0 +1,58 @@
+---
+title: A2 — SWDA MLOps | CI, gated CT / CD and batch recovery
+---
+flowchart TB
+  subgraph DEV[Development — CI]
+    direction TB
+    GIT["Git commit: code, tests, feature / prompt definitions"]
+    CI["CI: format, static / dependency scans, unit / integration tests"]
+    CPASS{"CI passes?"}
+    FIX["Reject build, record failure; fix + recommit"]
+    GIT --> CI --> CPASS
+    CPASS -->|"no"| FIX
+  end
+
+  subgraph STAGE[Staging — CT + release evidence]
+    direction TB
+    STAGED["Stage tested code + reproducible environment"]
+    CT["CT: versioned data, code, features, seeds and config"]
+    TRACK["MLflow: experiments, evaluation, artefacts / prompt versions"]
+    CAND["Unity Catalog: candidate model version"]
+    CHECK{"Baseline quality, fairness, reproducibility, security, operability and cost?"}
+    HUMAN{"Authorised approval if policy requires it?"}
+    DENY["Reject candidate / retain production baseline"]
+    STAGED --> CT --> TRACK --> CAND --> CHECK
+    CHECK -->|"fail"| DENY
+    CHECK -->|"pass"| HUMAN
+    HUMAN -->|"withheld"| DENY
+  end
+
+  subgraph PROD[Production — controlled CD + AIOps]
+    direction TB
+    CD["CD: approved model, code, rules, features + config pinned"]
+    RUN["Lakeflow: hourly batch / watermark + run ID"]
+    OUT["Idempotent MERGE / run manifest + downstream delivery"]
+    MON["Monitor missed runs, duration, quality, drift, errors, cost"]
+    INCIDENT{"Alert, degradation or drift?"}
+    TRIAGE["Incident triage, containment, audit and recovery"]
+    RESTORE["Rollback approved compatible release"]
+    REPLAY["Idempotent replay / deduplicated re-delivery"]
+    PROPOSE["Controlled retraining proposal"]
+    CD --> RUN --> OUT --> MON --> INCIDENT
+    INCIDENT -->|"incident"| TRIAGE --> RESTORE --> REPLAY
+    INCIDENT -->|"drift / outcomes"| PROPOSE
+  end
+
+  CPASS -->|"yes"| STAGED
+  HUMAN -->|"approved or policy-exempt"| CD
+  PROPOSE -.->|"new candidate: NO auto-promotion"| CT
+
+  LEG["Legend: solid = execution / promotion | dotted = corrective feedback | human gate precedes production"]
+  classDef step fill:#EAF2F7,stroke:#64829B,color:#17354B
+  classDef gate fill:#F8F0E4,stroke:#A48758,color:#523C24
+  classDef failure fill:#F9ECEB,stroke:#B57370,color:#5F2D2D
+  classDef legend fill:#FFFFFF,stroke:#A5B0BF,color:#495566,font-size:11px
+  class GIT,CI,STAGED,CT,TRACK,CAND,CD,RUN,OUT,MON,PROPOSE,REPLAY step
+  class CPASS,CHECK,HUMAN,INCIDENT gate
+  class FIX,DENY,TRIAGE,RESTORE failure
+  class LEG legend

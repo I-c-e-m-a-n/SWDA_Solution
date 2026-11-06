@@ -1,0 +1,315 @@
+{
+  "run": {
+    "id": "run-e71f4dd9204b4f82",
+    "kind": "CANDIDATE",
+    "parent": null,
+    "status": "NO_PATTERN",
+    "version": 1,
+    "metadata": "{\"depth\": 0, \"parent_run_id\": null, \"removed_actor\": null, \"run_id\": \"run-e71f4dd9204b4f82\", \"run_type\": \"CANDIDATE\", \"scenario\": {\"fault\": \"\", \"features\": [\"bundling_value_hypothesis\", \"price_value_hypothesis\"], \"fixture_version\": \"scripts-2\", \"mode\": \"dependency\", \"policy_version\": \"acl-1\", \"roles\": [\"PA\", \"TA\"], \"rounds\": 2, \"scenario_id\": \"new_relative\", \"seed\": 17, \"source_version\": \"annex-1\", \"sources\": [\"S1\", \"S2\"], \"version\": \"1\"}, \"status\": \"RUNNING\", \"version\": 0}"
+  },
+  "records": [
+    {
+      "seq": 480,
+      "id": "run_started-c558f3c5f5534c2a",
+      "run_id": "run-e71f4dd9204b4f82",
+      "kind": "run_started",
+      "data": {
+        "depth": 0,
+        "parent_run_id": null,
+        "removed_actor": null,
+        "run_id": "run-e71f4dd9204b4f82",
+        "run_type": "CANDIDATE",
+        "scenario": {
+          "fault": "",
+          "features": [
+            "bundling_value_hypothesis",
+            "price_value_hypothesis"
+          ],
+          "fixture_version": "scripts-2",
+          "mode": "dependency",
+          "policy_version": "acl-1",
+          "roles": [
+            "PA",
+            "TA"
+          ],
+          "rounds": 2,
+          "scenario_id": "new_relative",
+          "seed": 17,
+          "source_version": "annex-1",
+          "sources": [
+            "S1",
+            "S2"
+          ],
+          "version": "1"
+        },
+        "status": "RUNNING",
+        "version": 0
+      },
+      "timestamp": "2026-11-06T16:15:58.489Z"
+    },
+    {
+      "seq": 481,
+      "id": "snapshots-75412d6db3e44a01",
+      "run_id": "run-e71f4dd9204b4f82",
+      "kind": "snapshots",
+      "data": {
+        "adapter_version": "scripts-2",
+        "code_revision": "sha256:5875c19de7deb03d0999f68af32a931d2706ccc28e0b3c34caf71e7218b10edc",
+        "code_version": "1.1.0",
+        "grounding_version": "annex-concepts-1",
+        "limits": {
+          "cards": 3,
+          "cf": 3,
+          "lineage_calls": 48,
+          "retries": 2,
+          "rounds": 4,
+          "seconds": 120.0,
+          "suite_calls": 60,
+          "test_calls": 12,
+          "test_fixtures": 12,
+          "turns": 12
+        },
+        "policy": {
+          "EA": {
+            "actor": "EA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical employment/training benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "PA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-06",
+              "MO-08",
+              "S5"
+            ]
+          },
+          "PA": {
+            "actor": "PA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical enrolment or funding benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "REV": {
+            "actor": "REV",
+            "capabilities": [
+              "reference_lookup",
+              "review"
+            ],
+            "incentive": "Challenge assumptions and provenance",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "GATE"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "TA": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          }
+        },
+        "scenario": {
+          "fault": "",
+          "features": [
+            "bundling_value_hypothesis",
+            "price_value_hypothesis"
+          ],
+          "fixture_version": "scripts-2",
+          "mode": "dependency",
+          "policy_version": "acl-1",
+          "roles": [
+            "PA",
+            "TA"
+          ],
+          "rounds": 2,
+          "scenario_id": "new_relative",
+          "seed": 17,
+          "source_version": "annex-1",
+          "sources": [
+            "S1",
+            "S2"
+          ],
+          "version": "1"
+        },
+        "schema_version": "2",
+        "source_manifest": {
+          "annex-v1.json": "62d62e2c00eb3c2ed494f310376a1a41650281a5eb7ba4c973e629c1e24dc0ff",
+          "manifest_version": "release-1"
+        }
+      },
+      "timestamp": "2026-11-06T16:15:58.490Z"
+    },
+    {
+      "seq": 482,
+      "id": "grounding-bcb8146c84aa4c46",
+      "run_id": "run-e71f4dd9204b4f82",
+      "kind": "grounding",
+      "data": {
+        "benign": [],
+        "eligible": false,
+        "evidence": "Illustrative risk concepts only; no evidence of actual wrongdoing.",
+        "features": {
+          "bundling_value_hypothesis": {
+            "context": [
+              "S1"
+            ],
+            "direct": [],
+            "level": "WEAK_CONTEXT"
+          },
+          "price_value_hypothesis": {
+            "context": [
+              "S2"
+            ],
+            "direct": [],
+            "level": "WEAK_CONTEXT"
+          }
+        },
+        "unsupported": [
+          "bundling_value_hypothesis",
+          "price_value_hypothesis"
+        ],
+        "version": "annex-concepts-1"
+      },
+      "timestamp": "2026-11-06T16:15:58.491Z"
+    },
+    {
+      "seq": 483,
+      "id": "no_pattern-eb8bc906877e4e28",
+      "run_id": "run-e71f4dd9204b4f82",
+      "kind": "no_pattern",
+      "data": {
+        "grounding": {
+          "benign": [],
+          "eligible": false,
+          "evidence": "Illustrative risk concepts only; no evidence of actual wrongdoing.",
+          "features": {
+            "bundling_value_hypothesis": {
+              "context": [
+                "S1"
+              ],
+              "direct": [],
+              "level": "WEAK_CONTEXT"
+            },
+            "price_value_hypothesis": {
+              "context": [
+                "S2"
+              ],
+              "direct": [],
+              "level": "WEAK_CONTEXT"
+            }
+          },
+          "unsupported": [
+            "bundling_value_hypothesis",
+            "price_value_hypothesis"
+          ],
+          "version": "annex-concepts-1"
+        },
+        "reason": "Unsupported risk mechanism; all configured features retained."
+      },
+      "timestamp": "2026-11-06T16:15:58.493Z"
+    },
+    {
+      "seq": 484,
+      "id": "state_transition-826e7b7c38e74e67",
+      "run_id": "run-e71f4dd9204b4f82",
+      "kind": "state_transition",
+      "data": {
+        "status": "NO_PATTERN"
+      },
+      "timestamp": "2026-11-06T16:15:58.494Z"
+    }
+  ],
+  "budgets": [],
+  "decisions": [],
+  "annotations": [],
+  "children": []
+}

@@ -1,0 +1,236 @@
+{
+  "method": "v3 authoritative Mermaid -> deterministic offline source parsers -> Graphviz (A1) / custom SVG sequence reconstruction (A2); v3 PNG rasterized from corresponding SVG; six phase PNGs cropped with repeated participant legend",
+  "native_mermaid_renderer": "NOT VERIFIED (Chromium page navigation blocked, no Mermaid CLI installed)",
+  "inputs": {
+    "A1 v2 Mermaid": {
+      "filename": "P2_A1_Simulation_Architecture_v2(2).mmd",
+      "bytes": 11399,
+      "sha256": "75879c538961452361a80c358b9d22218257a80b9bd8426a41df0a1667f4e3cb"
+    },
+    "A1 v2 SVG": {
+      "filename": "P2_A1_Simulation_Architecture_v2(3).svg",
+      "bytes": 75913,
+      "sha256": "9698bb672c073eb49394fefbe790ed7960a3a347c814266f42cf5aeff47d8833",
+      "svg_declared": {
+        "width": "3777pt",
+        "height": "1685pt",
+        "viewBox": "0.00 0.00 3777.32 1684.76"
+      }
+    },
+    "A1 v2 PNG": {
+      "filename": "P2_A1_Simulation_Architecture_v2(3).png",
+      "bytes": 499615,
+      "sha256": "8f7ad471a9c479364579e9322c7b1be02e8f1b2102841c901d0e97f55d20f9e2",
+      "dimensions_px": [
+        2048,
+        913
+      ]
+    },
+    "A2 v2 Mermaid": {
+      "filename": "P2_A2_Simulation_Sequence_v2(2).mmd",
+      "bytes": 12777,
+      "sha256": "d2d6c59f3dac21fdc46db0f1bf449d7e67a304d2e319664b3ad3babf46b8fcf9"
+    },
+    "A2 v2 SVG": {
+      "filename": "P2_A2_Simulation_Sequence_v2(3).svg",
+      "bytes": 102254,
+      "sha256": "ef022a13bd2c427f6cefdcfd002590d11621fb30c849213730f8798c8e256376",
+      "svg_declared": {
+        "width": "3569",
+        "height": "7933",
+        "viewBox": "0 0 3569 7933"
+      }
+    },
+    "A2 v2 PNG": {
+      "filename": "P2_A2_Simulation_Sequence_v2(3).png",
+      "bytes": 420325,
+      "sha256": "9df55ae475f8a92347453ec3934be8de43bf31c26b8b678090738dbacd9cea30",
+      "dimensions_px": [
+        921,
+        2047
+      ]
+    },
+    "A2 v2 Phase 1 PNG": {
+      "filename": "P2_A2_Sequence_v2_Phase_1(1).png",
+      "bytes": 121432,
+      "sha256": "1b6519ddcffac73308b489e32b44b8e67f19ef1794daa26eaeb1b8ca4a8c35d5",
+      "dimensions_px": [
+        2048,
+        552
+      ]
+    },
+    "A2 v2 Phase 2 PNG": {
+      "filename": "P2_A2_Sequence_v2_Phase_2(1).png",
+      "bytes": 303467,
+      "sha256": "346802912d285c447a6f5a9c9b8f614e076ccebda8f2ecd632e5facac943a329",
+      "dimensions_px": [
+        2048,
+        1293
+      ]
+    },
+    "A2 v2 Phase 3 PNG": {
+      "filename": "P2_A2_Sequence_v2_Phase_3(1).png",
+      "bytes": 121708,
+      "sha256": "51ebec7322bcb3948d79dc3602fc5e242c636d51418fc3b08a693b185fafed22",
+      "dimensions_px": [
+        2048,
+        531
+      ]
+    },
+    "A2 v2 Phase 4 PNG": {
+      "filename": "P2_A2_Sequence_v2_Phase_4(1).png",
+      "bytes": 200440,
+      "sha256": "e54d3bd0515bd6cd44c2d0c222e3aa7f738dacbc2aee0ba8703850413e0b565b",
+      "dimensions_px": [
+        2048,
+        829
+      ]
+    },
+    "A2 v2 Phase 5 PNG": {
+      "filename": "P2_A2_Sequence_v2_Phase_5(1).png",
+      "bytes": 203797,
+      "sha256": "18dfee9a2968ce044a5cc687560c8578238c232ffb9424af943a927889a3b91b",
+      "dimensions_px": [
+        2048,
+        846
+      ]
+    },
+    "A2 v2 Phase 6 PNG": {
+      "filename": "P2_A2_Sequence_v2_Phase_6(1).png",
+      "bytes": 87092,
+      "sha256": "df31851d5f975f2cf5b17b1b72002720136ad2a42113269d83c6de8966bc706a",
+      "dimensions_px": [
+        2048,
+        378
+      ]
+    }
+  },
+  "outputs": {
+    "A1 Mermaid": {
+      "filename": "P2_A1_Simulation_Architecture_v3.mmd",
+      "bytes": 12583,
+      "sha256": "d757392cd021e90f1a02c6aebc905f191d4cdc28f5ed96fd46da7b385bea0528"
+    },
+    "A1 SVG": {
+      "filename": "P2_A1_Simulation_Architecture_v3.svg",
+      "bytes": 77194,
+      "sha256": "ef00c66088a1cb5cc77fef642d17ddedc7aab7b061c5b68b1aa211147c1ddb09",
+      "svg_declared": {
+        "width": "10033pt",
+        "height": "2048pt",
+        "viewBox": "0.00 0.00 10032.50 2048.00"
+      }
+    },
+    "A1 PNG": {
+      "filename": "P2_A1_Simulation_Architecture_v3.png",
+      "bytes": 1511969,
+      "sha256": "c3e6928ac69e0fd2537d4c759a4f28019a382ba9ebe8f25887b09f6c2701414a",
+      "dimensions_px": [
+        11333,
+        2313
+      ]
+    },
+    "A1 executive Mermaid": {
+      "filename": "P2_A1_Executive_Overview_v3.mmd",
+      "bytes": 2315,
+      "sha256": "c034c8a5a23b9155be8edf23958adeb5ef0eb28b6cdf32aab1c086cfb563b88e"
+    },
+    "A1 executive SVG": {
+      "filename": "P2_A1_Executive_Overview_v3.svg",
+      "bytes": 22778,
+      "sha256": "101db2808f8a7f774cd33f77882e1043cc3766f7b74005ffca38360806d874ed",
+      "svg_declared": {
+        "width": "1956pt",
+        "height": "1404pt",
+        "viewBox": "0.00 0.00 1956.00 1403.50"
+      }
+    },
+    "A1 executive PNG": {
+      "filename": "P2_A1_Executive_Overview_v3.png",
+      "bytes": 842800,
+      "sha256": "335c6d17c9b9abc2fbd7f7a92c1154d2644f757b8e8227785756282e74c1e0c4",
+      "dimensions_px": [
+        6520,
+        4680
+      ]
+    },
+    "A2 Mermaid": {
+      "filename": "P2_A2_Simulation_Sequence_v3.mmd",
+      "bytes": 13413,
+      "sha256": "9a43c87d68aab0e9b78ee1afbd2a759d41beb240b89bb785012ca097b0c1b43e"
+    },
+    "A2 SVG": {
+      "filename": "P2_A2_Simulation_Sequence_v3.svg",
+      "bytes": 71655,
+      "sha256": "fbf70b6cd414f0b7229b6749b1d1bc562a806e86d9d855c40c96ce42e7e7573f",
+      "svg_declared": {
+        "width": "4506",
+        "height": "8668",
+        "viewBox": "0 0 4506 8668"
+      }
+    },
+    "A2 PNG": {
+      "filename": "P2_A2_Simulation_Sequence_v3.png",
+      "bytes": 1138841,
+      "sha256": "bc4faf531ee7f61435700d23381abd53e619802a578ee87af34a95310bac4bd5",
+      "dimensions_px": [
+        4506,
+        8668
+      ]
+    },
+    "A2 Phase 1 PNG": {
+      "filename": "P2_A2_Sequence_v3_Phase_1.png",
+      "bytes": 173067,
+      "sha256": "6fedec0fad5d12e39a980fb0f789c3108fe4e06e84360099f9cac4d145ca38e6",
+      "dimensions_px": [
+        4506,
+        1225
+      ]
+    },
+    "A2 Phase 2 PNG": {
+      "filename": "P2_A2_Sequence_v3_Phase_2.png",
+      "bytes": 342373,
+      "sha256": "6e368e965dbf15776114b5a51cfcac36152849e6660707c225429164bbefdb5d",
+      "dimensions_px": [
+        4506,
+        2627
+      ]
+    },
+    "A2 Phase 3 PNG": {
+      "filename": "P2_A2_Sequence_v3_Phase_3.png",
+      "bytes": 182929,
+      "sha256": "417d63d1300ad79dbfff3206f27b73aafa6f0745ead2ffd6d6932db54da4b9a3",
+      "dimensions_px": [
+        4506,
+        1204
+      ]
+    },
+    "A2 Phase 4 PNG": {
+      "filename": "P2_A2_Sequence_v3_Phase_4.png",
+      "bytes": 253967,
+      "sha256": "aba3de3f0c9cbce27a8abf1ee7ca1ccdbeefb661d818e2443770e4c08981c94f",
+      "dimensions_px": [
+        4506,
+        1780
+      ]
+    },
+    "A2 Phase 5 PNG": {
+      "filename": "P2_A2_Sequence_v3_Phase_5.png",
+      "bytes": 232970,
+      "sha256": "6168ae43a41d9795273f3e4fba632f59d9f3d57d7f4c881915f7f8fc7fbfe4ac",
+      "dimensions_px": [
+        4506,
+        1690
+      ]
+    },
+    "A2 Phase 6 PNG": {
+      "filename": "P2_A2_Sequence_v3_Phase_6.png",
+      "bytes": 158176,
+      "sha256": "221145f4fa645a2c49843676e01a458c457397ac97b6d6bc93d3a80a270412b3",
+      "dimensions_px": [
+        4506,
+        1045
+      ]
+    }
+  }
+}

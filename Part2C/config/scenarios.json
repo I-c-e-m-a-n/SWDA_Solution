@@ -1,0 +1,159 @@
+[
+  {
+    "scenario_id": "two_actor",
+    "version": "1",
+    "fixture_version": "scripts-2",
+    "source_version": "annex-1",
+    "policy_version": "acl-1",
+    "seed": 17,
+    "roles": [
+      "PA",
+      "TA"
+    ],
+    "sources": [
+      "MO-04",
+      "S3"
+    ],
+    "features": [
+      "cash_offer",
+      "credit_use",
+      "optional_attendance"
+    ],
+    "mode": "dependency",
+    "rounds": 2,
+    "fault": ""
+  },
+  {
+    "scenario_id": "three_role",
+    "version": "1",
+    "fixture_version": "scripts-2",
+    "source_version": "annex-1",
+    "policy_version": "acl-1",
+    "seed": 17,
+    "roles": [
+      "PA",
+      "EA",
+      "TA"
+    ],
+    "sources": [
+      "MO-08",
+      "MO-06"
+    ],
+    "features": [
+      "sponsor_fee",
+      "provider_return",
+      "employment_link"
+    ],
+    "mode": "dependency",
+    "rounds": 2,
+    "fault": ""
+  },
+  {
+    "scenario_id": "single_actor",
+    "version": "1",
+    "fixture_version": "scripts-2",
+    "source_version": "annex-1",
+    "policy_version": "acl-1",
+    "seed": 17,
+    "roles": [
+      "TA"
+    ],
+    "sources": [
+      "MO-03"
+    ],
+    "features": [
+      "false_claim",
+      "nonattendance"
+    ],
+    "mode": "single",
+    "rounds": 2,
+    "fault": ""
+  },
+  {
+    "scenario_id": "benign_s5",
+    "version": "1",
+    "fixture_version": "scripts-2",
+    "source_version": "annex-1",
+    "policy_version": "acl-1",
+    "seed": 17,
+    "roles": [
+      "TA",
+      "PA",
+      "EA"
+    ],
+    "sources": [
+      "S5"
+    ],
+    "features": [],
+    "mode": "benign",
+    "rounds": 2,
+    "fault": ""
+  },
+  {
+    "scenario_id": "insufficient",
+    "version": "1",
+    "fixture_version": "scripts-2",
+    "source_version": "annex-1",
+    "policy_version": "acl-1",
+    "seed": 17,
+    "roles": [
+      "PA",
+      "TA"
+    ],
+    "sources": [
+      "S1",
+      "S2",
+      "S4"
+    ],
+    "features": [],
+    "mode": "insufficient",
+    "rounds": 2,
+    "fault": ""
+  },
+  {
+    "scenario_id": "new_relative",
+    "version": "1",
+    "fixture_version": "scripts-2",
+    "source_version": "annex-1",
+    "policy_version": "acl-1",
+    "seed": 17,
+    "roles": [
+      "PA",
+      "TA"
+    ],
+    "sources": [
+      "S1",
+      "S2"
+    ],
+    "features": [
+      "bundling_value_hypothesis",
+      "price_value_hypothesis"
+    ],
+    "mode": "dependency",
+    "rounds": 2,
+    "fault": ""
+  },
+  {
+    "scenario_id": "variation",
+    "version": "1",
+    "fixture_version": "scripts-2",
+    "source_version": "annex-1",
+    "policy_version": "acl-1",
+    "seed": 17,
+    "roles": [
+      "PA",
+      "TA"
+    ],
+    "sources": [
+      "S3",
+      "MO-04"
+    ],
+    "features": [
+      "cash_offer",
+      "credit_use"
+    ],
+    "mode": "dependency",
+    "rounds": 2,
+    "fault": ""
+  }
+]

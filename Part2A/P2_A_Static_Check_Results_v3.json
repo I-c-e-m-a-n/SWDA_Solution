@@ -1,0 +1,51 @@
+{
+  "counts": {
+    "A1_v2": [
+      35,
+      11,
+      62
+    ],
+    "A1_v3": [
+      35,
+      12,
+      66
+    ],
+    "A1_v3_operational_links": 63,
+    "A1_v3_operational_line_types": {
+      "data": 42,
+      "control": 11,
+      "telemetry": 10
+    },
+    "overview_v3": [
+      13,
+      9,
+      23
+    ],
+    "A2_v2": {
+      "participants": 14,
+      "messages": 100,
+      "frames": 14,
+      "frame_types": {
+        "alt": 9,
+        "break": 1,
+        "loop": 2,
+        "opt": 2
+      }
+    },
+    "A2_v3": {
+      "participants": 14,
+      "messages": 100,
+      "frames": 14,
+      "frame_types": {
+        "alt": 9,
+        "break": 1,
+        "loop": 2,
+        "opt": 2
+      },
+      "phases": 6
+    }
+  },
+  "source_checks": "PASS: all assertions in verify_v3.py",
+  "native_mermaid_parser": "NOT VERIFIED",
+  "runtime_security_and_approval": "NOT VERIFIED"
+}

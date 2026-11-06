@@ -1,0 +1,80 @@
+---
+title: A4 — MCP 2026-07-28 | authorised discovery, invocation and denial
+---
+sequenceDiagram
+  autonumber
+  actor U as Business user
+  participant H as Enterprise host
+  participant C as MCP client
+  participant I as Identity provider
+  participant G as Unity Gateway
+  participant P as SWDA policy authority
+  participant S as Private MCP server
+  participant A as Recommendation agent
+  participant T as Classification tool
+  participant L as Catalogue lookup
+  participant D as Curated catalogue
+  participant O as Audit / monitoring
+
+  U->>H: Submit recommendation request
+  H->>I: Authenticate user and obtain dedicated host OAuth M2M token
+  I-->>H: User session and scoped host service-principal token
+  H->>C: Host-authorised request and service-principal token
+  Note over C,G: Target revision 2026-07-28 uses self-describing requests. Verify interoperability.
+  opt Optional capability discovery, if target protocol supported
+    C->>G: server/discover + request metadata
+    G->>G: Validate host token and service discovery permission
+    G-->>C: Permitted capabilities or controlled denial
+  end
+  C->>G: tools/list + authenticated host principal
+  G->>G: Validate host token, UC EXECUTE grants and tool selectors
+  G->>S: Request permitted tool catalogue via managed proxy
+  S->>P: Check published manifest, digest, expiry and policy freshness
+  alt Discovery approved
+    P-->>S: Active scoped tool allowlist
+    S-->>G: Permitted server tools
+    G-->>C: Filtered tools/list (cache hints if supported)
+  else Not approved / revoked / policy unavailable
+    P-->>S: Deny, no valid approval
+    S-->>G: Denied or empty catalogue
+    G-->>C: Controlled discovery denial
+  end
+
+  C->>G: tools/call recommend_service (structured input)
+  G->>G: Recheck host identity, UC grants and selected tool
+  alt Gateway rejects caller or tool
+    G-->>C: Access denied / unavailable (no backend invocation)
+  else Gateway allows
+    G->>S: Managed proxy, authenticated backend service identity
+    S->>P: Fresh call-time policy: exact deployed digest, status, tool, scope, expiry
+    alt Revoked, expired, stale or registry unreachable
+      P-->>S: DENY (fail closed)
+      S-->>G: Sanitised policy denial
+      G-->>C: Controlled denial
+    else Active approval and matching release
+      P-->>S: Allow with restricted service scope
+      S->>S: Validate protocol version, headers, input schema / limits
+      alt Invalid input, protocol or policy
+        S-->>G: Sanitised validation error
+        G-->>C: Controlled error
+      else Valid request
+        S->>A: Execute service recommendation
+        A->>T: Deterministic classification
+        T-->>A: Class and rule reference
+        A->>L: Approved catalogue lookup
+        L->>D: Read-only filtered records
+        D-->>L: Minimal programme facts + catalogue version
+        L-->>A: Eligible programme matches
+        A-->>S: Structured result + provenance
+        S->>S: Validate output schema / redaction
+        S-->>G: Validated MCP tool result or safe tool error
+        G-->>C: Result / controlled failure
+        C-->>H: Parsed, validated response
+        H-->>U: Recommendation or safe failure
+      end
+    end
+  end
+  G-->>O: UC audit and usage events, trace ID / status
+  S-->>O: SWDA decision / invocation events, no secrets or raw sensitive payload
+  Note over G,S: No public backend ingress. SWDA checks do not depend on unverified Gateway policy hooks.
+  Note over H,S: Host enforces user permissions. Backend sees service identity only without verified delegation.
