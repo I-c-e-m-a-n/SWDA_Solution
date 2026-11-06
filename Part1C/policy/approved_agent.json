@@ -1,0 +1,20 @@
+{
+  "simulation": true,
+  "agent_id": "swda-synthetic-recommender",
+  "agent_version": "1.0.0",
+  "artefact_digest": "269492fa8c29714483f1211f2f028da7df74665dd6198ab0106681eb62df09f8",
+  "schema_digest": "6bc2e6c3193369ea6d54b37b31b35567fd96fe0fb328f71688c4e8cdc9a9ef9e",
+  "tools": ["recommend_service"],
+  "internal_tools": ["classify", "lookup"],
+  "approved_clients": ["trusted-local-host"],
+  "service_scope": "synthetic-recommendations",
+  "environment": "local-demo",
+  "state": "PUBLISHED",
+  "expires_at": "2027-11-06T00:00:00Z",
+  "policy_revision": 1,
+  "developer": "synthetic-developer",
+  "security_reviewer": "synthetic-security-reviewer",
+  "business_approver": "synthetic-business-owner",
+  "publisher": "synthetic-platform-publisher",
+  "evidence": "Version-controlled demo fixture only; fictional signers, not production approval."
+}

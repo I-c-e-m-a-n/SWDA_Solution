@@ -1,0 +1,779 @@
+{
+  "source_commit": "70c04fc27c35900fc1bdd0b54c675c5d6e8f29d8",
+  "files": [
+    {
+      "path": ".github/workflows/part1c.yml",
+      "classification": "REFINE",
+      "reason": "Consolidate documentation or update destination references",
+      "source_sha256": "9cd4895053da2c6538cc90d0cb3585ece1998cf6939fe74a80c02c02a1a639f6"
+    },
+    {
+      "path": "Part1A/architecture_notes.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "2e5d8bd88129bce06dfec5f9e2072eeb7df9f05392cd61abb68bdad72085e751"
+    },
+    {
+      "path": "Part1A/assumptions_register.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "f261302461fdca4721c4f7d800cef31d11195189595f7f3661945db1be9fdcdd"
+    },
+    {
+      "path": "Part1A/diagrams/A1.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "e766a503d61ff9d758ed73323fbcdc670166b1d5781db13d4d783309d52de1c0"
+    },
+    {
+      "path": "Part1A/diagrams/A1.svg",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "a75ee0159998e742e43ea25137dfaa0336ed8a90be0323b9b0c67189e90e631d"
+    },
+    {
+      "path": "Part1A/diagrams/A1_enterprise_ai_architecture.mmd",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "c79e812e58c8f1d91b7c14688ed363ba27dd1e094a503ea772cf33ba55746fde"
+    },
+    {
+      "path": "Part1A/diagrams/A2.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "0715698e76c0dfa9204ed2fa53d737d7ba6590d60d950e90104ecd1d703b346a"
+    },
+    {
+      "path": "Part1A/diagrams/A2.svg",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "6ee8f3c82b2b293e415b6f9371807adf2f700bf547e2d229038a0ff8218b16a2"
+    },
+    {
+      "path": "Part1A/diagrams/A2_mlops_lifecycle.mmd",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "e831e6a508f1cd392c2228e4292005fdafd303836d2b7ff6a0cc3b1bba1277c7"
+    },
+    {
+      "path": "Part1A/diagrams/A3.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "b61dcb11538824f7f8550cdd2626ced6b22282482ca24122644a39d61592f3af"
+    },
+    {
+      "path": "Part1A/diagrams/A3.svg",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "1f8cb1038bec889aaf16bcc245d3a637261b1ff1f163955ac60ba3c6c32757a5"
+    },
+    {
+      "path": "Part1A/diagrams/A3_agent_registry_approval.mmd",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "fe9e36c970719e3fa903e2a8d972470aac70a56874b532699b107e7ec52703f1"
+    },
+    {
+      "path": "Part1A/diagrams/A4.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "1f1ef7c9dd72697221df418eca94e304a093c107b6fd2a08581e914ccc56da10"
+    },
+    {
+      "path": "Part1A/diagrams/A4.svg",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "39e1060fbf55f60cbe819dfa22b0de62dd460d48e93270bb8632d884c406ce1e"
+    },
+    {
+      "path": "Part1A/diagrams/A4_mcp_runtime_sequence.mmd",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "885dbcafaaa62d28a7a190375d8d3c00ea298fa34f67e078de9c980ef39d3a44"
+    },
+    {
+      "path": "Part1B/SWDA_Part1B_Design_Document_Final.pdf",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "72784abdecc2a005455895e613cc3b96b5dea9fdeb18e04b24720db9e780e286"
+    },
+    {
+      "path": "Part1C/.gitignore",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "0d29a3cf69eed5ae03af2c95f8a6d79bacfa3ab60a8fe661d0249b3978a9ca5b"
+    },
+    {
+      "path": "Part1C/README.md",
+      "classification": "REFINE",
+      "reason": "Consolidate documentation or update destination references",
+      "source_sha256": "353bec74e2e25ca334ab01eb5182b6cf0f43fd6a015f6154832322f346ea83b5"
+    },
+    {
+      "path": "Part1C/data/synthetic_programmes.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "9df6cbccab94c77dcc97fc62986a8f70b87c6ba280176e7cb68bd32684e78185"
+    },
+    {
+      "path": "Part1C/demo.sh",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "0c2eb0aa41bdac99cb8ca0cdf9cb664308206d6d2cb53a2caae3fbfa8654aff8"
+    },
+    {
+      "path": "Part1C/docs/ai_usage.md",
+      "classification": "EXCLUDE",
+      "reason": "Disclosure consolidated into root README",
+      "source_sha256": "3ec176eba11428275d95abbf5e2886477739e64155a75818b86211da489c5a70"
+    },
+    {
+      "path": "Part1C/docs/architecture_alignment.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "6c8dab7b25580064f9b0d39f18a9ea2c229843c047936ce7ddcb25dbfd74d0cf"
+    },
+    {
+      "path": "Part1C/docs/pull_request.md",
+      "classification": "EXCLUDE",
+      "reason": "Obsolete pull request narrative",
+      "source_sha256": "4610755a4b938146cd4f74bd65b110aff7cbdda53787324d67b7beeec960f118"
+    },
+    {
+      "path": "Part1C/docs/security_limitations.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "d95e9d31ecc670aead5714df793570728059497f793202bbe73512f6e89ce7a2"
+    },
+    {
+      "path": "Part1C/docs/test_evidence.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "9f9496b3e9d2273ba1ba0766551e9ae2cbd647209c95e18b8b375a22aed574b3"
+    },
+    {
+      "path": "Part1C/policy/approved_agent.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "e61f57c511a46f205f33d09e45cfe48896e4482ce02946ad47b5c1acc9344bab"
+    },
+    {
+      "path": "Part1C/pyproject.toml",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "65c06d024ea23702952c029c96dca447681803e5910db9c258e2270856dfa6e9"
+    },
+    {
+      "path": "Part1C/requirements.lock",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "9740ca405112efb97a68c5923573ea196c8d50111964f446a0bb3a5835397911"
+    },
+    {
+      "path": "Part1C/setup.sh",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "a53e73e98298d681ea3c82064a172ed2ff87bb7851e51e07e1c0f0bb04669f66"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/__init__.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "99c8ba4ddcdea3cd6dc2e9be07b1804720402905b89a40e167d95e3c704c8364"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/agent.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "d46dc5a75d253a0a29510369e187e62160798bfb80a224769b035ecedb88788a"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/artefacts.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "60084603177f5af2de5cdcbe6dac256c00d7d4f97774256ff5fd2c76624afe59"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/audit.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "b5bf13c25a01577c48331021d3b72c80bb4b4c63b0d6048668d1bebc349b860e"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/catalogue.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "b6e27677ad9e2c4b40dcf47a9be9670e1175d3a6ac61777504ab18f672bb5882"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/classifier.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "5c6efeccdd75686c0a7ec5d3a621b2aca1cea5ecc9103b62fd536ab5b4791cab"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/client_demo.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "13708f9e5ace9c38d561e54ff2090250c7b2529dfab2c4e2bee93ee3c7515a99"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/policy.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "6303bc9d0a482f9abbe0efd9ae2382b2a1c70a4435c2ce03070b15b93d827e2d"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/registry.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "533f1082a9d0a61f2d9d696b0898cc26afdf7a13d93ef3bd3301d7911df63ede"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/schemas.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "1a96ad5ba92d29d02c75688129e43c1a2b623810b08cb1299dcd9697cc394205"
+    },
+    {
+      "path": "Part1C/src/swda_part1c/server.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "4322f5cad444f283818b5752fe203e30753b9688e986fa9f827f605b05b76e23"
+    },
+    {
+      "path": "Part1C/test.sh",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "672f29c19465a83cc1094ebb9ff0df322bbe3e32c855eb4271488575264ad1b3"
+    },
+    {
+      "path": "Part1C/tests/conftest.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "e20c8b82fb1cdea97bd59f8c7a27a10e929734fc3e5f9239b0645f526c38f068"
+    },
+    {
+      "path": "Part1C/tests/test_engine.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "2b179801749c7355640b7bea28e692b6dae813835ce67e0acff60761e6802c7f"
+    },
+    {
+      "path": "Part1C/tests/test_governance.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "1fab6d7211f53c6d1fc172fa17fc50fd1c40cae9f453a43af5ae127b046354da"
+    },
+    {
+      "path": "Part1C/tests/test_protocol.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "e586862475d3d4fb3263b023c1fdc5e464a53a7e9abcd6534d1c28f6dae4f14b"
+    },
+    {
+      "path": "Part2A/P2_A1_Architecture_Notes_v3.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "5b41ef8d74f7ac69fa23cf3948e1778c7f8f93459663aa27db68c91a27a02b9a"
+    },
+    {
+      "path": "Part2A/P2_A1_Executive_Overview_v3.mmd",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "c034c8a5a23b9155be8edf23958adeb5ef0eb28b6cdf32aab1c086cfb563b88e"
+    },
+    {
+      "path": "Part2A/P2_A1_Executive_Overview_v3.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "335c6d17c9b9abc2fbd7f7a92c1154d2644f757b8e8227785756282e74c1e0c4"
+    },
+    {
+      "path": "Part2A/P2_A1_Executive_Overview_v3.svg",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "101db2808f8a7f774cd33f77882e1043cc3766f7b74005ffca38360806d874ed"
+    },
+    {
+      "path": "Part2A/P2_A1_Simulation_Architecture_v3.mmd",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "d757392cd021e90f1a02c6aebc905f191d4cdc28f5ed96fd46da7b385bea0528"
+    },
+    {
+      "path": "Part2A/P2_A1_Simulation_Architecture_v3.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "c3e6928ac69e0fd2537d4c759a4f28019a382ba9ebe8f25887b09f6c2701414a"
+    },
+    {
+      "path": "Part2A/P2_A1_Simulation_Architecture_v3.svg",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "ef00c66088a1cb5cc77fef642d17ddedc7aab7b061c5b68b1aa211147c1ddb09"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_Notes_v3.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "742f378f43ba32481ee1283fcde04d2074b975e0b0b4fc5ef31fd4ee4a51e308"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_1.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "6fedec0fad5d12e39a980fb0f789c3108fe4e06e84360099f9cac4d145ca38e6"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_2.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "6e368e965dbf15776114b5a51cfcac36152849e6660707c225429164bbefdb5d"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_3.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "417d63d1300ad79dbfff3206f27b73aafa6f0745ead2ffd6d6932db54da4b9a3"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_4.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "aba3de3f0c9cbce27a8abf1ee7ca1ccdbeefb661d818e2443770e4c08981c94f"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_5.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "6168ae43a41d9795273f3e4fba632f59d9f3d57d7f4c881915f7f8fc7fbfe4ac"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_6.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "221145f4fa645a2c49843676e01a458c457397ac97b6d6bc93d3a80a270412b3"
+    },
+    {
+      "path": "Part2A/P2_A2_Simulation_Sequence_v3.mmd",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "9a43c87d68aab0e9b78ee1afbd2a759d41beb240b89bb785012ca097b0c1b43e"
+    },
+    {
+      "path": "Part2A/P2_A2_Simulation_Sequence_v3.png",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "bc4faf531ee7f61435700d23381abd53e619802a578ee87af34a95310bac4bd5"
+    },
+    {
+      "path": "Part2A/P2_A2_Simulation_Sequence_v3.svg",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "fbf70b6cd414f0b7229b6749b1d1bc562a806e86d9d855c40c96ce42e7e7573f"
+    },
+    {
+      "path": "Part2A/P2_A_Architecture_Verification_v3.md",
+      "classification": "REFINE",
+      "reason": "Consolidate documentation or update destination references",
+      "source_sha256": "77306e0394ec89b146fcf32f7a5fbdb4b128b83a9d575907c9ecaa5a447069cd"
+    },
+    {
+      "path": "Part2A/P2_A_Source_to_Render_Manifest_v3.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "785a194184e329c37297a9386791a23f326f43e4bf76f21e099fe47189262e48"
+    },
+    {
+      "path": "Part2A/P2_A_Static_Check_Results_v3.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "15c7110f680b50a5a6164b55710edbb444a52194c51259ab6b98c5d0d0fcaf13"
+    },
+    {
+      "path": "Part2B/P2_B_Design_Note_v2.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "e618d8970784e6c0d2ed20aa40cce4c889af03744e2f30b6ab4cdfd27e44aab8"
+    },
+    {
+      "path": "Part2B/Test",
+      "classification": "EXCLUDE",
+      "reason": "Placeholder explicitly excluded",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "Part2C/.gitignore",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "57bfb4cbed9ecc5f4cd524f4617e925a90bc0511df01ad84bd0fc632a1471c26"
+    },
+    {
+      "path": "Part2C/README.md",
+      "classification": "REFINE",
+      "reason": "Consolidate documentation or update destination references",
+      "source_sha256": "02ac004c1c9de49c8bb2158f74a27aa1e44872aa792f2a9960cdfcda4c4ba2ea"
+    },
+    {
+      "path": "Part2C/config/limits.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "7a506412695a074e0ebc2daf8e1885d62fcadc385cb08a9aa60b0b7be4a7c67e"
+    },
+    {
+      "path": "Part2C/config/profiles.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "fd48bb756c0200099e4690ade3eff1ba741e6abb384f7cb8abd968edb09e322b"
+    },
+    {
+      "path": "Part2C/config/reviewers.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "f523d204cda426a6fdba4a0223940b10f221304740736ab7a7240d9935107be8"
+    },
+    {
+      "path": "Part2C/config/scenarios.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "400849eae311572694381c3ce4b659879c0698eecfe707dfe343491ebe611ffa"
+    },
+    {
+      "path": "Part2C/data/annex-injection-v1.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "dd3dea736634b8a9cd018bfcda43a518613294229446e742743c63fbbdb143ab"
+    },
+    {
+      "path": "Part2C/data/annex-v1.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "62d62e2c00eb3c2ed494f310376a1a41650281a5eb7ba4c973e629c1e24dc0ff"
+    },
+    {
+      "path": "Part2C/docs/ai_use.md",
+      "classification": "EXCLUDE",
+      "reason": "Disclosure consolidated into root README",
+      "source_sha256": "a5e13031ffe34435aa4935da69a8e15943f117de72fd2c38fe8df06d5914061b"
+    },
+    {
+      "path": "Part2C/docs/evaluation_report.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "861d9e9946d785307ddb6e0fdfd7f5cc071b6bcaefb52038cb96eb11be71490b"
+    },
+    {
+      "path": "Part2C/docs/implementation_alignment.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "7740da4507ead45d3cb50b74660f0debc6dd2b7502fc148bdfdb1b8ed98aaa08"
+    },
+    {
+      "path": "Part2C/docs/mock_model_limitations.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "2f0a5a67ed5b56c7821a6c93fda17eee1fdd97d4bc741ab5cbf36753422db53c"
+    },
+    {
+      "path": "Part2C/docs/preimplementation.md",
+      "classification": "REFINE",
+      "reason": "Consolidate documentation or update destination references",
+      "source_sha256": "8cb8cbd5a8b8209e3c9e0d3147eaf9712bcae1ecab51fbf4568290cc5edcd682"
+    },
+    {
+      "path": "Part2C/docs/remediation_f1_f10.md",
+      "classification": "REFINE",
+      "reason": "Consolidate documentation or update destination references",
+      "source_sha256": "53a10a582b4402bc24e86c5f6af23d2d7f0019b580b0c578d7a413315616e2e7"
+    },
+    {
+      "path": "Part2C/docs/requirements_traceability.md",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "4c26071f0118ef471dfa1b50ee1093787c0a74ce31d1d96c17ab8a8d282ee9f6"
+    },
+    {
+      "path": "Part2C/examples/benign_s5.cards.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "Part2C/examples/benign_s5.trace.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "73cd97f7a5f5862cd08d98ea50af7136c742b96578bf17970c6431d4d981ba50"
+    },
+    {
+      "path": "Part2C/examples/denied.trace.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "37234ae72ca2c8925cd4e7c46275d6327d1e63e8f6d7cd9d2257b835cee46b26"
+    },
+    {
+      "path": "Part2C/examples/evaluation-traces.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "3576e3db475b867e57d29fcc24c8a587176992040cfdd813c481e8eddba781df"
+    },
+    {
+      "path": "Part2C/examples/evaluation.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "3a8d341a9c801f72d3230bf995ebe11b1ce8dfebb64b9532dc1ad6f0bdb3f899"
+    },
+    {
+      "path": "Part2C/examples/index.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "6cd3c336c958fe0c71c4a427379b9af787164e3f78a5af415d9c686276ac302a"
+    },
+    {
+      "path": "Part2C/examples/insufficient.cards.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "Part2C/examples/insufficient.trace.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "f3420136b4eaf70ef823f62eaf755480512ea2422ae4da6c4ae0fa274754d164"
+    },
+    {
+      "path": "Part2C/examples/new_relative.cards.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "Part2C/examples/new_relative.trace.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "a12471df0e45e24b45fc81fe420a989368d54afbdcd360dcdeb2360326a32911"
+    },
+    {
+      "path": "Part2C/examples/pytest.xml",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "81d2a94fbbbb7b1af8d3f9f0986ebd053979d60b5f2f35d2d06f1f5197192edb"
+    },
+    {
+      "path": "Part2C/examples/single_actor.cards.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "3d27d6e0253ef8c8d0f7590b4d8ffe7297747c879021b634177ff77853163bdf"
+    },
+    {
+      "path": "Part2C/examples/single_actor.trace.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "44a982780960d33415540f875ee2444115fb5b5fc2f11c5074547e563140a722"
+    },
+    {
+      "path": "Part2C/examples/three_role.cards.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "a3dbd672cb753babfae9f88339700f6fda5df11f0fd8992ecfe7c014e0f13116"
+    },
+    {
+      "path": "Part2C/examples/three_role.trace.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "5be6696d3cc580abfaa6caf7439f489f2f393061ccd91ad22acf69144d4056e2"
+    },
+    {
+      "path": "Part2C/examples/two_actor.cards.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "b372fca4bb266d5d3834d822b405c6bdc612789aa01b949cd2315af25af50265"
+    },
+    {
+      "path": "Part2C/examples/two_actor.trace.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "a36461264d56bff97fe2df722068b8670929ace1f5feb7c4c4c1bd581d076629"
+    },
+    {
+      "path": "Part2C/examples/variation.cards.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "863cbb923df99be2657bd1546767c453ac6606ea7779f59ad334ff1f1ac2d87f"
+    },
+    {
+      "path": "Part2C/examples/variation.trace.json",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "ec104444046aa4f2ed0cfc316bc7ee76ebbda7bbb484e3758cf7edca03970458"
+    },
+    {
+      "path": "Part2C/pyproject.toml",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "653e93258776d9829a4c97ec67db77f7f5a352f39ac718623040b2eee5b2eb67"
+    },
+    {
+      "path": "Part2C/requirements.lock",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "bb4e34044c324b67df41f04bbf266841a88f0a354d23b1b3474b00bfc4ddbe16"
+    },
+    {
+      "path": "Part2C/run.sh",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "053c6f8dbff3a93a8f655cfeee3804be351584826a344202f9c6ddd02f851cc2"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/__init__.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "20993c11eada86807073ad072370fbf27aabaf4e4a7f39779d549652b2ea33b3"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/analysis.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "13fc3fcd1e60631e145660518d1f408d4179fd13ef006fe68216e7d35c55d293"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/approval.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "ecd6f5424ffb14582841c2100adecde998c7fd3604ad0d259aa218ed85eab057"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/cli.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "1442a62dd33af20c5d5af59f15ac696f729e92b42f83457a99959d8f41dd2149"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/evaluation.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "fb3952ce2a774309a91edc0ed46887e124147db52d95f0bb3b6b480583ca3ce5"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/grounding.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "511e82265074025c4eb201df3e1e586753a98c7e7352dc3c30cb43c2ee87193d"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/models.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "42d590ae836ba36650bd4c850c17f88020ac7564ae7cb5b1bb2d028705a9f385"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/orchestrator.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "9eb6462ffea42679c05f293a5ae9d7569594e6552aa9762c0a1916bd2411dbda"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/policy.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "9d4057b78ee3d7cc41417fa07d6fc50d0e4a283893eee8f4fe6434d197e788f6"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/release.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "22a1ebf663c14ab2de1d4c2ac4b620ccfaea845bf3ba6c7fcda6cfdcc790425f"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/review.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "4b931ee4186f47716b19b8153dd4881964d8d87ed8fe038def1fdcdf1a4f3bba"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/safety.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "8f3cd39e344a199f95be6cc3092ee991e987fabdc047a5c8f296b0000a8db6d7"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/schemas.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "a135ec3ed683f545d78661dd9c75ee633cf74e5e589ceced71c46a587cb2ddcb"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/sources.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "2d4e950014aa0f231c5af8cd49de058f6383639a41e8820cd623d4266a893040"
+    },
+    {
+      "path": "Part2C/src/swda_part2c/store.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "0d06597086471fad59cbb66d417ed2ce3b2746a6c3e79f657ff8ff94da418a6e"
+    },
+    {
+      "path": "Part2C/tests/conftest.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "493c8b6b1aff2d15392f22c29c7bc7e517162d4884a56872c0e83db9edaea739"
+    },
+    {
+      "path": "Part2C/tests/test_approval.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "3996938c71c3640b3727ae6517ee6a3db4dec1bd57667623dac24d7204513082"
+    },
+    {
+      "path": "Part2C/tests/test_cli.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "1d385cbe6be99193ce70e19211e64b99e7f0a50e1f33f055d4452c55e570e5da"
+    },
+    {
+      "path": "Part2C/tests/test_contracts.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "7f5f482878a3fd3ad6ee6f29fb4fb535346baad56ec774c03cf292a49f19ed69"
+    },
+    {
+      "path": "Part2C/tests/test_remediation_architecture.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "ad7bcdbaf8b6807d58c01a215fe1974363f2156056328252951f46b0ec315d11"
+    },
+    {
+      "path": "Part2C/tests/test_remediation_boundaries.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "70a83f33ab4b66578b6369b08201c9ec39811f33870b10a35e6cf8b84e349b5a"
+    },
+    {
+      "path": "Part2C/tests/test_remediation_persistence.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "e449123a187696d2c93dc4e5d055c0faf6c36b9160722d83c7090d996dcd0908"
+    },
+    {
+      "path": "Part2C/tests/test_remediation_semantics.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "640b8c7ab3ac86c65c982d75238ec10bebd2b6cc5797680272fcf332644aa708"
+    },
+    {
+      "path": "Part2C/tests/test_workflows.py",
+      "classification": "KEEP",
+      "reason": "Assessment artefact, executable dependency or verification evidence",
+      "source_sha256": "9f448e88435bb5b038cd20dfdb616846ee8c1837a7d653275e79d55414ae7706"
+    },
+    {
+      "path": "README.md",
+      "classification": "REFINE",
+      "reason": "Consolidate documentation or update destination references",
+      "source_sha256": "22ef9e5778c26a74b91f3b3fb612de2101ca6c0e010da120668cd0d59e0f4340"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+---
+title: A3 — SWDA agent governance | version-bound approval and publication
+---
+flowchart TB
+  subgraph REVIEW[SWDA approval registry — authoritative control states]
+    direction TB
+    DRAFT(["DRAFT"])
+    REGISTERED(["REGISTERED"])
+    VALIDATED(["VALIDATED"])
+    SECURITY(["SECURITY_REVIEWED"])
+    APPROVED(["APPROVED"])
+    REJECTED(["REJECTED"])
+    DRAFT -->|"developer: immutable version + digest"| REGISTERED
+    REGISTERED -->|"automated pipeline: tests / schemas / scans / evaluations pass"| VALIDATED
+    REGISTERED -->|"validation fails"| REJECTED
+    VALIDATED -->|"independent security + data review"| SECURITY
+    VALIDATED -->|"security / evaluation failure"| REJECTED
+    SECURITY -->|"business owner: human sign-off"| APPROVED
+    SECURITY -->|"approval denied"| REJECTED
+  end
+
+  subgraph RELEASE[SWDA admission + Databricks publication boundary]
+    direction TB
+    CTRL["SWDA publication controller: verify registry status, exact digest, expiry + separation of duties"]
+    PASS{"Admission matches approved manifest?"}
+    GATE["Unity Gateway MCP Service: exact tool selectors, UC EXECUTE grants, managed connection"]
+    BACK["Private MCP backend: attested deployment + runtime policy check"]
+    PUBLISHED(["PUBLISHED"])
+    CTRL --> PASS
+    PASS -->|"yes: platform admin applies config"| GATE
+    GATE -->|"publish only after readback + restricted connectivity"| BACK
+    BACK -->|"admission evidence recorded"| PUBLISHED
+  end
+
+  subgraph EXCEPT[Post-publication controls]
+    direction TB
+    SUSPENDED(["SUSPENDED"])
+    REVOKED(["REVOKED"])
+    REAPPROVAL(["REAPPROVAL_REQUIRED"])
+    PUBLISHED -->|"emergency: security / platform authority"| SUSPENDED
+    PUBLISHED -->|"authority permanently withdraws"| REVOKED
+    PUBLISHED -->|"expiry or material change"| REAPPROVAL
+    SUSPENDED -->|"permanent withdrawal"| REVOKED
+    SUSPENDED -->|"remediate and review"| REAPPROVAL
+    REAPPROVAL -->|"developer submits NEW immutable version"| DRAFT
+  end
+
+  subgraph ENFORCE[SWDA owned controls — not assumed native Gateway features]
+    direction TB
+    REG["Registry record: ID, semver, owner, purpose, code digest, MCP schemas, tool allowlist, data class, client IDs, IAM, evidence, approvers, timestamps, environment, expiry"]
+    POLICY["Runtime policy authority: APPROVED/PUBLISHED status, digest, scope, expiry and revocation; fail closed"]
+    AUDIT["Audit: append-only decisions, admission, config changes, suspension and denials"]
+  end
+
+  APPROVED -->|"platform admin requests publish"| CTRL
+  PASS -->|"no: deny; no exposed service"| REAPPROVAL
+  REGISTERED -.->|"immutable registration"| REG
+  REG -.->|"authoritative signed / fresh decisions"| POLICY
+  POLICY -.->|"check on discovery and every tool call"| BACK
+  GATE -.->|"UC grants + selectors are separate controls"| POLICY
+  PUBLISHED -.->|"record publication"| AUDIT
+  REJECTED -.->|"record refusal"| AUDIT
+  REVOKED -.->|"deny subsequent calls / reconcile grants"| POLICY
+  SUSPENDED -.->|"deny subsequent calls / restrict discovery"| POLICY
+  REAPPROVAL -.->|"block previous approval"| POLICY
+  CTRL -.->|"audit publication attempt"| AUDIT
+
+  LEG["Legend: solid = transition / action | dotted = governance evidence | immutable changed artefacts require new review"]
+  classDef state fill:#EAF2F7,stroke:#64829B,color:#17354B
+  classDef done fill:#E7F1E9,stroke:#618268,color:#235038
+  classDef risk fill:#FAE9E7,stroke:#B67C76,color:#692F2C
+  classDef guard fill:#F8F0E4,stroke:#A48758,color:#523C24
+  classDef legend fill:#FFFFFF,stroke:#A5B0BF,color:#495566,font-size:11px
+  class DRAFT,REGISTERED,VALIDATED,SECURITY,APPROVED state
+  class PUBLISHED done
+  class REJECTED,SUSPENDED,REVOKED,REAPPROVAL risk
+  class CTRL,PASS,GATE,BACK,REG,POLICY,AUDIT guard
+  class LEG legend

@@ -1,0 +1,192 @@
+%% SWDA Part 2A — v3 targeted precision patch/A2 | proposed local Python PoC sequence, NOT an implementation trace.
+%% Only Annex A (MO-01..MO-08) and Annex B (S1..S5) may be referenced.
+%% Annex A is illustrative and Annex B unverified; no simulated statement is evidence of fraud.
+%% Distinct trusted controls and isolated actors; all cross-actor communication is mediated.
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "Inter, Arial, sans-serif", "background": "#FFFFFF", "primaryColor": "#F4F7FB", "primaryTextColor": "#17243A", "primaryBorderColor": "#71869D", "lineColor": "#536779", "signalColor": "#40536D", "signalTextColor": "#17243A", "actorBkg": "#F4F7FB", "actorBorder": "#7890A6", "actorTextColor": "#17243A", "noteBkgColor": "#FFF7E7", "noteBorderColor": "#CBA86B", "noteTextColor": "#4F4027", "activationBkgColor": "#EAF5F1", "activationBorderColor": "#5D9883", "labelBoxBkgColor": "#EFF6FF", "labelBoxBorderColor": "#94B4D5", "labelTextColor": "#17324E"}, "sequence": {"mirrorActors": false, "showSequenceNumbers": false, "wrap": true, "useMaxWidth": false, "actorMargin": 35, "diagramMarginX": 26, "diagramMarginY": 24, "messageMargin": 27, "noteMargin": 12, "boxMargin": 10, "boxTextMargin": 6}}}%%
+sequenceDiagram
+    autonumber
+    actor H as Human operator / reviewer
+    box rgb(237,245,252) Trusted local control and provenance
+        participant CLI as Local CLI / review UI
+        participant ORCH as Deterministic orchestrator
+        participant CAT as Read-only source catalogue
+        participant POL as Policy / schema gateway
+    end
+    box rgb(246,242,255) Isolated scripted actors
+        participant TA as Trainee Agent
+        participant PA as Training Provider Agent
+        participant EA as Employer Agent
+    end
+    box rgb(239,246,251) Trusted deterministic analysis
+        participant ANA as Pattern assembler / actor-removal
+    end
+    box rgb(255,246,230) ISOLATED NON-AUTHORITATIVE REVIEW
+        participant REV as Review Agent - recommendations only
+    end
+    box rgb(237,249,244) Trusted deterministic assurance
+        participant SAFE as Deterministic safety gates
+        participant EVAL as Evaluation harness
+    end
+    box rgb(232,247,238) Trusted human decision and persistence
+        participant APPR as Trusted human approval service
+        participant STORE as Trusted run state + audit store
+    end
+
+    Note over H,CAT: PHASE 1 — INITIATION AND SOURCE TRUST BOUNDARY
+    H->>CLI: Start simulation with selected scenario
+    CLI->>ORCH: Authorised invocation + versioned config
+    ORCH->>STORE: Create CANDIDATE run_id, seed, NON_APPROVED state and aggregate lineage budget
+    ORCH->>CAT: Resolve Annex A MO-01..MO-08 and Annex B S1..S5 IDs
+    CAT->>CAT: Compare ID, schema, version and digest with separately trusted versioned manifest
+    Note over CAT,POL: Source text is untrusted DATA, never executable policy or instructions.
+    alt Source references and scenario are valid
+        CAT-->>ORCH: Pinned catalogue snapshot + provenance / trust tags
+        ORCH->>POL: Install fixed actor scopes, sender / recipient ACL and schemas
+        POL-->>ORCH: Policy snapshot validated
+        ORCH->>STORE: Checkpoint caps: patterns, CF, TEST fixtures, turns, retries, elapsed and aggregate lineage calls
+    else Missing / malformed / altered source or invalid permissions
+        CAT-->>ORCH: Validation failure + quarantine reason
+        ORCH->>STORE: Append failed initiation event, state BLOCKED
+        break Invalid initiation, terminate run
+            ORCH-->>CLI: Terminal failure, no agent execution
+        end
+    end
+
+    Note over ORCH,EA: PHASE 2 — BOUNDED, GATEWAY-MEDIATED SIMULATION (valid runs only)
+    loop Each scheduled actor turn, within round / step / time / aggregate lineage call budgets
+        ORCH->>CAT: Read only source IDs permitted to selected actor
+        CAT-->>ORCH: Scoped, tagged excerpts, no privileged records
+        ORCH->>POL: Dispatch envelope (run_id, msg_id, sender, target, scope, schema)
+        alt Dispatch authorised and within budget
+            POL->>STORE: Append dispatch ALLOW + source versions / msg_id
+            alt Selected turn: Trainee Agent
+                POL->>TA: Scoped context + optional validated prior message
+                TA->>TA: Invoke scripted trainee mock LLM
+                TA-->>POL: Proposed structured message (not a fact)
+            else Selected turn: Training Provider Agent
+                POL->>PA: Scoped context + optional validated prior message
+                PA->>PA: Invoke scripted provider mock LLM
+                PA-->>POL: Proposed structured message (not a fact)
+            else Selected turn: Employer Agent
+                POL->>EA: Scoped context + optional validated prior message
+                EA->>EA: Invoke scripted employer mock LLM
+                EA-->>POL: Proposed structured message (not a fact)
+            end
+            POL->>POL: Verify bound sender / recipient / ACL / source IDs / schema / safety
+            alt Valid actor response and permitted recipient
+                POL->>STORE: Append receipt ALLOW (run_id, msg_id, policy outcome)
+                POL-->>ORCH: Validated message + provenance / intended recipient
+                opt A different actor must receive this message
+                    ORCH->>POL: Schedule recipient turn with validated parent msg_id
+                    Note over ORCH,POL: No actor-to-actor channel, next delivery repeats dispatch checks.
+                end
+            else Retryable schema error and retry budget remains
+                POL->>STORE: Append receipt DENY + validation reason
+                POL-->>ORCH: Retryable error + attempt number
+                ORCH->>STORE: Increment retry / usage counters
+                ORCH->>ORCH: Requeue same scoped task only; no additional sources, recipients or permissions
+            else Non-retryable policy / safety failure or retry exhausted
+                POL->>STORE: Append receipt DENY + reason + msg_id
+                POL-->>ORCH: Block message, never deliver it
+                ORCH->>STORE: Record terminal fault or continue by configured policy
+            end
+        else Dispatch denied or resource limit reached
+            POL->>STORE: Append dispatch DENY / limit event
+            POL-->>ORCH: Reject request + reason code
+            ORCH->>STORE: Stop / mark incomplete on configured fail-closed rule
+        end
+        ORCH->>STORE: Checkpoint round, route, retries, mock usage and remaining budget
+    end
+    ORCH->>STORE: Seal run transcript, status COMPLETED or BLOCKED
+    Note over ORCH,STORE: Blocked or incomplete runs do not enter candidate approval, all actor activity is recorded by trusted code.
+
+    alt Completed with sufficient validated contributions
+        Note over ORCH,ANA: PHASE 3 — HYPOTHETICAL PATTERN CONSTRUCTION
+        ORCH->>ANA: Validated transcript + allowed source / simulation provenance
+        ANA->>ANA: Typed risk-level card: actors, contributions, benefits, flows, test-data needs; bounded pattern count
+        ANA->>ANA: Label each assertion SOURCE / SIMULATION / ASSUMPTION
+        loop Each actor actually participating, up to configured CF cap (CANDIDATE only)
+            ANA->>ORCH: Request CF: CANDIDATE parent_run_id + removed_actor, seed / ACL / lineage budget
+            ORCH->>ORCH: Enforce parent=CANDIDATE, depth=1, cap; fresh CF ID and context, remove tainted descendants
+            ORCH->>CAT: Reload immutable Annex-only baseline for remaining actor scopes
+            CAT-->>ORCH: Fresh scoped source snapshot + versioned provenance
+            ORCH->>POL: CF bounded rerun: remaining actors, SAME policy / schemas, aggregate lineage budget
+            Note over ORCH,POL: CF never launches CF/TEST; no removed-actor memory or descendant data; failures fail closed.
+            POL-->>ORCH: Validated reduced-actor outcome / fault
+            ORCH->>STORE: Append linked counterfactual run and messages
+            ORCH-->>ANA: Independent reduced outcome + trace reference
+        end
+        ANA->>ANA: Separate multi-party collusion / single-actor / inconclusive
+        ANA->>STORE: Append draft card ID, provenance and dependency outcomes
+
+        Note over ANA,SAFE: PHASE 4 — INDEPENDENT MACHINE REVIEW AND DETERMINISTIC GATES
+        ANA->>REV: Draft hypothetical card + dependency results + source IDs
+        REV->>POL: Request scoped source/MO lookup (reviewer identity, purpose, allowed IDs only)
+        alt Reviewer read authorised — references valid
+            POL->>CAT: Invoke trusted read-only MO/reference helpers for allowed MO/S source IDs
+            CAT-->>POL: Versioned, tagged permitted records via read-only helper; no unrestricted catalogue
+            POL-->>REV: Schema-validated, filtered references, trust labels and comparison inputs
+            REV->>REV: Challenge assumptions, evidence strength, benign conflicts and data gaps
+            REV-->>SAFE: Recommend known / variation / new relative to sample only
+        else Reviewer ACL denied, invalid source or unapproved tool
+            POL->>STORE: Append review DENY, source ID and reason
+            POL-->>REV: Deny — no catalogue data or private actor state
+            REV-->>SAFE: Review invalid — mandatory deterministic gate failure
+        end
+        Note over REV,SAFE: REV is less trusted than SAFE/EVAL/APPR; never writes catalogue, gates, audit or approval.
+        SAFE->>SAFE: Schema, provenance, injection, unsafe-detail and source/simulation checks
+        SAFE->>EVAL: Evaluate candidate run and policy / actor / E2E assertions
+        EVAL->>STORE: Read run-linked messages, denials, budgets and prior gate outcomes
+        STORE-->>EVAL: Read-only trace / audit evidence
+        EVAL-->>SAFE: Evaluation report with failures and run_id
+        alt Safety / provenance / evaluation gates fail
+            SAFE->>STORE: Append blocked candidate + specific failure reasons
+            SAFE-->>ORCH: BLOCKED, no human approval queue entry
+            ORCH-->>CLI: Report failed candidate for diagnostics only
+        else All gates pass
+            SAFE->>STORE: Candidate-only: persist passed gates and REVIEW_PENDING; CF/TEST cannot queue
+            SAFE-->>ORCH: Reviewable candidate (never a fraud finding)
+
+            Note over H,SAFE: PHASE 5 — EXPLICIT HUMAN-ONLY DECISION
+            ORCH->>CLI: Display tagged card, assumptions, source IDs, MO basis, tests
+            CLI-->>H: Present simulated risk pattern for investigation decision
+            H->>CLI: Submit explicit decision with reason
+            CLI->>APPR: Submit human-origin decision + reviewer identity / reason
+            APPR->>POL: Verify configured/local PoC reviewer identity, role and action scope
+            POL-->>APPR: Explicit reviewer-authorisation verdict
+            APPR->>STORE: Read candidate status REVIEW_PENDING + persisted gate IDs
+            STORE-->>APPR: Current status / validation / evaluation evidence
+            alt Authorised human, REVIEW_PENDING, passed gates and valid action
+                alt Approve for further investigation
+                    APPR->>STORE: Atomic compare-and-swap: APPROVED_FOR_INVESTIGATION + decision audit
+                else Reject candidate
+                    APPR->>STORE: Atomic compare-and-swap: REJECTED + decision audit
+                else Request revision
+                    APPR->>STORE: Atomic compare-and-swap: REVISION_REQUESTED + decision audit
+                end
+                Note over APPR,STORE: One SQLite CAS transaction verifies REVIEW_PENDING + gates and persists decision; no enterprise IAM asserted.
+                STORE-->>APPR: Committed decision receipt (or conflict/failure)
+                APPR-->>CLI: Return committed receipt — on failure return denial only
+                CLI-->>H: Persisted decision receipt — no fraud finding
+            else Model-originated, unauthorised, malformed or invalid state / gates
+                APPR->>STORE: Append denied attempt without candidate-state change
+                APPR-->>CLI: Deny — status unchanged (no automatic approval)
+                CLI-->>H: Denied decision, no state transition
+            end
+        end
+    else Blocked / incomplete / no valid candidate
+        ORCH-->>CLI: Terminal outcome, no reviewable card or approval transition
+    end
+
+    Note over ORCH,STORE: PHASE 6 — REPLAYABLE EVALUATION AND OBSERVABILITY (separate test-only runs)
+    opt On-demand or pre-submission deterministic regression suite
+        EVAL->>ORCH: Start independent top-level TEST fixtures within suite cap; not from TEST or CF
+        ORCH->>POL: TEST via SAME gateway/schema, bounded turns/retries/usage; no recursive TEST
+        POL-->>ORCH: Fixture responses / denial codes (through bounded turns)
+        ORCH->>STORE: Append test-only run IDs, message IDs, seeds and budgets
+        EVAL->>STORE: Inspect fixture outputs, policy decisions and complete traces
+        STORE-->>EVAL: Trace snapshots correlated to fixture run IDs
+        EVAL->>EVAL: Check expected denials, benign outcomes, schema / E2E regressions
+        EVAL->>STORE: Append test report only; no human queue, no cascading TEST or approval writes
+    end
+    Note over H,STORE: AUDIT: actors, REV, CF, TEST and EVAL never write approval states — only APPR persists human decisions.

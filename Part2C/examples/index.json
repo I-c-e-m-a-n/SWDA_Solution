@@ -1,0 +1,37 @@
+[
+  {
+    "scenario": "two_actor",
+    "run_id": "run-312cff93f0b146fb",
+    "status": "REVIEW_PENDING"
+  },
+  {
+    "scenario": "three_role",
+    "run_id": "run-daa33ef5c2544dba",
+    "status": "REVIEW_PENDING"
+  },
+  {
+    "scenario": "single_actor",
+    "run_id": "run-b42bbe86c961407d",
+    "status": "REVIEW_PENDING"
+  },
+  {
+    "scenario": "benign_s5",
+    "run_id": "run-4f4642c7b71b4926",
+    "status": "NO_PATTERN"
+  },
+  {
+    "scenario": "insufficient",
+    "run_id": "run-9add07adf1334e46",
+    "status": "NO_PATTERN"
+  },
+  {
+    "scenario": "new_relative",
+    "run_id": "run-e71f4dd9204b4f82",
+    "status": "NO_PATTERN"
+  },
+  {
+    "scenario": "variation",
+    "run_id": "run-1eca35fbeaab4079",
+    "status": "REVIEW_PENDING"
+  }
+]

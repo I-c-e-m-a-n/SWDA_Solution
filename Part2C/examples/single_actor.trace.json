@@ -1,0 +1,2565 @@
+{
+  "run": {
+    "id": "run-b42bbe86c961407d",
+    "kind": "CANDIDATE",
+    "parent": null,
+    "status": "REVIEW_PENDING",
+    "version": 1,
+    "metadata": "{\"depth\": 0, \"parent_run_id\": null, \"removed_actor\": null, \"run_id\": \"run-b42bbe86c961407d\", \"run_type\": \"CANDIDATE\", \"scenario\": {\"fault\": \"\", \"features\": [\"false_claim\", \"nonattendance\"], \"fixture_version\": \"scripts-2\", \"mode\": \"single\", \"policy_version\": \"acl-1\", \"roles\": [\"TA\"], \"rounds\": 2, \"scenario_id\": \"single_actor\", \"seed\": 17, \"source_version\": \"annex-1\", \"sources\": [\"MO-03\"], \"version\": \"1\"}, \"status\": \"RUNNING\", \"version\": 0}"
+  },
+  "records": [
+    {
+      "seq": 325,
+      "id": "run_started-009ecf662d5e4646",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "run_started",
+      "data": {
+        "depth": 0,
+        "parent_run_id": null,
+        "removed_actor": null,
+        "run_id": "run-b42bbe86c961407d",
+        "run_type": "CANDIDATE",
+        "scenario": {
+          "fault": "",
+          "features": [
+            "false_claim",
+            "nonattendance"
+          ],
+          "fixture_version": "scripts-2",
+          "mode": "single",
+          "policy_version": "acl-1",
+          "roles": [
+            "TA"
+          ],
+          "rounds": 2,
+          "scenario_id": "single_actor",
+          "seed": 17,
+          "source_version": "annex-1",
+          "sources": [
+            "MO-03"
+          ],
+          "version": "1"
+        },
+        "status": "RUNNING",
+        "version": 0
+      },
+      "timestamp": "2026-11-06T16:15:58.297Z"
+    },
+    {
+      "seq": 326,
+      "id": "snapshots-1f764744f9ad48c8",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "snapshots",
+      "data": {
+        "adapter_version": "scripts-2",
+        "code_revision": "sha256:5875c19de7deb03d0999f68af32a931d2706ccc28e0b3c34caf71e7218b10edc",
+        "code_version": "1.1.0",
+        "grounding_version": "annex-concepts-1",
+        "limits": {
+          "cards": 3,
+          "cf": 3,
+          "lineage_calls": 48,
+          "retries": 2,
+          "rounds": 4,
+          "seconds": 120.0,
+          "suite_calls": 60,
+          "test_calls": 12,
+          "test_fixtures": 12,
+          "turns": 12
+        },
+        "policy": {
+          "EA": {
+            "actor": "EA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical employment/training benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "PA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-06",
+              "MO-08",
+              "S5"
+            ]
+          },
+          "PA": {
+            "actor": "PA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical enrolment or funding benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "REV": {
+            "actor": "REV",
+            "capabilities": [
+              "reference_lookup",
+              "review"
+            ],
+            "incentive": "Challenge assumptions and provenance",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "GATE"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "TA": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          }
+        },
+        "scenario": {
+          "fault": "",
+          "features": [
+            "false_claim",
+            "nonattendance"
+          ],
+          "fixture_version": "scripts-2",
+          "mode": "single",
+          "policy_version": "acl-1",
+          "roles": [
+            "TA"
+          ],
+          "rounds": 2,
+          "scenario_id": "single_actor",
+          "seed": 17,
+          "source_version": "annex-1",
+          "sources": [
+            "MO-03"
+          ],
+          "version": "1"
+        },
+        "schema_version": "2",
+        "source_manifest": {
+          "annex-v1.json": "62d62e2c00eb3c2ed494f310376a1a41650281a5eb7ba4c973e629c1e24dc0ff",
+          "manifest_version": "release-1"
+        }
+      },
+      "timestamp": "2026-11-06T16:15:58.299Z"
+    },
+    {
+      "seq": 327,
+      "id": "grounding-629d3e2689a04511",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "grounding",
+      "data": {
+        "benign": [],
+        "eligible": true,
+        "evidence": "Illustrative risk concepts only; no evidence of actual wrongdoing.",
+        "features": {
+          "false_claim": {
+            "context": [],
+            "direct": [
+              "MO-03"
+            ],
+            "level": "DIRECT_CONCEPT"
+          },
+          "nonattendance": {
+            "context": [],
+            "direct": [
+              "MO-03"
+            ],
+            "level": "DIRECT_CONCEPT"
+          }
+        },
+        "unsupported": [],
+        "version": "annex-concepts-1"
+      },
+      "timestamp": "2026-11-06T16:15:58.300Z"
+    },
+    {
+      "seq": 328,
+      "id": "context_reset-7d061cc64cc2485c",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "context_reset",
+      "data": {
+        "copied_parent_messages": [],
+        "excluded_parent_messages": [],
+        "fresh_history": true,
+        "removed_actor": null
+      },
+      "timestamp": "2026-11-06T16:15:58.302Z"
+    },
+    {
+      "seq": 329,
+      "id": "policy-8b14700f33024cfa",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DISPATCH_ALLOWED",
+        "message_id": "msg-7e148e6bbe8e48c7",
+        "stage": "dispatch"
+      },
+      "timestamp": "2026-11-06T16:15:58.303Z"
+    },
+    {
+      "seq": 330,
+      "id": "invocation_started-330189d7ae3b4aed",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "invocation_started",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "TA",
+            "attempt": 0,
+            "message_id": "msg-7e148e6bbe8e48c7",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "propose",
+            "recipient": "ORCH",
+            "round": 1,
+            "run_id": "run-b42bbe86c961407d",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "MO-03"
+            ],
+            "source_version": "annex-1",
+            "turn": 1
+          },
+          "incoming": [],
+          "prior": [],
+          "profile": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Credit encashment",
+              "source_id": "MO-03",
+              "source_type": "ANNEX_A",
+              "text": "Individuals submit false claims without attending a course",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "fixture_version": "scripts-2",
+            "mode": "single",
+            "policy_version": "acl-1",
+            "roles": [
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "single_actor",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "MO-03"
+            ],
+            "version": "1"
+          }
+        },
+        "invocation_id": "inv-c9cf18cd04234ee6",
+        "schema_version": "2",
+        "script_version": "scripts-2"
+      },
+      "timestamp": "2026-11-06T16:15:58.304Z"
+    },
+    {
+      "seq": 331,
+      "id": "usage-0f7da01b604545d3",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "usage",
+      "data": {
+        "attempt": 0,
+        "elapsed_seconds": 0.006102115999965463,
+        "invocation_id": "inv-c9cf18cd04234ee6",
+        "message_id": "msg-7e148e6bbe8e48c7",
+        "scopes": [
+          "run-b42bbe86c961407d"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.304Z"
+    },
+    {
+      "seq": 332,
+      "id": "policy-ea15038b9f4a4590",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "RECEIPT_ALLOWED",
+        "message_id": "msg-7e148e6bbe8e48c7",
+        "stage": "receipt"
+      },
+      "timestamp": "2026-11-06T16:15:58.305Z"
+    },
+    {
+      "seq": 333,
+      "id": "policy-ef8087f4e0a04ac2",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DEPENDENCY_ALLOWED",
+        "message_id": "msg-7e148e6bbe8e48c7",
+        "stage": "dependency"
+      },
+      "timestamp": "2026-11-06T16:15:58.307Z"
+    },
+    {
+      "seq": 334,
+      "id": "policy-0bcdf1586f424a2e",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "CONCEPT_SUPPORTED",
+        "message_id": "msg-7e148e6bbe8e48c7",
+        "stage": "grounding"
+      },
+      "timestamp": "2026-11-06T16:15:58.308Z"
+    },
+    {
+      "seq": 335,
+      "id": "policy-40498738c32b4cc6",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "SAFE_CLOSED_GRAMMAR",
+        "message_id": "msg-7e148e6bbe8e48c7",
+        "stage": "safety"
+      },
+      "timestamp": "2026-11-06T16:15:58.309Z"
+    },
+    {
+      "seq": 336,
+      "id": "msg-7e148e6bbe8e48c7",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "message",
+      "data": {
+        "envelope": {
+          "actor": "TA",
+          "attempt": 0,
+          "message_id": "msg-7e148e6bbe8e48c7",
+          "parent_message_id": null,
+          "policy_version": "acl-1",
+          "purpose": "propose",
+          "recipient": "ORCH",
+          "round": 1,
+          "run_id": "run-b42bbe86c961407d",
+          "run_type": "CANDIDATE",
+          "schema_version": "2",
+          "source_ids": [
+            "MO-03"
+          ],
+          "source_version": "annex-1",
+          "turn": 1
+        },
+        "response": {
+          "claims": [
+            {
+              "label": "SOURCE",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Individuals submit false claims without attending a course"
+            },
+            {
+              "label": "ASSUMPTION",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+            }
+          ],
+          "contribution": {
+            "actor": "TA",
+            "benefit": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established."
+            },
+            "claim": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Hypothetical TA contribution: a potentially unsupported grant claim, nonattendance. Role allocation is a modelling assumption, not observed conduct."
+            },
+            "dependency_features": {},
+            "depends_on": [],
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "material": true
+          },
+          "operation": "propose",
+          "recipient": "ORCH"
+        }
+      },
+      "timestamp": "2026-11-06T16:15:58.310Z"
+    },
+    {
+      "seq": 337,
+      "id": "inv-c9cf18cd04234ee6",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "invocation",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "TA",
+            "attempt": 0,
+            "message_id": "msg-7e148e6bbe8e48c7",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "propose",
+            "recipient": "ORCH",
+            "round": 1,
+            "run_id": "run-b42bbe86c961407d",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "MO-03"
+            ],
+            "source_version": "annex-1",
+            "turn": 1
+          },
+          "incoming": [],
+          "prior": [],
+          "profile": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Credit encashment",
+              "source_id": "MO-03",
+              "source_type": "ANNEX_A",
+              "text": "Individuals submit false claims without attending a course",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "fixture_version": "scripts-2",
+            "mode": "single",
+            "policy_version": "acl-1",
+            "roles": [
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "single_actor",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "MO-03"
+            ],
+            "version": "1"
+          }
+        },
+        "error_code": "",
+        "invocation_id": "inv-c9cf18cd04234ee6",
+        "outcome": "SCHEMA_VALID",
+        "output_bytes": 939,
+        "output_digest": "12475bef3b4172465edbc7a07ceb9599b16a276be9b6bad9e4cd135b8d6f44cb",
+        "raw_output": "{\"operation\": \"propose\", \"recipient\": \"ORCH\", \"claims\": [{\"label\": \"SOURCE\", \"text\": \"Individuals submit false claims without attending a course\", \"source_ids\": [\"MO-03\"]}, {\"label\": \"ASSUMPTION\", \"text\": \"Role incentives and structural dependencies are scripted modelling assumptions.\", \"source_ids\": [\"MO-03\"]}], \"contribution\": {\"actor\": \"TA\", \"claim\": {\"label\": \"SIMULATION\", \"text\": \"Hypothetical TA contribution: a potentially unsupported grant claim, nonattendance. Role allocation is a modelling assumption, not observed conduct.\", \"source_ids\": [\"MO-03\"]}, \"benefit\": {\"label\": \"SIMULATION\", \"text\": \"Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established.\", \"source_ids\": [\"MO-03\"]}, \"features\": [\"false_claim\", \"nonattendance\"], \"depends_on\": [], \"dependency_features\": {}, \"material\": true}}",
+        "schema_version": "2",
+        "script_version": "scripts-2",
+        "semantic_output_digest": "12475bef3b4172465edbc7a07ceb9599b16a276be9b6bad9e4cd135b8d6f44cb"
+      },
+      "timestamp": "2026-11-06T16:15:58.311Z"
+    },
+    {
+      "seq": 338,
+      "id": "policy-185f485720454282",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DISPATCH_ALLOWED",
+        "message_id": "msg-bed3fb04fe0844b3",
+        "stage": "dispatch"
+      },
+      "timestamp": "2026-11-06T16:15:58.312Z"
+    },
+    {
+      "seq": 339,
+      "id": "invocation_started-fd106d0a9a0642bc",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "invocation_started",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "TA",
+            "attempt": 0,
+            "message_id": "msg-bed3fb04fe0844b3",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "propose",
+            "recipient": "ORCH",
+            "round": 2,
+            "run_id": "run-b42bbe86c961407d",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "MO-03"
+            ],
+            "source_version": "annex-1",
+            "turn": 2
+          },
+          "incoming": [],
+          "prior": [
+            {
+              "envelope": {
+                "actor": "TA",
+                "attempt": 0,
+                "message_id": "msg-7e148e6bbe8e48c7",
+                "parent_message_id": null,
+                "policy_version": "acl-1",
+                "purpose": "propose",
+                "recipient": "ORCH",
+                "round": 1,
+                "run_id": "run-b42bbe86c961407d",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "MO-03"
+                ],
+                "source_version": "annex-1",
+                "turn": 1
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "MO-03"
+                    ],
+                    "text": "Individuals submit false claims without attending a course"
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "MO-03"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "TA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "MO-03"
+                    ],
+                    "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "MO-03"
+                    ],
+                    "text": "Hypothetical TA contribution: a potentially unsupported grant claim, nonattendance. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [
+                    "false_claim",
+                    "nonattendance"
+                  ],
+                  "material": true
+                },
+                "operation": "propose",
+                "recipient": "ORCH"
+              }
+            }
+          ],
+          "profile": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Credit encashment",
+              "source_id": "MO-03",
+              "source_type": "ANNEX_A",
+              "text": "Individuals submit false claims without attending a course",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "fixture_version": "scripts-2",
+            "mode": "single",
+            "policy_version": "acl-1",
+            "roles": [
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "single_actor",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "MO-03"
+            ],
+            "version": "1"
+          }
+        },
+        "invocation_id": "inv-eeb1e46d37144c10",
+        "schema_version": "2",
+        "script_version": "scripts-2"
+      },
+      "timestamp": "2026-11-06T16:15:58.314Z"
+    },
+    {
+      "seq": 340,
+      "id": "usage-cbf6de31c2e54479",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "usage",
+      "data": {
+        "attempt": 0,
+        "elapsed_seconds": 0.015457055999831937,
+        "invocation_id": "inv-eeb1e46d37144c10",
+        "message_id": "msg-bed3fb04fe0844b3",
+        "scopes": [
+          "run-b42bbe86c961407d"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.314Z"
+    },
+    {
+      "seq": 341,
+      "id": "policy-5b67d4ce1fe942e5",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "RECEIPT_ALLOWED",
+        "message_id": "msg-bed3fb04fe0844b3",
+        "stage": "receipt"
+      },
+      "timestamp": "2026-11-06T16:15:58.315Z"
+    },
+    {
+      "seq": 342,
+      "id": "policy-5b7e6406be224e31",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DEPENDENCY_ALLOWED",
+        "message_id": "msg-bed3fb04fe0844b3",
+        "stage": "dependency"
+      },
+      "timestamp": "2026-11-06T16:15:58.316Z"
+    },
+    {
+      "seq": 343,
+      "id": "policy-9ba8b2a27d4d48d2",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "CONCEPT_SUPPORTED",
+        "message_id": "msg-bed3fb04fe0844b3",
+        "stage": "grounding"
+      },
+      "timestamp": "2026-11-06T16:15:58.317Z"
+    },
+    {
+      "seq": 344,
+      "id": "policy-ed281267babb41bf",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "SAFE_CLOSED_GRAMMAR",
+        "message_id": "msg-bed3fb04fe0844b3",
+        "stage": "safety"
+      },
+      "timestamp": "2026-11-06T16:15:58.318Z"
+    },
+    {
+      "seq": 345,
+      "id": "msg-bed3fb04fe0844b3",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "message",
+      "data": {
+        "envelope": {
+          "actor": "TA",
+          "attempt": 0,
+          "message_id": "msg-bed3fb04fe0844b3",
+          "parent_message_id": null,
+          "policy_version": "acl-1",
+          "purpose": "propose",
+          "recipient": "ORCH",
+          "round": 2,
+          "run_id": "run-b42bbe86c961407d",
+          "run_type": "CANDIDATE",
+          "schema_version": "2",
+          "source_ids": [
+            "MO-03"
+          ],
+          "source_version": "annex-1",
+          "turn": 2
+        },
+        "response": {
+          "claims": [
+            {
+              "label": "SOURCE",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Individuals submit false claims without attending a course"
+            },
+            {
+              "label": "ASSUMPTION",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+            }
+          ],
+          "contribution": {
+            "actor": "TA",
+            "benefit": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established."
+            },
+            "claim": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Hypothetical TA contribution: a potentially unsupported grant claim, nonattendance. Role allocation is a modelling assumption, not observed conduct."
+            },
+            "dependency_features": {},
+            "depends_on": [],
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "material": true
+          },
+          "operation": "propose",
+          "recipient": "ORCH"
+        }
+      },
+      "timestamp": "2026-11-06T16:15:58.319Z"
+    },
+    {
+      "seq": 346,
+      "id": "inv-eeb1e46d37144c10",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "invocation",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "TA",
+            "attempt": 0,
+            "message_id": "msg-bed3fb04fe0844b3",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "propose",
+            "recipient": "ORCH",
+            "round": 2,
+            "run_id": "run-b42bbe86c961407d",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "MO-03"
+            ],
+            "source_version": "annex-1",
+            "turn": 2
+          },
+          "incoming": [],
+          "prior": [
+            {
+              "envelope": {
+                "actor": "TA",
+                "attempt": 0,
+                "message_id": "msg-7e148e6bbe8e48c7",
+                "parent_message_id": null,
+                "policy_version": "acl-1",
+                "purpose": "propose",
+                "recipient": "ORCH",
+                "round": 1,
+                "run_id": "run-b42bbe86c961407d",
+                "run_type": "CANDIDATE",
+                "schema_version": "2",
+                "source_ids": [
+                  "MO-03"
+                ],
+                "source_version": "annex-1",
+                "turn": 1
+              },
+              "response": {
+                "claims": [
+                  {
+                    "label": "SOURCE",
+                    "source_ids": [
+                      "MO-03"
+                    ],
+                    "text": "Individuals submit false claims without attending a course"
+                  },
+                  {
+                    "label": "ASSUMPTION",
+                    "source_ids": [
+                      "MO-03"
+                    ],
+                    "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+                  }
+                ],
+                "contribution": {
+                  "actor": "TA",
+                  "benefit": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "MO-03"
+                    ],
+                    "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established."
+                  },
+                  "claim": {
+                    "label": "SIMULATION",
+                    "source_ids": [
+                      "MO-03"
+                    ],
+                    "text": "Hypothetical TA contribution: a potentially unsupported grant claim, nonattendance. Role allocation is a modelling assumption, not observed conduct."
+                  },
+                  "dependency_features": {},
+                  "depends_on": [],
+                  "features": [
+                    "false_claim",
+                    "nonattendance"
+                  ],
+                  "material": true
+                },
+                "operation": "propose",
+                "recipient": "ORCH"
+              }
+            }
+          ],
+          "profile": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Credit encashment",
+              "source_id": "MO-03",
+              "source_type": "ANNEX_A",
+              "text": "Individuals submit false claims without attending a course",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "fixture_version": "scripts-2",
+            "mode": "single",
+            "policy_version": "acl-1",
+            "roles": [
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "single_actor",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "MO-03"
+            ],
+            "version": "1"
+          }
+        },
+        "error_code": "",
+        "invocation_id": "inv-eeb1e46d37144c10",
+        "outcome": "SCHEMA_VALID",
+        "output_bytes": 939,
+        "output_digest": "12475bef3b4172465edbc7a07ceb9599b16a276be9b6bad9e4cd135b8d6f44cb",
+        "raw_output": "{\"operation\": \"propose\", \"recipient\": \"ORCH\", \"claims\": [{\"label\": \"SOURCE\", \"text\": \"Individuals submit false claims without attending a course\", \"source_ids\": [\"MO-03\"]}, {\"label\": \"ASSUMPTION\", \"text\": \"Role incentives and structural dependencies are scripted modelling assumptions.\", \"source_ids\": [\"MO-03\"]}], \"contribution\": {\"actor\": \"TA\", \"claim\": {\"label\": \"SIMULATION\", \"text\": \"Hypothetical TA contribution: a potentially unsupported grant claim, nonattendance. Role allocation is a modelling assumption, not observed conduct.\", \"source_ids\": [\"MO-03\"]}, \"benefit\": {\"label\": \"SIMULATION\", \"text\": \"Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established.\", \"source_ids\": [\"MO-03\"]}, \"features\": [\"false_claim\", \"nonattendance\"], \"depends_on\": [], \"dependency_features\": {}, \"material\": true}}",
+        "schema_version": "2",
+        "script_version": "scripts-2",
+        "semantic_output_digest": "12475bef3b4172465edbc7a07ceb9599b16a276be9b6bad9e4cd135b8d6f44cb"
+      },
+      "timestamp": "2026-11-06T16:15:58.321Z"
+    },
+    {
+      "seq": 354,
+      "id": "counterfactual-22f15cf747484e3c",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "counterfactual",
+      "data": {
+        "excluded_parent_messages": [
+          "msg-7e148e6bbe8e48c7",
+          "msg-bed3fb04fe0844b3"
+        ],
+        "outcome": "SINGLE_ACTOR_FEASIBILITY",
+        "parent_run_id": "run-b42bbe86c961407d",
+        "rationale": "Fresh reduced execution compared with validated material dependency edges and feature coverage. A surviving coalition is not single-actor feasibility; loss without parent cooperation is inconclusive. No real-world causal proof is claimed.",
+        "removed_actor": "TA",
+        "run_id": "run-d0cb01f1d6d74ec4",
+        "surviving_actors": []
+      },
+      "timestamp": "2026-11-06T16:15:58.333Z"
+    },
+    {
+      "seq": 355,
+      "id": "policy-fc3845a911e646f1",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DISPATCH_ALLOWED",
+        "message_id": "review-17469b7f9a024618",
+        "stage": "dispatch"
+      },
+      "timestamp": "2026-11-06T16:15:58.334Z"
+    },
+    {
+      "seq": 356,
+      "id": "reviewer_lookup-d46ef744ebae4116",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "reviewer_lookup",
+      "data": {
+        "allowed": true,
+        "requested": {
+          "actor": "REV",
+          "purpose": "mo_comparison",
+          "source_ids": [
+            "MO-01",
+            "MO-02",
+            "MO-03",
+            "MO-04",
+            "MO-05",
+            "MO-06",
+            "MO-07",
+            "MO-08"
+          ]
+        },
+        "returned_ids": [
+          "MO-01",
+          "MO-02",
+          "MO-03",
+          "MO-04",
+          "MO-05",
+          "MO-06",
+          "MO-07",
+          "MO-08"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.335Z"
+    },
+    {
+      "seq": 357,
+      "id": "policy-9e8d4c828e44417e",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "LOOKUP_ALLOWED",
+        "message_id": "review-17469b7f9a024618",
+        "stage": "reviewer_lookup"
+      },
+      "timestamp": "2026-11-06T16:15:58.336Z"
+    },
+    {
+      "seq": 358,
+      "id": "invocation_started-1f7157315acc4258",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "invocation_started",
+      "data": {
+        "context": {
+          "comparison": {
+            "classification": "KNOWN",
+            "details": [
+              {
+                "absent_from_pattern": [],
+                "additional_to_mo": [],
+                "mo": "MO-03",
+                "shared": [
+                  "false_claim",
+                  "nonattendance"
+                ]
+              }
+            ],
+            "matches": [
+              "MO-03"
+            ],
+            "rationale": "KNOWN relative only to MO-01–MO-08. MO-03: shared=['false_claim', 'nonattendance'], absent=[], additional=[] Feature similarity describes illustrative concepts, not actual wrongdoing or real-world novelty."
+          },
+          "draft": {
+            "actors": [
+              "TA"
+            ],
+            "assertions": [
+              {
+                "label": "SOURCE",
+                "source_ids": [
+                  "MO-03"
+                ],
+                "text": "Individuals submit false claims without attending a course"
+              },
+              {
+                "label": "ASSUMPTION",
+                "source_ids": [
+                  "MO-03"
+                ],
+                "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+              },
+              {
+                "label": "SOURCE",
+                "source_ids": [
+                  "MO-03"
+                ],
+                "text": "Individuals submit false claims without attending a course"
+              },
+              {
+                "label": "ASSUMPTION",
+                "source_ids": [
+                  "MO-03"
+                ],
+                "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+              }
+            ],
+            "assumptions": [
+              "Role incentives and structural dependencies are scripted modelling assumptions."
+            ],
+            "cf": [
+              {
+                "excluded_parent_messages": [
+                  "msg-7e148e6bbe8e48c7",
+                  "msg-bed3fb04fe0844b3"
+                ],
+                "outcome": "SINGLE_ACTOR_FEASIBILITY",
+                "parent_run_id": "run-b42bbe86c961407d",
+                "rationale": "Fresh reduced execution compared with validated material dependency edges and feature coverage. A surviving coalition is not single-actor feasibility; loss without parent cooperation is inconclusive. No real-world causal proof is claimed.",
+                "removed_actor": "TA",
+                "run_id": "run-d0cb01f1d6d74ec4",
+                "surviving_actors": []
+              }
+            ],
+            "contributions": [
+              {
+                "actor": "TA",
+                "benefit": {
+                  "label": "SIMULATION",
+                  "source_ids": [
+                    "MO-03"
+                  ],
+                  "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established."
+                },
+                "claim": {
+                  "label": "SIMULATION",
+                  "source_ids": [
+                    "MO-03"
+                  ],
+                  "text": "Hypothetical TA contribution: a potentially unsupported grant claim, nonattendance. Role allocation is a modelling assumption, not observed conduct."
+                },
+                "dependency_features": {},
+                "depends_on": [],
+                "features": [
+                  "false_claim",
+                  "nonattendance"
+                ],
+                "material": true
+              }
+            ],
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "graph": {
+              "actors": [
+                "TA"
+              ],
+              "cooperative": false,
+              "coverage": true,
+              "edges": [],
+              "errors": [],
+              "single": true
+            },
+            "limitations": [
+              "No actual misconduct established.",
+              "Counterfactuals test scripted structure, not causation."
+            ],
+            "sources": [
+              "MO-03"
+            ]
+          },
+          "envelope": {
+            "actor": "REV",
+            "attempt": 0,
+            "message_id": "review-17469b7f9a024618",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "review",
+            "recipient": "GATE",
+            "round": 1,
+            "run_id": "run-b42bbe86c961407d",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08"
+            ],
+            "source_version": "annex-1",
+            "turn": 3
+          },
+          "incoming": [],
+          "prior": [],
+          "profile": {
+            "actor": "REV",
+            "capabilities": [
+              "reference_lookup",
+              "review"
+            ],
+            "incentive": "Challenge assumptions and provenance",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "GATE"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Dormant-entity claim syndicate",
+              "source_id": "MO-01",
+              "source_type": "ANNEX_A",
+              "text": "Dormant entities act as employers and training providers to submit false grant claims",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Forged evidence during checks",
+              "source_id": "MO-02",
+              "source_type": "ANNEX_A",
+              "text": "False records are provided when claims are checked or audited",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Credit encashment",
+              "source_id": "MO-03",
+              "source_type": "ANNEX_A",
+              "text": "Individuals submit false claims without attending a course",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Cash for enrolment",
+              "source_id": "MO-04",
+              "source_type": "ANNEX_A",
+              "text": "Agents or recruiters offer cash for using credits and suggest attendance is optional",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Falsified attendance",
+              "source_id": "MO-05",
+              "source_type": "ANNEX_A",
+              "text": "Attendance is recorded for training that did not take place",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Employment created for grants",
+              "source_id": "MO-06",
+              "source_type": "ANNEX_A",
+              "text": "People are hired only to attend a course and are let go afterwards",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed overseas",
+              "benign": false,
+              "name": "Overclaimed training",
+              "source_id": "MO-07",
+              "source_type": "ANNEX_A",
+              "text": "Claims exceed the training or attendance actually delivered",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Policy risk",
+              "benign": false,
+              "name": "Indirect kickback through a sponsor",
+              "source_id": "MO-08",
+              "source_type": "ANNEX_A",
+              "text": "A sponsor pays the nett fee while value flows back through the provider",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "fixture_version": "scripts-2",
+            "mode": "single",
+            "policy_version": "acl-1",
+            "roles": [
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "single_actor",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "MO-03"
+            ],
+            "version": "1"
+          }
+        },
+        "invocation_id": "inv-8e9a1162b6db41fd",
+        "schema_version": "2",
+        "script_version": "scripts-2"
+      },
+      "timestamp": "2026-11-06T16:15:58.338Z"
+    },
+    {
+      "seq": 359,
+      "id": "usage-466a4e2525934b2c",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "usage",
+      "data": {
+        "attempt": 0,
+        "elapsed_seconds": 0.039508077000391495,
+        "invocation_id": "inv-8e9a1162b6db41fd",
+        "message_id": "review-17469b7f9a024618",
+        "scopes": [
+          "run-b42bbe86c961407d"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.338Z"
+    },
+    {
+      "seq": 360,
+      "id": "inv-8e9a1162b6db41fd",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "invocation",
+      "data": {
+        "context": {
+          "comparison": {
+            "classification": "KNOWN",
+            "details": [
+              {
+                "absent_from_pattern": [],
+                "additional_to_mo": [],
+                "mo": "MO-03",
+                "shared": [
+                  "false_claim",
+                  "nonattendance"
+                ]
+              }
+            ],
+            "matches": [
+              "MO-03"
+            ],
+            "rationale": "KNOWN relative only to MO-01–MO-08. MO-03: shared=['false_claim', 'nonattendance'], absent=[], additional=[] Feature similarity describes illustrative concepts, not actual wrongdoing or real-world novelty."
+          },
+          "draft": {
+            "actors": [
+              "TA"
+            ],
+            "assertions": [
+              {
+                "label": "SOURCE",
+                "source_ids": [
+                  "MO-03"
+                ],
+                "text": "Individuals submit false claims without attending a course"
+              },
+              {
+                "label": "ASSUMPTION",
+                "source_ids": [
+                  "MO-03"
+                ],
+                "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+              },
+              {
+                "label": "SOURCE",
+                "source_ids": [
+                  "MO-03"
+                ],
+                "text": "Individuals submit false claims without attending a course"
+              },
+              {
+                "label": "ASSUMPTION",
+                "source_ids": [
+                  "MO-03"
+                ],
+                "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+              }
+            ],
+            "assumptions": [
+              "Role incentives and structural dependencies are scripted modelling assumptions."
+            ],
+            "cf": [
+              {
+                "excluded_parent_messages": [
+                  "msg-7e148e6bbe8e48c7",
+                  "msg-bed3fb04fe0844b3"
+                ],
+                "outcome": "SINGLE_ACTOR_FEASIBILITY",
+                "parent_run_id": "run-b42bbe86c961407d",
+                "rationale": "Fresh reduced execution compared with validated material dependency edges and feature coverage. A surviving coalition is not single-actor feasibility; loss without parent cooperation is inconclusive. No real-world causal proof is claimed.",
+                "removed_actor": "TA",
+                "run_id": "run-d0cb01f1d6d74ec4",
+                "surviving_actors": []
+              }
+            ],
+            "contributions": [
+              {
+                "actor": "TA",
+                "benefit": {
+                  "label": "SIMULATION",
+                  "source_ids": [
+                    "MO-03"
+                  ],
+                  "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established."
+                },
+                "claim": {
+                  "label": "SIMULATION",
+                  "source_ids": [
+                    "MO-03"
+                  ],
+                  "text": "Hypothetical TA contribution: a potentially unsupported grant claim, nonattendance. Role allocation is a modelling assumption, not observed conduct."
+                },
+                "dependency_features": {},
+                "depends_on": [],
+                "features": [
+                  "false_claim",
+                  "nonattendance"
+                ],
+                "material": true
+              }
+            ],
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "graph": {
+              "actors": [
+                "TA"
+              ],
+              "cooperative": false,
+              "coverage": true,
+              "edges": [],
+              "errors": [],
+              "single": true
+            },
+            "limitations": [
+              "No actual misconduct established.",
+              "Counterfactuals test scripted structure, not causation."
+            ],
+            "sources": [
+              "MO-03"
+            ]
+          },
+          "envelope": {
+            "actor": "REV",
+            "attempt": 0,
+            "message_id": "review-17469b7f9a024618",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "review",
+            "recipient": "GATE",
+            "round": 1,
+            "run_id": "run-b42bbe86c961407d",
+            "run_type": "CANDIDATE",
+            "schema_version": "2",
+            "source_ids": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08"
+            ],
+            "source_version": "annex-1",
+            "turn": 3
+          },
+          "incoming": [],
+          "prior": [],
+          "profile": {
+            "actor": "REV",
+            "capabilities": [
+              "reference_lookup",
+              "review"
+            ],
+            "incentive": "Challenge assumptions and provenance",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "GATE"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Dormant-entity claim syndicate",
+              "source_id": "MO-01",
+              "source_type": "ANNEX_A",
+              "text": "Dormant entities act as employers and training providers to submit false grant claims",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Forged evidence during checks",
+              "source_id": "MO-02",
+              "source_type": "ANNEX_A",
+              "text": "False records are provided when claims are checked or audited",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Credit encashment",
+              "source_id": "MO-03",
+              "source_type": "ANNEX_A",
+              "text": "Individuals submit false claims without attending a course",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Cash for enrolment",
+              "source_id": "MO-04",
+              "source_type": "ANNEX_A",
+              "text": "Agents or recruiters offer cash for using credits and suggest attendance is optional",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Falsified attendance",
+              "source_id": "MO-05",
+              "source_type": "ANNEX_A",
+              "text": "Attendance is recorded for training that did not take place",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Employment created for grants",
+              "source_id": "MO-06",
+              "source_type": "ANNEX_A",
+              "text": "People are hired only to attend a course and are let go afterwards",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Observed overseas",
+              "benign": false,
+              "name": "Overclaimed training",
+              "source_id": "MO-07",
+              "source_type": "ANNEX_A",
+              "text": "Claims exceed the training or attendance actually delivered",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Policy risk",
+              "benign": false,
+              "name": "Indirect kickback through a sponsor",
+              "source_id": "MO-08",
+              "source_type": "ANNEX_A",
+              "text": "A sponsor pays the nett fee while value flows back through the provider",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "",
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "fixture_version": "scripts-2",
+            "mode": "single",
+            "policy_version": "acl-1",
+            "roles": [
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "single_actor",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "MO-03"
+            ],
+            "version": "1"
+          }
+        },
+        "error_code": "",
+        "invocation_id": "inv-8e9a1162b6db41fd",
+        "outcome": "SCHEMA_VALID",
+        "output_bytes": 752,
+        "output_digest": "93938579ae1ef3bc398c4bb9c54fa7fb7a811b1ac6292cda2dcec0396ef57f73",
+        "raw_output": "{\"classification\":\"KNOWN\",\"matches\":[\"MO-03\"],\"rationale\":\"Review supports an illustrative concept comparison; contributions, assumptions and empirical gaps remain hypothetical.\",\"evidence_strength\":\"weak_unverified\",\"limitations\":[\"Illustrative MO similarity is separate from weak evidential confidence.\",\"Exercise excerpts are unverified; simulation establishes no misconduct.\",\"Counterfactuals test scripted dependencies, not real-world causation.\"],\"missing_data\":[\"Independently verified attendance records\",\"Independently verified grant-claim records\"],\"findings\":[\"HYPOTHETICAL_CONCEPTS_SUPPORTED\"],\"challenged_assertions\":[],\"missing_references\":[],\"unsupported_features\":[],\"counterfactual_objections\":[],\"benign_signals\":[],\"abstained\":false}",
+        "schema_version": "2",
+        "script_version": "scripts-2",
+        "semantic_output_digest": "93938579ae1ef3bc398c4bb9c54fa7fb7a811b1ac6292cda2dcec0396ef57f73"
+      },
+      "timestamp": "2026-11-06T16:15:58.339Z"
+    },
+    {
+      "seq": 361,
+      "id": "recommendation-9e731e03cab94364",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "recommendation",
+      "data": {
+        "abstained": false,
+        "benign_signals": [],
+        "challenged_assertions": [],
+        "classification": "KNOWN",
+        "counterfactual_objections": [],
+        "evidence_strength": "weak_unverified",
+        "findings": [
+          "HYPOTHETICAL_CONCEPTS_SUPPORTED"
+        ],
+        "limitations": [
+          "Illustrative MO similarity is separate from weak evidential confidence.",
+          "Exercise excerpts are unverified; simulation establishes no misconduct.",
+          "Counterfactuals test scripted dependencies, not real-world causation."
+        ],
+        "matches": [
+          "MO-03"
+        ],
+        "missing_data": [
+          "Independently verified attendance records",
+          "Independently verified grant-claim records"
+        ],
+        "missing_references": [],
+        "rationale": "Review supports an illustrative concept comparison; contributions, assumptions and empirical gaps remain hypothetical.",
+        "unsupported_features": []
+      },
+      "timestamp": "2026-11-06T16:15:58.341Z"
+    },
+    {
+      "seq": 362,
+      "id": "eval-e5aef1e0ef454674",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "evaluation",
+      "data": {
+        "checks": [
+          "nonempty_transcript:True",
+          "bound_identity:True",
+          "ancestry_same_run:True",
+          "scoped_references:True",
+          "participation_matches_contributions:True",
+          "source_support:True",
+          "benign_control:True",
+          "valid_material_graph:True"
+        ],
+        "evaluation_id": "eval-e5aef1e0ef454674",
+        "fixture_id": "candidate_trace_v2",
+        "passed": true,
+        "trace_ids": [
+          "msg-7e148e6bbe8e48c7",
+          "msg-bed3fb04fe0844b3"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.342Z"
+    },
+    {
+      "seq": 363,
+      "id": "gate-4b4524a3c00748de",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-4b4524a3c00748de",
+        "name": "source_integrity",
+        "passed": true,
+        "reason": "Trusted deterministic source_integrity"
+      },
+      "timestamp": "2026-11-06T16:15:58.344Z"
+    },
+    {
+      "seq": 364,
+      "id": "gate-ffe84ef09d614706",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-ffe84ef09d614706",
+        "name": "schema_validity",
+        "passed": true,
+        "reason": "Trusted deterministic schema_validity"
+      },
+      "timestamp": "2026-11-06T16:15:58.346Z"
+    },
+    {
+      "seq": 365,
+      "id": "gate-9f09ed705e0a49c7",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-9f09ed705e0a49c7",
+        "name": "source_reference_allowlisting",
+        "passed": true,
+        "reason": "Trusted deterministic source_reference_allowlisting"
+      },
+      "timestamp": "2026-11-06T16:15:58.347Z"
+    },
+    {
+      "seq": 366,
+      "id": "gate-8af35d2d706249e6",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-8af35d2d706249e6",
+        "name": "assertion_provenance",
+        "passed": true,
+        "reason": "Trusted deterministic assertion_provenance"
+      },
+      "timestamp": "2026-11-06T16:15:58.348Z"
+    },
+    {
+      "seq": 367,
+      "id": "gate-06471952289e4865",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-06471952289e4865",
+        "name": "policy_compliance",
+        "passed": true,
+        "reason": "Trusted deterministic policy_compliance"
+      },
+      "timestamp": "2026-11-06T16:15:58.349Z"
+    },
+    {
+      "seq": 368,
+      "id": "gate-5b9cd2ae8c8843de",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-5b9cd2ae8c8843de",
+        "name": "bounded_execution",
+        "passed": true,
+        "reason": "Trusted deterministic bounded_execution"
+      },
+      "timestamp": "2026-11-06T16:15:58.350Z"
+    },
+    {
+      "seq": 369,
+      "id": "gate-f5d730fcb67b41eb",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-f5d730fcb67b41eb",
+        "name": "output_safety",
+        "passed": true,
+        "reason": "Trusted deterministic output_safety"
+      },
+      "timestamp": "2026-11-06T16:15:58.351Z"
+    },
+    {
+      "seq": 370,
+      "id": "gate-1f0b60f7952149a6",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-1f0b60f7952149a6",
+        "name": "counterfactual_evidence",
+        "passed": true,
+        "reason": "Trusted deterministic counterfactual_evidence"
+      },
+      "timestamp": "2026-11-06T16:15:58.352Z"
+    },
+    {
+      "seq": 371,
+      "id": "gate-2555f458cf154e22",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-2555f458cf154e22",
+        "name": "reviewer_validity",
+        "passed": true,
+        "reason": "Trusted deterministic reviewer_validity"
+      },
+      "timestamp": "2026-11-06T16:15:58.353Z"
+    },
+    {
+      "seq": 372,
+      "id": "gate-416bb4c0204f405f",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-416bb4c0204f405f",
+        "name": "required_evaluation",
+        "passed": true,
+        "reason": "Trusted deterministic required_evaluation"
+      },
+      "timestamp": "2026-11-06T16:15:58.354Z"
+    },
+    {
+      "seq": 373,
+      "id": "gate-63019c95f67d4ca9",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "gate",
+      "data": {
+        "evidence": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "gate_id": "gate-63019c95f67d4ca9",
+        "name": "human_review_eligibility",
+        "passed": true,
+        "reason": "Trusted deterministic human_review_eligibility"
+      },
+      "timestamp": "2026-11-06T16:15:58.355Z"
+    },
+    {
+      "seq": 374,
+      "id": "pattern-b884d046c5a846c0",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "card",
+      "data": {
+        "actors": [
+          "TA"
+        ],
+        "assertions": [
+          {
+            "label": "SOURCE",
+            "source_ids": [
+              "MO-03"
+            ],
+            "text": "Individuals submit false claims without attending a course"
+          },
+          {
+            "label": "ASSUMPTION",
+            "source_ids": [
+              "MO-03"
+            ],
+            "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+          },
+          {
+            "label": "SOURCE",
+            "source_ids": [
+              "MO-03"
+            ],
+            "text": "Individuals submit false claims without attending a course"
+          },
+          {
+            "label": "ASSUMPTION",
+            "source_ids": [
+              "MO-03"
+            ],
+            "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+          },
+          {
+            "label": "ASSUMPTION",
+            "source_ids": [
+              "MO-03"
+            ],
+            "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+          }
+        ],
+        "classification": "KNOWN",
+        "comparison_rationale": "KNOWN relative only to MO-01–MO-08. MO-03: shared=['false_claim', 'nonattendance'], absent=[], additional=[] Feature similarity describes illustrative concepts, not actual wrongdoing or real-world novelty.",
+        "contributions": [
+          {
+            "actor": "TA",
+            "benefit": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established."
+            },
+            "claim": {
+              "label": "SIMULATION",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Hypothetical TA contribution: a potentially unsupported grant claim, nonattendance. Role allocation is a modelling assumption, not observed conduct."
+            },
+            "dependency_features": {},
+            "depends_on": [],
+            "features": [
+              "false_claim",
+              "nonattendance"
+            ],
+            "material": true
+          }
+        ],
+        "counterfactuals": [
+          {
+            "excluded_parent_messages": [
+              "msg-7e148e6bbe8e48c7",
+              "msg-bed3fb04fe0844b3"
+            ],
+            "outcome": "SINGLE_ACTOR_FEASIBILITY",
+            "parent_run_id": "run-b42bbe86c961407d",
+            "rationale": "Fresh reduced execution compared with validated material dependency edges and feature coverage. A surviving coalition is not single-actor feasibility; loss without parent cooperation is inconclusive. No real-world causal proof is claimed.",
+            "removed_actor": "TA",
+            "run_id": "run-d0cb01f1d6d74ec4",
+            "surviving_actors": []
+          }
+        ],
+        "evaluation_ids": [
+          "eval-e5aef1e0ef454674"
+        ],
+        "flows": [
+          {
+            "claim": {
+              "label": "ASSUMPTION",
+              "source_ids": [
+                "MO-03"
+              ],
+              "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning a potentially unsupported grant claim, nonattendance; no realised benefit is established."
+            },
+            "destination_actor": "TA",
+            "flow_type": "hypothesized_benefit",
+            "source_actor": "SCHEME",
+            "trace_ids": [
+              "msg-7e148e6bbe8e48c7",
+              "msg-bed3fb04fe0844b3"
+            ]
+          }
+        ],
+        "human_status": "REVIEW_PENDING",
+        "limitations": [
+          "Annex A is illustrative; Annex B is exercise-written and unverified.",
+          "Role allocation and benefit endpoints are assumptions, not observed transfers.",
+          "Actor-removal findings concern scripted structure, not real-world causation."
+        ],
+        "machine_outcome": "PASS",
+        "missing_data": [
+          "Independently verified attendance records",
+          "Independently verified grant-claim records"
+        ],
+        "pattern_id": "pattern-b884d046c5a846c0",
+        "run_id": "run-b42bbe86c961407d",
+        "scenario": {
+          "fault": "",
+          "features": [
+            "false_claim",
+            "nonattendance"
+          ],
+          "fixture_version": "scripts-2",
+          "mode": "single",
+          "policy_version": "acl-1",
+          "roles": [
+            "TA"
+          ],
+          "rounds": 2,
+          "scenario_id": "single_actor",
+          "seed": 17,
+          "source_version": "annex-1",
+          "sources": [
+            "MO-03"
+          ],
+          "version": "1"
+        },
+        "source_manifest": {
+          "annex-v1.json": "62d62e2c00eb3c2ed494f310376a1a41650281a5eb7ba4c973e629c1e24dc0ff",
+          "manifest_version": "release-1"
+        },
+        "summary": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-03"
+          ],
+          "text": "Hypothetical mechanism involving TA: a potentially unsupported grant claim, nonattendance. Single-actor structure in scripted contributions; no actual misconduct established."
+        },
+        "title": "Hypothetical single actor",
+        "trace_ids": [
+          "msg-7e148e6bbe8e48c7",
+          "msg-bed3fb04fe0844b3"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.356Z"
+    },
+    {
+      "seq": 375,
+      "id": "state_transition-828dec91f38b4884",
+      "run_id": "run-b42bbe86c961407d",
+      "kind": "state_transition",
+      "data": {
+        "status": "REVIEW_PENDING"
+      },
+      "timestamp": "2026-11-06T16:15:58.357Z"
+    }
+  ],
+  "budgets": [
+    {
+      "scope": "run-b42bbe86c961407d",
+      "used": 3,
+      "cap": 48
+    },
+    {
+      "scope": "run-d0cb01f1d6d74ec4",
+      "used": 0,
+      "cap": 48
+    }
+  ],
+  "decisions": [],
+  "annotations": [],
+  "children": [
+    {
+      "run": {
+        "id": "run-d0cb01f1d6d74ec4",
+        "kind": "CF",
+        "parent": "run-b42bbe86c961407d",
+        "status": "COMPLETE",
+        "version": 1,
+        "metadata": "{\"depth\": 1, \"parent_run_id\": \"run-b42bbe86c961407d\", \"removed_actor\": \"TA\", \"run_id\": \"run-d0cb01f1d6d74ec4\", \"run_type\": \"CF\", \"scenario\": {\"fault\": \"\", \"features\": [\"false_claim\", \"nonattendance\"], \"fixture_version\": \"scripts-2\", \"mode\": \"single\", \"policy_version\": \"acl-1\", \"roles\": [\"TA\"], \"rounds\": 2, \"scenario_id\": \"single_actor\", \"seed\": 17, \"source_version\": \"annex-1\", \"sources\": [\"MO-03\"], \"version\": \"1\"}, \"status\": \"RUNNING\", \"version\": 0}"
+      },
+      "records": [
+        {
+          "seq": 347,
+          "id": "run_started-90db734a26614c3b",
+          "run_id": "run-d0cb01f1d6d74ec4",
+          "kind": "run_started",
+          "data": {
+            "depth": 1,
+            "parent_run_id": "run-b42bbe86c961407d",
+            "removed_actor": "TA",
+            "run_id": "run-d0cb01f1d6d74ec4",
+            "run_type": "CF",
+            "scenario": {
+              "fault": "",
+              "features": [
+                "false_claim",
+                "nonattendance"
+              ],
+              "fixture_version": "scripts-2",
+              "mode": "single",
+              "policy_version": "acl-1",
+              "roles": [
+                "TA"
+              ],
+              "rounds": 2,
+              "scenario_id": "single_actor",
+              "seed": 17,
+              "source_version": "annex-1",
+              "sources": [
+                "MO-03"
+              ],
+              "version": "1"
+            },
+            "status": "RUNNING",
+            "version": 0
+          },
+          "timestamp": "2026-11-06T16:15:58.323Z"
+        },
+        {
+          "seq": 348,
+          "id": "snapshots-a489627f84ee4c7b",
+          "run_id": "run-d0cb01f1d6d74ec4",
+          "kind": "snapshots",
+          "data": {
+            "adapter_version": "scripts-2",
+            "code_revision": "sha256:5875c19de7deb03d0999f68af32a931d2706ccc28e0b3c34caf71e7218b10edc",
+            "code_version": "1.1.0",
+            "grounding_version": "annex-concepts-1",
+            "limits": {
+              "cards": 3,
+              "cf": 3,
+              "lineage_calls": 48,
+              "retries": 2,
+              "rounds": 4,
+              "seconds": 120.0,
+              "suite_calls": 60,
+              "test_calls": 12,
+              "test_fixtures": 12,
+              "turns": 12
+            },
+            "policy": {
+              "EA": {
+                "actor": "EA",
+                "capabilities": [
+                  "propose",
+                  "reply"
+                ],
+                "incentive": "Hypothetical employment/training benefit",
+                "prohibited": [
+                  "approve",
+                  "write",
+                  "shell",
+                  "network",
+                  "peer_call"
+                ],
+                "recipients": [
+                  "TA",
+                  "PA",
+                  "ORCH"
+                ],
+                "sources": [
+                  "MO-01",
+                  "MO-06",
+                  "MO-08",
+                  "S5"
+                ]
+              },
+              "PA": {
+                "actor": "PA",
+                "capabilities": [
+                  "propose",
+                  "reply"
+                ],
+                "incentive": "Hypothetical enrolment or funding benefit",
+                "prohibited": [
+                  "approve",
+                  "write",
+                  "shell",
+                  "network",
+                  "peer_call"
+                ],
+                "recipients": [
+                  "TA",
+                  "EA",
+                  "ORCH"
+                ],
+                "sources": [
+                  "MO-01",
+                  "MO-02",
+                  "MO-03",
+                  "MO-04",
+                  "MO-05",
+                  "MO-06",
+                  "MO-07",
+                  "MO-08",
+                  "S1",
+                  "S2",
+                  "S3",
+                  "S4",
+                  "S5"
+                ]
+              },
+              "REV": {
+                "actor": "REV",
+                "capabilities": [
+                  "reference_lookup",
+                  "review"
+                ],
+                "incentive": "Challenge assumptions and provenance",
+                "prohibited": [
+                  "approve",
+                  "write",
+                  "shell",
+                  "network",
+                  "peer_call"
+                ],
+                "recipients": [
+                  "GATE"
+                ],
+                "sources": [
+                  "MO-01",
+                  "MO-02",
+                  "MO-03",
+                  "MO-04",
+                  "MO-05",
+                  "MO-06",
+                  "MO-07",
+                  "MO-08",
+                  "S1",
+                  "S2",
+                  "S3",
+                  "S4",
+                  "S5"
+                ]
+              },
+              "TA": {
+                "actor": "TA",
+                "capabilities": [
+                  "propose",
+                  "reply"
+                ],
+                "incentive": "Hypothetical training benefit or avoided effort",
+                "prohibited": [
+                  "approve",
+                  "write",
+                  "shell",
+                  "network",
+                  "peer_call"
+                ],
+                "recipients": [
+                  "PA",
+                  "EA",
+                  "ORCH"
+                ],
+                "sources": [
+                  "MO-03",
+                  "MO-04",
+                  "MO-05",
+                  "MO-06",
+                  "MO-08",
+                  "S1",
+                  "S2",
+                  "S3",
+                  "S4",
+                  "S5"
+                ]
+              }
+            },
+            "scenario": {
+              "fault": "",
+              "features": [
+                "false_claim",
+                "nonattendance"
+              ],
+              "fixture_version": "scripts-2",
+              "mode": "single",
+              "policy_version": "acl-1",
+              "roles": [
+                "TA"
+              ],
+              "rounds": 2,
+              "scenario_id": "single_actor",
+              "seed": 17,
+              "source_version": "annex-1",
+              "sources": [
+                "MO-03"
+              ],
+              "version": "1"
+            },
+            "schema_version": "2",
+            "source_manifest": {
+              "annex-v1.json": "62d62e2c00eb3c2ed494f310376a1a41650281a5eb7ba4c973e629c1e24dc0ff",
+              "manifest_version": "release-1"
+            }
+          },
+          "timestamp": "2026-11-06T16:15:58.323Z"
+        },
+        {
+          "seq": 349,
+          "id": "cf_admission-29c22febe110458f",
+          "run_id": "run-d0cb01f1d6d74ec4",
+          "kind": "cf_admission",
+          "data": {
+            "parent": "run-b42bbe86c961407d",
+            "persisted_cap": 3,
+            "removed_actor": "TA",
+            "reserved_calls": 0
+          },
+          "timestamp": "2026-11-06T16:15:58.323Z"
+        },
+        {
+          "seq": 350,
+          "id": "grounding-32c70bac9df84d04",
+          "run_id": "run-d0cb01f1d6d74ec4",
+          "kind": "grounding",
+          "data": {
+            "benign": [],
+            "eligible": true,
+            "evidence": "Illustrative risk concepts only; no evidence of actual wrongdoing.",
+            "features": {
+              "false_claim": {
+                "context": [],
+                "direct": [
+                  "MO-03"
+                ],
+                "level": "DIRECT_CONCEPT"
+              },
+              "nonattendance": {
+                "context": [],
+                "direct": [
+                  "MO-03"
+                ],
+                "level": "DIRECT_CONCEPT"
+              }
+            },
+            "unsupported": [],
+            "version": "annex-concepts-1"
+          },
+          "timestamp": "2026-11-06T16:15:58.325Z"
+        },
+        {
+          "seq": 351,
+          "id": "context_reset-60eb2bba541349c3",
+          "run_id": "run-d0cb01f1d6d74ec4",
+          "kind": "context_reset",
+          "data": {
+            "copied_parent_messages": [],
+            "excluded_parent_messages": [
+              "msg-7e148e6bbe8e48c7",
+              "msg-bed3fb04fe0844b3"
+            ],
+            "fresh_history": true,
+            "removed_actor": "TA"
+          },
+          "timestamp": "2026-11-06T16:15:58.328Z"
+        },
+        {
+          "seq": 352,
+          "id": "cf_structure-4c8412a5d9b44adc",
+          "run_id": "run-d0cb01f1d6d74ec4",
+          "kind": "cf_structure",
+          "data": {
+            "actors": [],
+            "features": [],
+            "graph": {
+              "actors": [],
+              "cooperative": false,
+              "coverage": false,
+              "edges": [],
+              "errors": [],
+              "single": false
+            },
+            "supported": false
+          },
+          "timestamp": "2026-11-06T16:15:58.329Z"
+        },
+        {
+          "seq": 353,
+          "id": "state_transition-d89aa120594b4645",
+          "run_id": "run-d0cb01f1d6d74ec4",
+          "kind": "state_transition",
+          "data": {
+            "status": "COMPLETE"
+          },
+          "timestamp": "2026-11-06T16:15:58.330Z"
+        }
+      ],
+      "budgets": [
+        {
+          "scope": "run-b42bbe86c961407d",
+          "used": 3,
+          "cap": 48
+        },
+        {
+          "scope": "run-d0cb01f1d6d74ec4",
+          "used": 0,
+          "cap": 48
+        }
+      ],
+      "decisions": [],
+      "annotations": [],
+      "children": []
+    }
+  ]
+}

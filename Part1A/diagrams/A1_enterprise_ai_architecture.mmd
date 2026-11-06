@@ -1,0 +1,91 @@
+---
+title: A1 — SWDA enterprise AI | current batch, governed MCP and future online
+---
+flowchart TB
+  subgraph BUSINESS[Business systems and users]
+    direction TB
+    REQUEST["Service requests / case systems"]
+    CATALOG["Programme catalogue / outcomes"]
+    USER["Business users and applications"]
+  end
+
+  subgraph AWS[AWS boundary — proposed services]
+    direction TB
+    CONNECT["Approved ingestion connectors"]
+    LAND["Amazon S3 encrypted landing"]
+    SEC["IAM, KMS, secrets and private networking"]
+  end
+
+  subgraph DBX[Databricks — governed data and ML platform]
+    direction TB
+    VALID["Validation, deduplication / quarantine"]
+    BRONZE["Delta Bronze"]
+    SILVER["Delta Silver"]
+    GOLD["Delta Gold: features and catalogue snapshot"]
+    FEAT["Versioned feature engineering"]
+    TRAIN["Train / evaluate candidate"]
+    MLF["MLflow experiments, metrics and artefacts"]
+    UC["Unity Catalog: governed data and model registry"]
+    MODEL["Approved model + compatible rules manifest"]
+    BATCH["Lakeflow Jobs: HOURLY batch inference"]
+    RESULT["Versioned Delta recommendations + run manifest"]
+    MON["Quality, drift, feedback, run and cost monitoring"]
+    VALID --> BRONZE --> SILVER --> GOLD
+    GOLD --> FEAT --> TRAIN --> MLF --> UC
+    UC -->|"model version after A2 release gate"| MODEL
+    GOLD -->|"hourly inputs / catalogue rules"| BATCH
+    MODEL -->|"pinned approved release"| BATCH
+    BATCH --> RESULT --> MON
+  end
+
+  subgraph MCP[Enterprise MCP — proposed, separate runtime path]
+    direction TB
+    HOST["Authorised host + embedded MCP client"]
+    GATE["Unity Gateway: UC EXECUTE + tool selectors"]
+    BACK["Private custom MCP server + SWDA runtime PEP"]
+    AGENT["Service Recommendation Agent"]
+    TOOLS["Deterministic classifier + catalogue lookup"]
+    VIEW["Restricted read-only catalogue service"]
+    HOST -->|"discovery / tools call"| GATE
+    GATE -->|"managed proxy: permitted tools"| BACK
+    BACK --> AGENT --> TOOLS --> VIEW
+  end
+
+  subgraph GOVERN[Agent governance — SWDA owned]
+    direction TB
+    AR["Agent approval registry: version, digest, expiry"]
+    CTRL["Publication / revocation controller"]
+    POLICY["Private runtime policy authority"]
+    AR -.-> CTRL
+    AR -.-> POLICY
+  end
+
+  subgraph FUTURE[Future phase — NOT release 1]
+    direction TB
+    API["Authenticated online application API"]
+    SERVE["Near-real-time serving endpoint"]
+    API ==> SERVE
+  end
+
+  REQUEST -->|"service records"| CONNECT
+  CATALOG -->|"catalogue + outcomes"| CONNECT
+  CONNECT --> LAND --> VALID
+  RESULT -->|"governed delivery"| USER
+  USER -->|"review / outcome feedback"| CONNECT
+  MON -.->|"drift / feedback: propose CT"| TRAIN
+  GOLD -->|"published approved snapshot"| VIEW
+  CTRL -.->|"reconcile exact approved digest, UC grants, tool selectors"| GATE
+  POLICY -.->|"per-request status check; fail closed"| BACK
+  SEC -.->|"least privilege / encrypted access"| LAND
+
+  LEG["Legend: solid = proposed data / invocation | dotted = governance control | thick = future online only"]
+  classDef data fill:#EAF2F7,stroke:#64829B,color:#17354B,stroke-width:1.3px
+  classDef ml fill:#EDF4ED,stroke:#68896D,color:#173E2E,stroke-width:1.3px
+  classDef gov fill:#F8F1E7,stroke:#A18A65,color:#4B3B28,stroke-width:1.3px
+  classDef next fill:#F0F1F4,stroke:#939BAC,color:#525967,stroke-width:1.5px
+  classDef legend fill:#FFFFFF,stroke:#A5B0BF,color:#495566,font-size:11px
+  class REQUEST,CATALOG,USER,CONNECT,LAND,VALID,BRONZE,SILVER,GOLD,FEAT,RESULT,VIEW data
+  class TRAIN,MLF,MODEL,BATCH,MON,UC ml
+  class SEC,HOST,GATE,BACK,AGENT,TOOLS,AR,CTRL,POLICY gov
+  class API,SERVE next
+  class LEG legend

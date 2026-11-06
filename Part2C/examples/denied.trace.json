@@ -1,0 +1,631 @@
+{
+  "run": {
+    "id": "run-e9a26e53fd4a445b",
+    "kind": "TEST",
+    "parent": null,
+    "status": "BLOCKED",
+    "version": 1,
+    "metadata": "{\"depth\": 0, \"parent_run_id\": null, \"removed_actor\": null, \"run_id\": \"run-e9a26e53fd4a445b\", \"run_type\": \"TEST\", \"scenario\": {\"fault\": \"recipient\", \"features\": [\"cash_offer\", \"credit_use\", \"optional_attendance\"], \"fixture_version\": \"scripts-2\", \"mode\": \"dependency\", \"policy_version\": \"acl-1\", \"roles\": [\"PA\", \"TA\"], \"rounds\": 2, \"scenario_id\": \"two_actor\", \"seed\": 17, \"source_version\": \"annex-1\", \"sources\": [\"MO-04\", \"S3\"], \"version\": \"1\"}, \"status\": \"RUNNING\", \"version\": 0}"
+  },
+  "records": [
+    {
+      "seq": 598,
+      "id": "run_started-1ed22064e75a46ff",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "run_started",
+      "data": {
+        "depth": 0,
+        "parent_run_id": null,
+        "removed_actor": null,
+        "run_id": "run-e9a26e53fd4a445b",
+        "run_type": "TEST",
+        "scenario": {
+          "fault": "recipient",
+          "features": [
+            "cash_offer",
+            "credit_use",
+            "optional_attendance"
+          ],
+          "fixture_version": "scripts-2",
+          "mode": "dependency",
+          "policy_version": "acl-1",
+          "roles": [
+            "PA",
+            "TA"
+          ],
+          "rounds": 2,
+          "scenario_id": "two_actor",
+          "seed": 17,
+          "source_version": "annex-1",
+          "sources": [
+            "MO-04",
+            "S3"
+          ],
+          "version": "1"
+        },
+        "status": "RUNNING",
+        "version": 0
+      },
+      "timestamp": "2026-11-06T16:15:58.643Z"
+    },
+    {
+      "seq": 599,
+      "id": "snapshots-1dc1b9840c064cc7",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "snapshots",
+      "data": {
+        "adapter_version": "scripts-2",
+        "code_revision": "sha256:5875c19de7deb03d0999f68af32a931d2706ccc28e0b3c34caf71e7218b10edc",
+        "code_version": "1.1.0",
+        "grounding_version": "annex-concepts-1",
+        "limits": {
+          "cards": 3,
+          "cf": 3,
+          "lineage_calls": 48,
+          "retries": 2,
+          "rounds": 4,
+          "seconds": 120.0,
+          "suite_calls": 60,
+          "test_calls": 12,
+          "test_fixtures": 12,
+          "turns": 12
+        },
+        "policy": {
+          "EA": {
+            "actor": "EA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical employment/training benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "PA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-06",
+              "MO-08",
+              "S5"
+            ]
+          },
+          "PA": {
+            "actor": "PA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical enrolment or funding benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "REV": {
+            "actor": "REV",
+            "capabilities": [
+              "reference_lookup",
+              "review"
+            ],
+            "incentive": "Challenge assumptions and provenance",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "GATE"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "TA": {
+            "actor": "TA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical training benefit or avoided effort",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "PA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          }
+        },
+        "scenario": {
+          "fault": "recipient",
+          "features": [
+            "cash_offer",
+            "credit_use",
+            "optional_attendance"
+          ],
+          "fixture_version": "scripts-2",
+          "mode": "dependency",
+          "policy_version": "acl-1",
+          "roles": [
+            "PA",
+            "TA"
+          ],
+          "rounds": 2,
+          "scenario_id": "two_actor",
+          "seed": 17,
+          "source_version": "annex-1",
+          "sources": [
+            "MO-04",
+            "S3"
+          ],
+          "version": "1"
+        },
+        "schema_version": "2",
+        "source_manifest": {
+          "annex-v1.json": "62d62e2c00eb3c2ed494f310376a1a41650281a5eb7ba4c973e629c1e24dc0ff",
+          "manifest_version": "release-1"
+        }
+      },
+      "timestamp": "2026-11-06T16:15:58.645Z"
+    },
+    {
+      "seq": 600,
+      "id": "grounding-57994255771640bd",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "grounding",
+      "data": {
+        "benign": [],
+        "eligible": true,
+        "evidence": "Illustrative risk concepts only; no evidence of actual wrongdoing.",
+        "features": {
+          "cash_offer": {
+            "context": [
+              "S3"
+            ],
+            "direct": [
+              "MO-04"
+            ],
+            "level": "DIRECT_CONCEPT"
+          },
+          "credit_use": {
+            "context": [
+              "S3"
+            ],
+            "direct": [
+              "MO-04"
+            ],
+            "level": "DIRECT_CONCEPT"
+          },
+          "optional_attendance": {
+            "context": [],
+            "direct": [
+              "MO-04"
+            ],
+            "level": "DIRECT_CONCEPT"
+          }
+        },
+        "unsupported": [],
+        "version": "annex-concepts-1"
+      },
+      "timestamp": "2026-11-06T16:15:58.646Z"
+    },
+    {
+      "seq": 601,
+      "id": "context_reset-2f47b69487f3494f",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "context_reset",
+      "data": {
+        "copied_parent_messages": [],
+        "excluded_parent_messages": [],
+        "fresh_history": true,
+        "removed_actor": null
+      },
+      "timestamp": "2026-11-06T16:15:58.648Z"
+    },
+    {
+      "seq": 602,
+      "id": "policy-e62f9ffd54da4746",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "policy",
+      "data": {
+        "allowed": true,
+        "code": "DISPATCH_ALLOWED",
+        "message_id": "msg-fcf8bbab452a429b",
+        "stage": "dispatch"
+      },
+      "timestamp": "2026-11-06T16:15:58.649Z"
+    },
+    {
+      "seq": 603,
+      "id": "invocation_started-f0a2d8430e074987",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "invocation_started",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "PA",
+            "attempt": 0,
+            "message_id": "msg-fcf8bbab452a429b",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "propose",
+            "recipient": "TA",
+            "round": 1,
+            "run_id": "run-e9a26e53fd4a445b",
+            "run_type": "TEST",
+            "schema_version": "2",
+            "source_ids": [
+              "MO-04",
+              "S3"
+            ],
+            "source_version": "annex-1",
+            "turn": 1
+          },
+          "incoming": [],
+          "prior": [],
+          "profile": {
+            "actor": "PA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical enrolment or funding benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Cash for enrolment",
+              "source_id": "MO-04",
+              "source_type": "ANNEX_A",
+              "text": "Agents or recruiters offer cash for using credits and suggest attendance is optional",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S3",
+              "source_id": "S3",
+              "source_type": "ANNEX_B",
+              "text": "A marketing agent kept pushing my elderly mum to use her credits and mentioned a cash reward. Not sure what the course even was.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "recipient",
+            "features": [
+              "cash_offer",
+              "credit_use",
+              "optional_attendance"
+            ],
+            "fixture_version": "scripts-2",
+            "mode": "dependency",
+            "policy_version": "acl-1",
+            "roles": [
+              "PA",
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "two_actor",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "MO-04",
+              "S3"
+            ],
+            "version": "1"
+          }
+        },
+        "invocation_id": "inv-c399e1da901a4a65",
+        "schema_version": "2",
+        "script_version": "scripts-2"
+      },
+      "timestamp": "2026-11-06T16:15:58.650Z"
+    },
+    {
+      "seq": 604,
+      "id": "usage-4fede39a3b4044d7",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "usage",
+      "data": {
+        "attempt": 0,
+        "elapsed_seconds": 0.006269927000175812,
+        "invocation_id": "inv-c399e1da901a4a65",
+        "message_id": "msg-fcf8bbab452a429b",
+        "scopes": [
+          "run-e9a26e53fd4a445b"
+        ]
+      },
+      "timestamp": "2026-11-06T16:15:58.650Z"
+    },
+    {
+      "seq": 605,
+      "id": "policy-7473127b3dd3490a",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "policy",
+      "data": {
+        "allowed": false,
+        "code": "RECEIPT_DENIED",
+        "message_id": "msg-fcf8bbab452a429b",
+        "stage": "receipt"
+      },
+      "timestamp": "2026-11-06T16:15:58.652Z"
+    },
+    {
+      "seq": 606,
+      "id": "inv-c399e1da901a4a65",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "invocation",
+      "data": {
+        "context": {
+          "comparison": null,
+          "draft": null,
+          "envelope": {
+            "actor": "PA",
+            "attempt": 0,
+            "message_id": "msg-fcf8bbab452a429b",
+            "parent_message_id": null,
+            "policy_version": "acl-1",
+            "purpose": "propose",
+            "recipient": "TA",
+            "round": 1,
+            "run_id": "run-e9a26e53fd4a445b",
+            "run_type": "TEST",
+            "schema_version": "2",
+            "source_ids": [
+              "MO-04",
+              "S3"
+            ],
+            "source_version": "annex-1",
+            "turn": 1
+          },
+          "incoming": [],
+          "prior": [],
+          "profile": {
+            "actor": "PA",
+            "capabilities": [
+              "propose",
+              "reply"
+            ],
+            "incentive": "Hypothetical enrolment or funding benefit",
+            "prohibited": [
+              "approve",
+              "write",
+              "shell",
+              "network",
+              "peer_call"
+            ],
+            "recipients": [
+              "TA",
+              "EA",
+              "ORCH"
+            ],
+            "sources": [
+              "MO-01",
+              "MO-02",
+              "MO-03",
+              "MO-04",
+              "MO-05",
+              "MO-06",
+              "MO-07",
+              "MO-08",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          "references": [
+            {
+              "basis": "Observed",
+              "benign": false,
+              "name": "Cash for enrolment",
+              "source_id": "MO-04",
+              "source_type": "ANNEX_A",
+              "text": "Agents or recruiters offer cash for using credits and suggest attendance is optional",
+              "trust": "ILLUSTRATIVE",
+              "version": "annex-1"
+            },
+            {
+              "basis": "Written for this exercise; not verified accounts",
+              "benign": false,
+              "name": "S3",
+              "source_id": "S3",
+              "source_type": "ANNEX_B",
+              "text": "A marketing agent kept pushing my elderly mum to use her credits and mentioned a cash reward. Not sure what the course even was.",
+              "trust": "EXERCISE_UNVERIFIED",
+              "version": "annex-1"
+            }
+          ],
+          "scenario": {
+            "fault": "recipient",
+            "features": [
+              "cash_offer",
+              "credit_use",
+              "optional_attendance"
+            ],
+            "fixture_version": "scripts-2",
+            "mode": "dependency",
+            "policy_version": "acl-1",
+            "roles": [
+              "PA",
+              "TA"
+            ],
+            "rounds": 2,
+            "scenario_id": "two_actor",
+            "seed": 17,
+            "source_version": "annex-1",
+            "sources": [
+              "MO-04",
+              "S3"
+            ],
+            "version": "1"
+          }
+        },
+        "error_code": "RECEIPT_DENIED",
+        "invocation_id": "inv-c399e1da901a4a65",
+        "outcome": "POLICY_VIOLATION",
+        "output_bytes": 977,
+        "output_digest": "2686a32bb574b6bafa89a9020d199b1e61380c3175769f57a4622a7a88cfd9ca",
+        "raw_output": "",
+        "schema_version": "2",
+        "script_version": "scripts-2",
+        "semantic_output_digest": "2686a32bb574b6bafa89a9020d199b1e61380c3175769f57a4622a7a88cfd9ca"
+      },
+      "timestamp": "2026-11-06T16:15:58.653Z"
+    },
+    {
+      "seq": 607,
+      "id": "event-9b5a88e5fce34979",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "event",
+      "data": {
+        "actor": "ORCH",
+        "event_id": "event-9b5a88e5fce34979",
+        "kind": "execution_blocked",
+        "payload": {
+          "calls": [
+            {
+              "cap": 12,
+              "scope": "run-e9a26e53fd4a445b",
+              "used": 1
+            }
+          ],
+          "code": "RECEIPT_DENIED"
+        },
+        "run_id": "run-e9a26e53fd4a445b",
+        "timestamp": "2026-11-06T16:15:58.655264+00:00",
+        "trace_id": "run-e9a26e53fd4a445b"
+      },
+      "timestamp": "2026-11-06T16:15:58.655Z"
+    },
+    {
+      "seq": 608,
+      "id": "gate-34df5afd68eb4381",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "gate",
+      "data": {
+        "evidence": [],
+        "gate_id": "gate-34df5afd68eb4381",
+        "name": "execution_integrity",
+        "passed": false,
+        "reason": "RECEIPT_DENIED"
+      },
+      "timestamp": "2026-11-06T16:15:58.656Z"
+    },
+    {
+      "seq": 609,
+      "id": "state_transition-5942c36c85dc4937",
+      "run_id": "run-e9a26e53fd4a445b",
+      "kind": "state_transition",
+      "data": {
+        "status": "BLOCKED"
+      },
+      "timestamp": "2026-11-06T16:15:58.657Z"
+    }
+  ],
+  "budgets": [
+    {
+      "scope": "run-e9a26e53fd4a445b",
+      "used": 1,
+      "cap": 12
+    }
+  ],
+  "decisions": [],
+  "annotations": [],
+  "children": []
+}

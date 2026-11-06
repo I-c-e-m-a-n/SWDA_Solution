@@ -1,0 +1,93 @@
+{
+  "unchanged_files": 118,
+  "binary_and_image_hashes": [
+    {
+      "path": "Part1A/diagrams/A1.png",
+      "sha256": "e766a503d61ff9d758ed73323fbcdc670166b1d5781db13d4d783309d52de1c0"
+    },
+    {
+      "path": "Part1A/diagrams/A1.svg",
+      "sha256": "a75ee0159998e742e43ea25137dfaa0336ed8a90be0323b9b0c67189e90e631d"
+    },
+    {
+      "path": "Part1A/diagrams/A2.png",
+      "sha256": "0715698e76c0dfa9204ed2fa53d737d7ba6590d60d950e90104ecd1d703b346a"
+    },
+    {
+      "path": "Part1A/diagrams/A2.svg",
+      "sha256": "6ee8f3c82b2b293e415b6f9371807adf2f700bf547e2d229038a0ff8218b16a2"
+    },
+    {
+      "path": "Part1A/diagrams/A3.png",
+      "sha256": "b61dcb11538824f7f8550cdd2626ced6b22282482ca24122644a39d61592f3af"
+    },
+    {
+      "path": "Part1A/diagrams/A3.svg",
+      "sha256": "1f8cb1038bec889aaf16bcc245d3a637261b1ff1f163955ac60ba3c6c32757a5"
+    },
+    {
+      "path": "Part1A/diagrams/A4.png",
+      "sha256": "1f1ef7c9dd72697221df418eca94e304a093c107b6fd2a08581e914ccc56da10"
+    },
+    {
+      "path": "Part1A/diagrams/A4.svg",
+      "sha256": "39e1060fbf55f60cbe819dfa22b0de62dd460d48e93270bb8632d884c406ce1e"
+    },
+    {
+      "path": "Part1B/SWDA_Part1B_Design_Document_Final.pdf",
+      "sha256": "72784abdecc2a005455895e613cc3b96b5dea9fdeb18e04b24720db9e780e286"
+    },
+    {
+      "path": "Part2A/P2_A1_Executive_Overview_v3.png",
+      "sha256": "335c6d17c9b9abc2fbd7f7a92c1154d2644f757b8e8227785756282e74c1e0c4"
+    },
+    {
+      "path": "Part2A/P2_A1_Executive_Overview_v3.svg",
+      "sha256": "101db2808f8a7f774cd33f77882e1043cc3766f7b74005ffca38360806d874ed"
+    },
+    {
+      "path": "Part2A/P2_A1_Simulation_Architecture_v3.png",
+      "sha256": "c3e6928ac69e0fd2537d4c759a4f28019a382ba9ebe8f25887b09f6c2701414a"
+    },
+    {
+      "path": "Part2A/P2_A1_Simulation_Architecture_v3.svg",
+      "sha256": "ef00c66088a1cb5cc77fef642d17ddedc7aab7b061c5b68b1aa211147c1ddb09"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_1.png",
+      "sha256": "6fedec0fad5d12e39a980fb0f789c3108fe4e06e84360099f9cac4d145ca38e6"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_2.png",
+      "sha256": "6e368e965dbf15776114b5a51cfcac36152849e6660707c225429164bbefdb5d"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_3.png",
+      "sha256": "417d63d1300ad79dbfff3206f27b73aafa6f0745ead2ffd6d6932db54da4b9a3"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_4.png",
+      "sha256": "aba3de3f0c9cbce27a8abf1ee7ca1ccdbeefb661d818e2443770e4c08981c94f"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_5.png",
+      "sha256": "6168ae43a41d9795273f3e4fba632f59d9f3d57d7f4c881915f7f8fc7fbfe4ac"
+    },
+    {
+      "path": "Part2A/P2_A2_Sequence_v3_Phase_6.png",
+      "sha256": "221145f4fa645a2c49843676e01a458c457397ac97b6d6bc93d3a80a270412b3"
+    },
+    {
+      "path": "Part2A/P2_A2_Simulation_Sequence_v3.png",
+      "sha256": "bc4faf531ee7f61435700d23381abd53e619802a578ee87af34a95310bac4bd5"
+    },
+    {
+      "path": "Part2A/P2_A2_Simulation_Sequence_v3.svg",
+      "sha256": "fbf70b6cd414f0b7229b6749b1d1bc562a806e86d9d855c40c96ce42e7e7573f"
+    }
+  ],
+  "manifest_outputs_verified": 15,
+  "historical_manifest_inputs_absent": 12,
+  "local_markdown_targets_verified": 64,
+  "credential_pattern_scan": "No matches; heuristic scan is not a guarantee"
+}

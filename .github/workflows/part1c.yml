@@ -1,0 +1,37 @@
+name: Part1C portable MCP verification
+on:
+  pull_request:
+    paths: ["Part1C/**", ".github/workflows/part1c.yml"]
+  push:
+    branches: [main]
+    paths: ["Part1C/**", ".github/workflows/part1c.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-15, macos-15-intel]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: Part1C
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: ./setup.sh
+      - run: ./demo.sh
+      - run: ./test.sh --junitxml=test-results.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: part1c-results-${{ matrix.os }}
+          path: Part1C/test-results.xml

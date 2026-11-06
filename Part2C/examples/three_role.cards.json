@@ -1,0 +1,397 @@
+[
+  {
+    "actors": [
+      "PA",
+      "EA",
+      "TA"
+    ],
+    "assertions": [
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "MO-08"
+        ],
+        "text": "A sponsor pays the nett fee while value flows back through the provider"
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "MO-08",
+          "MO-06"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "MO-08"
+        ],
+        "text": "A sponsor pays the nett fee while value flows back through the provider"
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "MO-08",
+          "MO-06"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "MO-08"
+        ],
+        "text": "A sponsor pays the nett fee while value flows back through the provider"
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "MO-08",
+          "MO-06"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "MO-08"
+        ],
+        "text": "A sponsor pays the nett fee while value flows back through the provider"
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "MO-08",
+          "MO-06"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "MO-08"
+        ],
+        "text": "A sponsor pays the nett fee while value flows back through the provider"
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "MO-08",
+          "MO-06"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "SOURCE",
+        "source_ids": [
+          "MO-08"
+        ],
+        "text": "A sponsor pays the nett fee while value flows back through the provider"
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "MO-08",
+          "MO-06"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      },
+      {
+        "label": "ASSUMPTION",
+        "source_ids": [
+          "MO-08",
+          "MO-06"
+        ],
+        "text": "Role incentives and structural dependencies are scripted modelling assumptions."
+      }
+    ],
+    "classification": "VARIATION",
+    "comparison_rationale": "VARIATION relative only to MO-01–MO-08. MO-06: shared=['employment_link'], absent=['course_only', 'employment_end'], additional=['provider_return', 'sponsor_fee']; MO-08: shared=['provider_return', 'sponsor_fee'], absent=[], additional=['employment_link'] Feature similarity describes illustrative concepts, not actual wrongdoing or real-world novelty.",
+    "contributions": [
+      {
+        "actor": "PA",
+        "benefit": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning sponsor fee support; no realised benefit is established."
+        },
+        "claim": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "Hypothetical PA contribution: sponsor fee support. Role allocation is a modelling assumption, not observed conduct."
+        },
+        "dependency_features": {},
+        "depends_on": [],
+        "features": [
+          "sponsor_fee"
+        ],
+        "material": true
+      },
+      {
+        "actor": "EA",
+        "benefit": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "Hypothesized EA benefit: employment or sponsorship-related value in a scenario concerning value returning through a provider; no realised benefit is established."
+        },
+        "claim": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "Hypothetical EA contribution: value returning through a provider. Role allocation is a modelling assumption, not observed conduct."
+        },
+        "dependency_features": {
+          "msg-fc5e7374811349b2": [
+            "sponsor_fee"
+          ]
+        },
+        "depends_on": [
+          "msg-fc5e7374811349b2"
+        ],
+        "features": [
+          "provider_return"
+        ],
+        "material": true
+      },
+      {
+        "actor": "TA",
+        "benefit": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning an employment link; no realised benefit is established."
+        },
+        "claim": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "Hypothetical TA contribution: an employment link. Role allocation is a modelling assumption, not observed conduct."
+        },
+        "dependency_features": {
+          "msg-d115484c468f4c75": [
+            "provider_return"
+          ]
+        },
+        "depends_on": [
+          "msg-d115484c468f4c75"
+        ],
+        "features": [
+          "employment_link"
+        ],
+        "material": true
+      }
+    ],
+    "counterfactuals": [
+      {
+        "excluded_parent_messages": [
+          "msg-30321795baa5468a",
+          "msg-6c56d88bb986428c",
+          "msg-3401204c78e64f48",
+          "msg-fc5e7374811349b2",
+          "msg-d115484c468f4c75",
+          "msg-d481d4f51f124523"
+        ],
+        "outcome": "MULTI_PARTY_DEPENDENCY",
+        "parent_run_id": "run-daa33ef5c2544dba",
+        "rationale": "Fresh reduced execution compared with validated material dependency edges and feature coverage. A surviving coalition is not single-actor feasibility; loss without parent cooperation is inconclusive. No real-world causal proof is claimed.",
+        "removed_actor": "PA",
+        "run_id": "run-34ac83425dee4d5e",
+        "surviving_actors": []
+      },
+      {
+        "excluded_parent_messages": [
+          "msg-6c56d88bb986428c",
+          "msg-3401204c78e64f48",
+          "msg-d115484c468f4c75",
+          "msg-d481d4f51f124523"
+        ],
+        "outcome": "MULTI_PARTY_DEPENDENCY",
+        "parent_run_id": "run-daa33ef5c2544dba",
+        "rationale": "Fresh reduced execution compared with validated material dependency edges and feature coverage. A surviving coalition is not single-actor feasibility; loss without parent cooperation is inconclusive. No real-world causal proof is claimed.",
+        "removed_actor": "EA",
+        "run_id": "run-7b7f3037d24e45dc",
+        "surviving_actors": [
+          "PA"
+        ]
+      },
+      {
+        "excluded_parent_messages": [
+          "msg-3401204c78e64f48",
+          "msg-d481d4f51f124523"
+        ],
+        "outcome": "MULTI_PARTY_DEPENDENCY",
+        "parent_run_id": "run-daa33ef5c2544dba",
+        "rationale": "Fresh reduced execution compared with validated material dependency edges and feature coverage. A surviving coalition is not single-actor feasibility; loss without parent cooperation is inconclusive. No real-world causal proof is claimed.",
+        "removed_actor": "TA",
+        "run_id": "run-49e311060f284bf4",
+        "surviving_actors": [
+          "PA",
+          "EA"
+        ]
+      }
+    ],
+    "evaluation_ids": [
+      "eval-e2ef8650d0374df7"
+    ],
+    "flows": [
+      {
+        "claim": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "EA explicitly depends on PA's simulated sponsor fee support; this is a scripted relationship."
+        },
+        "destination_actor": "EA",
+        "flow_type": "contribution_dependency",
+        "source_actor": "PA",
+        "trace_ids": [
+          "msg-fc5e7374811349b2",
+          "msg-d115484c468f4c75"
+        ]
+      },
+      {
+        "claim": {
+          "label": "SIMULATION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "TA explicitly depends on EA's simulated value returning through a provider; this is a scripted relationship."
+        },
+        "destination_actor": "TA",
+        "flow_type": "contribution_dependency",
+        "source_actor": "EA",
+        "trace_ids": [
+          "msg-d115484c468f4c75",
+          "msg-d481d4f51f124523"
+        ]
+      },
+      {
+        "claim": {
+          "label": "ASSUMPTION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "Hypothesized PA benefit: enrolment or funding-related value in a scenario concerning sponsor fee support; no realised benefit is established."
+        },
+        "destination_actor": "PA",
+        "flow_type": "hypothesized_benefit",
+        "source_actor": "SCHEME",
+        "trace_ids": [
+          "msg-30321795baa5468a",
+          "msg-fc5e7374811349b2"
+        ]
+      },
+      {
+        "claim": {
+          "label": "ASSUMPTION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "Hypothesized EA benefit: employment or sponsorship-related value in a scenario concerning value returning through a provider; no realised benefit is established."
+        },
+        "destination_actor": "EA",
+        "flow_type": "hypothesized_benefit",
+        "source_actor": "SCHEME",
+        "trace_ids": [
+          "msg-d115484c468f4c75"
+        ]
+      },
+      {
+        "claim": {
+          "label": "ASSUMPTION",
+          "source_ids": [
+            "MO-08",
+            "MO-06"
+          ],
+          "text": "Hypothesized TA benefit: training-related value or reduced attendance effort in a scenario concerning an employment link; no realised benefit is established."
+        },
+        "destination_actor": "TA",
+        "flow_type": "hypothesized_benefit",
+        "source_actor": "SCHEME",
+        "trace_ids": [
+          "msg-d481d4f51f124523"
+        ]
+      }
+    ],
+    "human_status": "REVIEW_PENDING",
+    "limitations": [
+      "Annex A is illustrative; Annex B is exercise-written and unverified.",
+      "Role allocation and benefit endpoints are assumptions, not observed transfers.",
+      "Actor-removal findings concern scripted structure, not real-world causation."
+    ],
+    "machine_outcome": "PASS",
+    "missing_data": [
+      "Independently verified employment records",
+      "Independently verified enrolment records",
+      "Independently verified financial or value-flow records"
+    ],
+    "pattern_id": "pattern-e941591a4dfc49b4",
+    "run_id": "run-daa33ef5c2544dba",
+    "scenario": {
+      "fault": "",
+      "features": [
+        "sponsor_fee",
+        "provider_return",
+        "employment_link"
+      ],
+      "fixture_version": "scripts-2",
+      "mode": "dependency",
+      "policy_version": "acl-1",
+      "roles": [
+        "PA",
+        "EA",
+        "TA"
+      ],
+      "rounds": 2,
+      "scenario_id": "three_role",
+      "seed": 17,
+      "source_version": "annex-1",
+      "sources": [
+        "MO-08",
+        "MO-06"
+      ],
+      "version": "1"
+    },
+    "source_manifest": {
+      "annex-v1.json": "62d62e2c00eb3c2ed494f310376a1a41650281a5eb7ba4c973e629c1e24dc0ff",
+      "manifest_version": "release-1"
+    },
+    "summary": {
+      "label": "SIMULATION",
+      "source_ids": [
+        "MO-08",
+        "MO-06"
+      ],
+      "text": "Hypothetical mechanism involving PA, EA, TA: sponsor fee support, value returning through a provider, an employment link. Explicit material cooperation in scripted contributions; no actual misconduct established."
+    },
+    "title": "Hypothetical three role",
+    "trace_ids": [
+      "msg-30321795baa5468a",
+      "msg-6c56d88bb986428c",
+      "msg-3401204c78e64f48",
+      "msg-fc5e7374811349b2",
+      "msg-d115484c468f4c75",
+      "msg-d481d4f51f124523"
+    ]
+  }
+]

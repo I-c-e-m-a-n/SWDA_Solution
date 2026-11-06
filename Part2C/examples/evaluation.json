@@ -1,0 +1,330 @@
+{
+  "suite_id": "suite-c48b623607b24bcf",
+  "fixture_version": "eval-1",
+  "executed": 12,
+  "failures": 0,
+  "complete": true,
+  "passed": true,
+  "results": [
+    {
+      "fixture_id": "valid_messages",
+      "run_id": "run-96ed2b912cb94658",
+      "expected": "COMPLETE",
+      "actual": "COMPLETE",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true
+      },
+      "trace": "trace:run-96ed2b912cb94658",
+      "message_count": 4
+    },
+    {
+      "fixture_id": "malformed_schema",
+      "run_id": "run-82abf14ecec94d52",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true
+      },
+      "trace": "trace:run-82abf14ecec94d52",
+      "message_count": 0
+    },
+    {
+      "fixture_id": "unauthorised_identity",
+      "run_id": "run-426e14f7046047cd",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true,
+        "no_delivery": true
+      },
+      "trace": "trace:run-426e14f7046047cd",
+      "message_count": 0
+    },
+    {
+      "fixture_id": "forbidden_source",
+      "run_id": "run-388ee11c33c2406a",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true,
+        "no_delivery": true
+      },
+      "trace": "trace:run-388ee11c33c2406a",
+      "message_count": 0
+    },
+    {
+      "fixture_id": "reviewer_lookup",
+      "run_id": "run-df74d61294e34f40",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true,
+        "denied_lookup": true
+      },
+      "trace": "trace:run-df74d61294e34f40",
+      "message_count": 4
+    },
+    {
+      "fixture_id": "source_injection",
+      "run_id": "run-5548e6580407461b",
+      "expected": "COMPLETE",
+      "actual": "COMPLETE",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true
+      },
+      "trace": "trace:run-5548e6580407461b",
+      "message_count": 4
+    },
+    {
+      "fixture_id": "unsafe_unsupported",
+      "run_id": "run-21e878b343584bb8",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true,
+        "no_delivery": true
+      },
+      "trace": "trace:run-21e878b343584bb8",
+      "message_count": 0
+    },
+    {
+      "fixture_id": "benign_s5",
+      "run_id": "run-d93b277947d24e23",
+      "expected": "NO_PATTERN",
+      "actual": "NO_PATTERN",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true,
+        "no_card": true
+      },
+      "trace": "trace:run-d93b277947d24e23",
+      "message_count": 6
+    },
+    {
+      "fixture_id": "single_actor",
+      "run_id": "run-b7c48d09c5824a9b",
+      "expected": "COMPLETE",
+      "actual": "COMPLETE",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true
+      },
+      "trace": "trace:run-b7c48d09c5824a9b",
+      "message_count": 2
+    },
+    {
+      "fixture_id": "two_actor_dependency",
+      "run_id": "run-6c5d40ef8f0f4e72",
+      "expected": "COMPLETE",
+      "actual": "COMPLETE",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true
+      },
+      "trace": "trace:run-6c5d40ef8f0f4e72",
+      "message_count": 4
+    },
+    {
+      "fixture_id": "three_role",
+      "run_id": "run-d5fa8340dfde4fd1",
+      "expected": "COMPLETE",
+      "actual": "COMPLETE",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true
+      },
+      "trace": "trace:run-d5fa8340dfde4fd1",
+      "message_count": 6
+    },
+    {
+      "fixture_id": "timeout_budget",
+      "run_id": "run-5d36872150994fdc",
+      "expected": "BLOCKED",
+      "actual": "BLOCKED",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "no_approval": true,
+        "no_children": true
+      },
+      "trace": "trace:run-5d36872150994fdc",
+      "message_count": 0
+    }
+  ],
+  "usage": [
+    {
+      "scope": "run-1eca35fbeaab4079",
+      "used": 9,
+      "cap": 48
+    },
+    {
+      "scope": "run-21e878b343584bb8",
+      "used": 1,
+      "cap": 12
+    },
+    {
+      "scope": "run-312cff93f0b146fb",
+      "used": 9,
+      "cap": 48
+    },
+    {
+      "scope": "run-34ac83425dee4d5e",
+      "used": 4,
+      "cap": 48
+    },
+    {
+      "scope": "run-388ee11c33c2406a",
+      "used": 1,
+      "cap": 12
+    },
+    {
+      "scope": "run-426e14f7046047cd",
+      "used": 1,
+      "cap": 12
+    },
+    {
+      "scope": "run-49e311060f284bf4",
+      "used": 4,
+      "cap": 48
+    },
+    {
+      "scope": "run-4f4642c7b71b4926",
+      "used": 6,
+      "cap": 48
+    },
+    {
+      "scope": "run-5548e6580407461b",
+      "used": 5,
+      "cap": 12
+    },
+    {
+      "scope": "run-5d36872150994fdc",
+      "used": 0,
+      "cap": 1
+    },
+    {
+      "scope": "run-6c5d40ef8f0f4e72",
+      "used": 5,
+      "cap": 12
+    },
+    {
+      "scope": "run-7b7f3037d24e45dc",
+      "used": 4,
+      "cap": 48
+    },
+    {
+      "scope": "run-8149f3916cde44b7",
+      "used": 2,
+      "cap": 48
+    },
+    {
+      "scope": "run-82abf14ecec94d52",
+      "used": 3,
+      "cap": 12
+    },
+    {
+      "scope": "run-96ed2b912cb94658",
+      "used": 5,
+      "cap": 12
+    },
+    {
+      "scope": "run-9add07adf1334e46",
+      "used": 4,
+      "cap": 48
+    },
+    {
+      "scope": "run-9cff25a90f10442e",
+      "used": 2,
+      "cap": 48
+    },
+    {
+      "scope": "run-b42bbe86c961407d",
+      "used": 3,
+      "cap": 48
+    },
+    {
+      "scope": "run-b7c48d09c5824a9b",
+      "used": 3,
+      "cap": 12
+    },
+    {
+      "scope": "run-c9346b71778f4d32",
+      "used": 2,
+      "cap": 48
+    },
+    {
+      "scope": "run-d0cb01f1d6d74ec4",
+      "used": 0,
+      "cap": 48
+    },
+    {
+      "scope": "run-d5fa8340dfde4fd1",
+      "used": 7,
+      "cap": 12
+    },
+    {
+      "scope": "run-d6cfaf40269649f3",
+      "used": 2,
+      "cap": 48
+    },
+    {
+      "scope": "run-d93b277947d24e23",
+      "used": 6,
+      "cap": 12
+    },
+    {
+      "scope": "run-daa33ef5c2544dba",
+      "used": 19,
+      "cap": 48
+    },
+    {
+      "scope": "run-df74d61294e34f40",
+      "used": 4,
+      "cap": 12
+    },
+    {
+      "scope": "run-e9a26e53fd4a445b",
+      "used": 1,
+      "cap": 12
+    },
+    {
+      "scope": "suite-c48b623607b24bcf",
+      "used": 41,
+      "cap": 60
+    }
+  ],
+  "limitations": [
+    "Scripted expectations measure control regressions, not real-world detection accuracy.",
+    "Actor-removal reruns and approval concurrency are covered separately in pytest CANDIDATE integration tests.",
+    "Timeout is forced deterministically; throughput and production performance are not measured."
+  ]
+}

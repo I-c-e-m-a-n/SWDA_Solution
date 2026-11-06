@@ -1,0 +1,103 @@
+{
+  "version": "acl-1",
+  "profiles": [
+    {
+      "actor": "TA",
+      "incentive": "Hypothetical training benefit or avoided effort",
+      "capabilities": [
+        "propose",
+        "reply"
+      ],
+      "sources": [
+        "MO-03",
+        "MO-04",
+        "MO-05",
+        "MO-06",
+        "MO-08",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "recipients": [
+        "PA",
+        "EA",
+        "ORCH"
+      ]
+    },
+    {
+      "actor": "PA",
+      "incentive": "Hypothetical enrolment or funding benefit",
+      "capabilities": [
+        "propose",
+        "reply"
+      ],
+      "sources": [
+        "MO-01",
+        "MO-02",
+        "MO-03",
+        "MO-04",
+        "MO-05",
+        "MO-06",
+        "MO-07",
+        "MO-08",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "recipients": [
+        "TA",
+        "EA",
+        "ORCH"
+      ]
+    },
+    {
+      "actor": "EA",
+      "incentive": "Hypothetical employment/training benefit",
+      "capabilities": [
+        "propose",
+        "reply"
+      ],
+      "sources": [
+        "MO-01",
+        "MO-06",
+        "MO-08",
+        "S5"
+      ],
+      "recipients": [
+        "TA",
+        "PA",
+        "ORCH"
+      ]
+    },
+    {
+      "actor": "REV",
+      "incentive": "Challenge assumptions and provenance",
+      "capabilities": [
+        "reference_lookup",
+        "review"
+      ],
+      "sources": [
+        "MO-01",
+        "MO-02",
+        "MO-03",
+        "MO-04",
+        "MO-05",
+        "MO-06",
+        "MO-07",
+        "MO-08",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "recipients": [
+        "GATE"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "swda-part2c"
+version = "1.1.0"
+requires-python = ">=3.12"
+dependencies = ["pydantic==2.13.4"]
+[project.optional-dependencies]
+test = ["pytest==8.4.2"]
+[project.scripts]
+swda-part2c = "swda_part2c.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
